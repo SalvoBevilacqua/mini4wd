@@ -1,0 +1,379 @@
+/* ==========================================================================
+   TAMIYA MINI 4WD ITALIA - MOTORSPORT THEME STYLES
+   ========================================================================== */
+
+:root {
+  --tamiya-red: #e60012;
+  --tamiya-blue: #003399;
+  --tamiya-dark: #0f141d;
+  --tamiya-card-bg: #18202e;
+  --tamiya-card-border: #263347;
+  --tamiya-hover: #212c3f;
+  --tamiya-accent: #00d2ff;
+  --tamiya-volt: #e6ff00;
+  --tamiya-text: #e2e8f0;
+  --tamiya-muted: #94a3b8;
+  --tamiya-success: #10b981;
+  --tamiya-warning: #f59e0b;
+  --tamiya-danger: #ef4444;
+}
+
+body {
+  background-color: var(--tamiya-dark);
+  color: var(--tamiya-text);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  overflow-x: hidden;
+}
+
+/* Carbon fiber background accent for headers */
+.carbon-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(0, 51, 153, 0.25) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(230, 0, 18, 0.2) 0%, transparent 40%),
+              #0f141d;
+  border-bottom: 2px solid var(--tamiya-card-border);
+}
+
+/* Brand Logo */
+.brand-tamiya {
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-flag {
+  display: inline-flex;
+  width: 32px;
+  height: 22px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.brand-flag-red {
+  background-color: var(--tamiya-red);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+}
+.brand-flag-blue {
+  background-color: var(--tamiya-blue);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, .font-heading {
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Category Cards */
+.category-card {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--cat-color, #4a5568);
+  transition: width 0.2s ease;
+}
+.category-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  background-color: var(--tamiya-hover);
+}
+.category-card.active {
+  border-color: var(--cat-color, var(--tamiya-accent));
+  background-color: rgba(0, 102, 204, 0.12);
+  box-shadow: 0 0 0 1px var(--cat-color, var(--tamiya-accent)), 0 10px 25px -5px rgba(0, 102, 204, 0.3);
+}
+.category-card.active::before {
+  width: 6px;
+}
+
+/* Category Deep Dive Section */
+.guide-card {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.rule-box-allowed {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.rule-box-forbidden {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.spec-badge-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Product Cards */
+.part-card {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.part-card:hover {
+  border-color: rgba(0, 210, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.6);
+}
+.part-card.in-build {
+  border-color: var(--tamiya-success);
+  box-shadow: 0 0 0 1px var(--tamiya-success);
+}
+
+/* Image Container & Carousel */
+.part-img-wrapper {
+  background: #ffffff;
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--tamiya-card-border);
+}
+.part-img-wrapper img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.part-card:hover .part-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.img-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  z-index: 5;
+}
+.part-img-wrapper:hover .img-nav-btn {
+  opacity: 1;
+}
+.img-nav-btn.prev { left: 8px; }
+.img-nav-btn.next { right: 8px; }
+
+.img-zoom-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(15, 20, 29, 0.85);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 6;
+  transition: all 0.2s;
+}
+.img-zoom-btn:hover {
+  background: var(--tamiya-red);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Item Number Badge */
+.item-tag {
+  font-family: 'Chakra Petch', monospace;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  background: #000;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Category Filter Tabs */
+.filter-pill-btn {
+  background: var(--tamiya-card-bg);
+  color: var(--tamiya-muted);
+  border: 1px solid var(--tamiya-card-border);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.filter-pill-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.filter-pill-btn.active {
+  background: var(--tamiya-blue);
+  color: #fff;
+  border-color: var(--tamiya-accent);
+  box-shadow: 0 4px 12px rgba(0, 51, 153, 0.4);
+}
+
+/* Paddock Tip & Tech Insights Cards */
+.paddock-tip-card {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.paddock-tip-card:hover {
+  border-color: rgba(0, 210, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.paddock-tip-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: rgba(0, 210, 255, 0.1);
+  color: var(--tamiya-accent);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+/* Modal styling */
+.modal-content {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  color: var(--tamiya-text);
+  border-radius: 14px;
+}
+.modal-header {
+  border-bottom: 1px solid var(--tamiya-card-border);
+}
+.modal-footer {
+  border-top: 1px solid var(--tamiya-card-border);
+}
+
+/* Lightbox Zoom Container */
+.lightbox-img-container {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: grab;
+}
+.lightbox-img-container:active {
+  cursor: grabbing;
+}
+.lightbox-img {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  transition: transform 0.2s ease-out;
+  transform-origin: center center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--tamiya-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tamiya-card-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4c68;
+}
+
+/* Print styles for Bill of Materials */
+@media print {
+  body {
+    background-color: #fff !important;
+    color: #000 !important;
+    padding-bottom: 0 !important;
+  }
+  .sticky-summary-bar, .no-print, nav, #categoriesSection, #filtersSection {
+    display: none !important;
+  }
+  .guide-card, .part-card, .modal-content {
+    background-color: #fff !important;
+    border: 1px solid #ddd !important;
+    color: #000 !important;
+  }
+  #summarySection {
+    display: block !important;
+  }
+}

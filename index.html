@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="it" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamiya Mini 4WD Italia - Guida Categorie Ufficiali & Configuratore Legale</title>
+  <meta name="description" content="Configuratore ufficiale per campionati Tamiya Mini 4WD in Italia: B-Max GP, Open Class, Tuned Class, Box Stock, Expert Classica R.U.M. e Street Mini 4WD. Verifica compatibilità e componenti 100% legali.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Chakra Petch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary border-opacity-25 shadow-sm">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand brand-tamiya" href="#">
+        <div class="brand-flag">
+          <div class="brand-flag-red">★</div>
+          <div class="brand-flag-blue">★</div>
+        </div>
+        <div>
+          <span class="text-white fw-bold">TAMIYA RACING LAB</span>
+          <span class="badge bg-danger ms-1 text-uppercase font-heading" style="font-size:0.65rem;">Italia</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#categoriesSection"><i class="bi bi-grid-fill me-1 text-primary"></i> Categorie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#guideSection"><i class="bi bi-book-half me-1 text-info"></i> Regolamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#paddockTipsSection"><i class="bi bi-lightbulb-fill me-1 text-warning"></i> Consigli & Setup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#builderSection"><i class="bi bi-wrench-adjustable me-1 text-primary"></i> Configuratore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#summarySection"><i class="bi bi-card-checklist me-1 text-success"></i> Resoconto & Acquisti</a>
+          </li>
+        </ul>
+
+        <!-- Category Selector in Navbar -->
+        <div class="d-flex align-items-center gap-2">
+          <label class="text-muted small d-none d-xl-inline">Categoria Attiva:</label>
+          <select id="navbarCategorySelect" class="form-select form-select-sm bg-dark text-white border-secondary fw-semibold" style="width: auto;">
+            <option value="bmax">B-Max GP (Basic Max)</option>
+            <option value="open">Open Class (Japan Cup)</option>
+            <option value="tuned">Tuned Class / TMEC</option>
+            <option value="boxstock">Box Stock (Scatola)</option>
+            <option value="expert">Expert Classica (Piana R.U.M.)</option>
+            <option value="street">Street Mini 4WD (Outdoor)</option>
+          </select>
+
+          <!-- Current Build Count Button -->
+          <a href="#summarySection" class="btn btn-sm btn-outline-info d-flex align-items-center gap-2">
+            <i class="bi bi-cart3"></i>
+            <span>Build: <strong id="navBuildCount">0</strong> parti</span>
+          </a>
+
+          <!-- Admin / Data Manager Modal Button -->
+          <button class="btn btn-sm btn-outline-warning d-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#adminModal" title="Gestisci e aggiorna componenti, categorie e JSON">
+            <i class="bi bi-database-gear"></i>
+            <span class="d-none d-lg-inline">Gestione Database</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO & CATEGORY SELECTOR CARDS
+       ========================================================================= -->
+  <header class="carbon-bg py-5">
+    <div class="container px-3 px-lg-4 text-center">
+      <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-dark border border-secondary border-opacity-50 text-white small">
+        <span class="badge bg-danger rounded-circle p-1">●</span>
+        <span>Regolamento Ufficiale Campionati Mini 4WD Italia • Stagione 2024 - 2026</span>
+      </div>
+
+      <h1 class="display-5 fw-extrabold text-white mb-2">
+        GUIDA CATEGORIE & <span class="text-primary">CONFIGURATORE UFFICIALE</span>
+      </h1>
+      <p class="lead text-muted mx-auto mb-4" style="max-width: 820px;">
+        Scegli una categoria di gara ufficiale in Italia. Scopri cosa è ammesso e cosa è tassativamente vietato, carica i componenti 100% omologati e componi la tua Mini 4WD legale pronta per la verifica tecnica (Scrutineering) e l'acquisto!
+      </p>
+
+      <!-- Category Selector Grid -->
+      <div class="row g-3 text-start justify-content-center" id="categoriesSection">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       CATEGORY DEEP DIVE & RULES GUIDE
+       ========================================================================= -->
+  <section id="guideSection" class="py-5 border-bottom border-secondary border-opacity-25">
+    <div class="container px-3 px-lg-4">
+      <div id="categoryGuideContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PADDOCK TECH & ADVANCED SETUP TIPS (DIVISI PER CATEGORIA)
+       ========================================================================= -->
+  <section id="paddockTipsSection" class="py-5 border-bottom border-secondary border-opacity-25 bg-dark">
+    <div class="container px-3 px-lg-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+          <span class="badge bg-warning text-dark px-3 py-1 font-heading text-uppercase">Approfondimenti & Segreti di Gara</span>
+          <h2 class="h3 fw-bold text-white mt-1 mb-0">CONSIGLI D'ASSETTO DAI PADDOCK ITALIANI & JAPAN CUP</h2>
+          <p class="text-muted small mb-0">Guide tecniche, tarature fini e accorgimenti di regolamento specifici per: <span id="paddockCategoryLabel" class="fw-bold text-info">B-Max GP</span></p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge bg-secondary border border-secondary text-muted small"><i class="bi bi-shield-check text-success me-1"></i>Testati in Gara Ufficiale</span>
+        </div>
+      </div>
+
+      <!-- Paddock Tips Cards Grid -->
+      <div class="row g-3" id="paddockTipsContainer">
+        <!-- Rendered dynamically by app.js based on active category -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE MINI 4WD COMPONENT CONFIGURATOR
+       ========================================================================= -->
+  <section id="builderSection" class="py-5">
+    <div class="container px-3 px-lg-4">
+      
+      <!-- Section Title & Live Status -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+        <div>
+          <span class="badge bg-primary px-3 py-1 font-heading text-uppercase">Configuratore Tecnico</span>
+          <h2 class="h3 fw-bold text-white mt-1 mb-0">COMPONENTI OMOLOGATI TAMIYA</h2>
+          <p class="text-muted small mb-0">Seleziona e combina i pezzi per la categoria attiva: <span id="builderCategoryLabel" class="fw-bold text-info">B-Max GP</span></p>
+        </div>
+
+        <!-- Legality Status Live Alert -->
+        <div id="liveLegalityBanner" class="spec-badge-pill border-success text-success bg-dark">
+          <i class="bi bi-shield-check fs-5"></i>
+          <div>
+            <div class="fw-bold small text-uppercase">Stato Conformità Regolamento</div>
+            <div id="liveLegalityText" class="small text-white">100% Conforme alla Categoria Attiva</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="card bg-dark border-secondary border-opacity-50 p-3 mb-4" id="filtersSection">
+        <div class="row g-3 align-items-center">
+          
+          <!-- Category Pills -->
+          <div class="col-12 col-xl-8">
+            <div class="d-flex flex-wrap gap-2" id="componentTypeFilterContainer">
+              <button class="filter-pill-btn active" data-type="all">Tutti i Componenti</button>
+              <button class="filter-pill-btn" data-type="chassis"><i class="bi bi-truck me-1"></i> Telai & Kit</button>
+              <button class="filter-pill-btn" data-type="motor"><i class="bi bi-lightning-charge me-1"></i> Motori</button>
+              <button class="filter-pill-btn" data-type="plate"><i class="bi bi-layers me-1"></i> Staffe / Carbonio</button>
+              <button class="filter-pill-btn" data-type="damper"><i class="bi bi-bullseye me-1"></i> Mass Dampers</button>
+              <button class="filter-pill-btn" data-type="roller"><i class="bi bi-circle me-1"></i> Rulli & Cuscinetti</button>
+              <button class="filter-pill-btn" data-type="wheel"><i class="bi bi-disc me-1"></i> Ruote & Gomme</button>
+              <button class="filter-pill-btn" data-type="brake"><i class="bi bi-slash-circle me-1"></i> Freni & Spugne</button>
+              <button class="filter-pill-btn" data-type="gear"><i class="bi bi-gear me-1"></i> Ingranaggi</button>
+              <button class="filter-pill-btn" data-type="accessory"><i class="bi bi-tools me-1"></i> Minuteria</button>
+            </div>
+          </div>
+
+          <!-- Legal Only Switch & Search -->
+          <div class="col-12 col-xl-4">
+            <div class="d-flex flex-column flex-sm-row gap-2 justify-content-xl-end">
+              
+              <!-- Legal Toggle -->
+              <div class="form-check form-switch d-flex align-items-center gap-2 bg-dark p-2 border border-secondary border-opacity-50 rounded">
+                <input class="form-check-input ms-0 me-2" type="checkbox" id="legalOnlyToggle" checked>
+                <label class="form-check-label small text-white user-select-none mb-0" for="legalOnlyToggle">
+                  Solo Legali <span class="badge bg-success ms-1">Attivo</span>
+                </label>
+              </div>
+
+              <!-- Search Input -->
+              <div class="input-group input-group-sm">
+                <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
+                <input type="text" id="componentSearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Cerca Item (es. 15477, Carbon)...">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Component Cards Grid -->
+      <div class="row g-4" id="componentsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       BUILD SUMMARY & SHOPPING BILL OF MATERIALS (BOM)
+       ========================================================================= -->
+  <section id="summarySection" class="py-5 bg-dark border-top border-secondary border-opacity-25">
+    <div class="container px-3 px-lg-4">
+      
+      <div class="guide-card mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 pb-3 mb-3 border-bottom border-secondary border-opacity-50">
+          <div>
+            <div class="d-flex align-items-center gap-2">
+              <span class="badge bg-success font-heading fs-6">RESOCONTO ASSETTO</span>
+              <span id="summaryCategoryBadge" class="badge bg-primary font-heading fs-6">B-MAX GP</span>
+            </div>
+            <h3 class="h4 fw-bold text-white mt-1 mb-0">SCHEDA TECNICA & LISTA RICAMBI DA ACQUISTARE</h3>
+            <p class="text-muted small mb-0">Riepilogo dei pezzi selezionati, verifica di omologazione e link diretti ai codici articolo originali Tamiya.</p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-sm btn-outline-info" id="btnCopyBom">
+              <i class="bi bi-clipboard-check me-1"></i> Copia Lista Ricambi
+            </button>
+            <button class="btn btn-sm btn-outline-light" id="btnPrintBom">
+              <i class="bi bi-printer me-1"></i> Stampa Scheda
+            </button>
+            <button class="btn btn-sm btn-outline-danger" id="btnClearBom">
+              <i class="bi bi-trash3 me-1"></i> Svuota
+            </button>
+          </div>
+        </div>
+
+        <!-- Verification Metrics Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
+              <div class="text-muted small text-uppercase">Conformità Gara</div>
+              <div class="fs-5 fw-bold text-success" id="summaryLegalityScore">100% Legale</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
+              <div class="text-muted small text-uppercase">Telaio Base</div>
+              <div class="fs-5 fw-bold text-info text-truncate" id="summaryChassisName">Nessuno</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
+              <div class="text-muted small text-uppercase">Parti Selezionate</div>
+              <div class="fs-4 fw-bold text-white" id="summaryPartsCount">0</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
+              <div class="text-muted small text-uppercase">Stima Indicativa</div>
+              <div class="fs-5 fw-semibold text-muted" id="summaryTotalPrice">€ 0.00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selected Parts Table / List -->
+        <div class="table-responsive">
+          <table class="table table-dark table-hover align-middle mb-0" id="summaryPartsTable">
+            <thead class="table-secondary text-uppercase small text-muted font-heading">
+              <tr>
+                <th style="width: 70px;">Foto</th>
+                <th style="width: 110px;">Item Tamiya</th>
+                <th>Nome Componente & Dettagli</th>
+                <th style="width: 120px;">Categoria</th>
+                <th style="width: 140px;">Stato Gara</th>
+                <th style="width: 90px;" class="text-end">Prezzo</th>
+                <th style="width: 130px;" class="text-center no-print">Acquisto / Info</th>
+                <th style="width: 50px;" class="text-center no-print">Azione</th>
+              </tr>
+            </thead>
+            <tbody id="summaryTableBody">
+              <!-- Rendered dynamically by app.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Empty State Message -->
+        <div id="summaryEmptyState" class="text-center py-5 text-muted">
+          <i class="bi bi-inbox fs-1 d-block mb-2 text-secondary"></i>
+          <h5 class="text-white">Nessun componente ancora selezionato</h5>
+          <p class="small mb-3">Seleziona i pezzi nel configuratore sovrastante oppure carica un preset consigliato vincitore.</p>
+          <button class="btn btn-sm btn-primary" id="btnLoadPresetDirect">
+            <i class="bi bi-magic me-1"></i> Carica Configurazione Consigliata per questa Categoria
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODALS: LIGHTBOX IMAGE ZOOM & TECHNICAL SHEET
+       ========================================================================= -->
+  
+  <!-- Image Zoom / Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-secondary">
+        <div class="modal-header">
+          <div>
+            <span class="item-tag me-2" id="lightboxItemNumber">Item #15477</span>
+            <span class="fw-bold text-white" id="lightboxItemTitle">Titolo Articolo</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body p-3">
+          
+          <!-- Zoom Controls Toolbar -->
+          <div class="d-flex justify-content-between align-items-center mb-2 px-2">
+            <div class="small text-muted" id="lightboxImageIndex">Immagine 1 di 1</div>
+            <div class="btn-group btn-group-sm">
+              <button class="btn btn-outline-secondary text-white" id="btnZoomOut" title="Rimpicciolisci"><i class="bi bi-zoom-out"></i></button>
+              <button class="btn btn-outline-secondary text-white" id="btnZoomReset" title="Reimposta 100%">1:1</button>
+              <button class="btn btn-outline-secondary text-white" id="btnZoomIn" title="Ingrandisci"><i class="bi bi-zoom-in"></i></button>
+            </div>
+          </div>
+
+          <!-- Main Zoomable Image Viewer -->
+          <div class="lightbox-img-container" id="lightboxContainer">
+            <img src="" alt="Part High Res" id="lightboxImage" class="lightbox-img">
+          </div>
+
+          <!-- Thumbnails Row (if multiple images) -->
+          <div class="d-flex justify-content-center gap-2 mt-3 overflow-auto py-1" id="lightboxThumbs">
+            <!-- Thumbs generated dynamically -->
+          </div>
+
+        </div>
+        <div class="modal-footer justify-content-between">
+          <a href="#" target="_blank" id="lightboxTamiyaLink" class="btn btn-sm btn-outline-primary">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Scheda Ufficiale Tamiya.com
+          </a>
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Technical Specification Modal -->
+  <div class="modal fade" id="techDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-secondary">
+        <div class="modal-header">
+          <div>
+            <span class="item-tag me-2" id="techModalItemNumber">Item #15477</span>
+            <h5 class="modal-title d-inline text-white fw-bold" id="techModalTitle">Nome Prodotto</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4 align-items-center mb-4">
+            <div class="col-md-5 text-center">
+              <div class="bg-white rounded p-3 d-inline-block shadow-sm">
+                <img id="techModalImage" src="" alt="Thumbnail" style="max-height: 180px; max-width: 100%; object-fit: contain;">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h6 class="text-uppercase text-info small fw-bold mb-1">Descrizione Tecnica</h6>
+              <p id="techModalDescription" class="text-white small mb-3"></p>
+              <div class="d-flex gap-2">
+                <span class="badge bg-secondary" id="techModalChassis">Chassis: Universale</span>
+                <span class="badge bg-success" id="techModalPrice">Prezzo stimato: € 0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specs Table -->
+          <h6 class="text-uppercase text-warning small fw-bold mb-2">Specifiche & Parametri Costruttivi</h6>
+          <div class="table-responsive mb-4">
+            <table class="table table-sm table-dark border-secondary table-bordered small mb-0">
+              <tbody id="techModalSpecsTable">
+                <!-- Dynamically generated -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Category Legality Matrix -->
+          <h6 class="text-uppercase text-success small fw-bold mb-2">Omologazione per Categoria Ufficiale</h6>
+          <div id="techModalLegalityList" class="d-flex flex-column gap-2">
+            <!-- Dynamically generated -->
+          </div>
+
+        </div>
+        <div class="modal-footer justify-content-between">
+          <a href="#" target="_blank" id="techModalOfficialLink" class="btn btn-sm btn-outline-info">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Apri Pagina Ufficiale Tamiya
+          </a>
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin / Data Manager Modal -->
+  <div class="modal fade" id="adminModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content border-secondary">
+        <div class="modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-warning text-dark font-heading">PANNELLO GESTIONE</span>
+            <h5 class="modal-title text-white fw-bold mb-0">AGGIORNAMENTO CATALOGO & REGOLAMENTI</h5>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body p-4">
+          
+          <!-- Admin Tabs -->
+          <ul class="nav nav-pills mb-4 border-bottom border-secondary border-opacity-50 pb-2 gap-2" id="adminTabs" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active font-heading btn-sm" data-bs-toggle="tab" data-bs-target="#adminTabNewPart">
+                <i class="bi bi-plus-circle me-1"></i> Aggiungi Nuovo Componente
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link font-heading btn-sm" data-bs-toggle="tab" data-bs-target="#adminTabRules">
+                <i class="bi bi-sliders me-1"></i> Modifica Categorie & Misure
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link font-heading btn-sm" data-bs-toggle="tab" data-bs-target="#adminTabSync">
+                <i class="bi bi-arrow-down-up me-1"></i> Import / Export JSON & Backup
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <!-- TAB 1: ADD NEW COMPONENT -->
+            <div class="tab-pane fade show active" id="adminTabNewPart">
+              <form id="adminNewPartForm">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <label class="form-label small text-muted">Codice Articolo Tamiya (Item #) *</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" id="adminPartNumber" placeholder="es. 95689 o 15530" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label small text-muted">Nome Ufficiale Componente (Tamiya) *</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" id="adminPartName" placeholder="es. HG Carbon Wide Rear Plate (1.5mm) J-Cup" required>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label small text-muted">Prezzo Indicativo (€)</label>
+                    <input type="number" step="0.10" class="form-control bg-dark text-white border-secondary" id="adminPartPrice" placeholder="es. 11.90" value="7.50">
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label small text-muted">Gruppo / Categoria *</label>
+                    <select class="form-select bg-dark text-white border-secondary" id="adminPartCategory">
+                      <option value="chassis">Telai & Kit Base</option>
+                      <option value="motor">Motori</option>
+                      <option value="plate" selected>Staffe & Piastre (Carbon/FRP)</option>
+                      <option value="damper">Mass Dampers / Dumper</option>
+                      <option value="roller">Rulli & Cuscinetti</option>
+                      <option value="wheel">Ruote & Gomme</option>
+                      <option value="brake">Freni & Spugne</option>
+                      <option value="gear">Ingranaggi & Trasmissione</option>
+                      <option value="accessory">Minuteria & Accessori</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label small text-muted">Compatibilità Telaio *</label>
+                    <select class="form-select bg-dark text-white border-secondary" id="adminPartChassisType">
+                      <option value="universal" selected>Universale (Tutti i telai)</option>
+                      <option value="single">Singolo Albero (VZ, FM-A, AR, Super-II, VS)</option>
+                      <option value="double">Doppio Albero PRO (MS, MA)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label class="form-label small text-muted">URL Immagine Principale (CDN Tamiya o Web)</label>
+                    <input type="url" class="form-control bg-dark text-white border-secondary" id="adminPartImageUrl" placeholder="https://d7z22c0gz59ng.cloudfront.net/...">
+                    <small class="text-muted" style="font-size: 0.72rem;">Se vuoto, usa automaticamente la CDN CloudFront Tamiya.</small>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label small text-muted">Omologazione Categorie (Seleziona dove è 100% legale):</label>
+                    <div class="d-flex flex-wrap gap-3 p-3 rounded bg-dark border border-secondary border-opacity-50">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="bmax" id="checkCatBmax" checked>
+                        <label class="form-check-label text-white small" for="checkCatBmax">B-Max GP</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="open" id="checkCatOpen" checked>
+                        <label class="form-check-label text-white small" for="checkCatOpen">Open Class</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="tuned" id="checkCatTuned" checked>
+                        <label class="form-check-label text-white small" for="checkCatTuned">Tuned Class / TMEC</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="boxstock" id="checkCatBoxStock">
+                        <label class="form-check-label text-white small" for="checkCatBoxStock">Box Stock</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="expert" id="checkCatExpert" checked>
+                        <label class="form-check-label text-white small" for="checkCatExpert">Expert Classica</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="street" id="checkCatStreet" checked>
+                        <label class="form-check-label text-white small" for="checkCatStreet">Street Mini 4WD</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label small text-muted">Descrizione & Note Tecniche</label>
+                    <textarea class="form-control bg-dark text-white border-secondary" id="adminPartDesc" rows="2" placeholder="Specifiche tecniche del pezzo, spessori, fori per rulli e consigli di montaggio..."></textarea>
+                  </div>
+
+                  <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary font-heading px-4">
+                      <i class="bi bi-plus-lg me-1"></i> Aggiungi al Catalogo Live
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB 2: EDIT CATEGORIES & RULES -->
+            <div class="tab-pane fade" id="adminTabRules">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label class="form-label small text-muted">Seleziona Categoria da Modificare</label>
+                  <select class="form-select bg-dark text-white border-secondary" id="adminCategorySelect">
+                    <option value="bmax">B-Max GP</option>
+                    <option value="open">Open Class</option>
+                    <option value="tuned">Tuned Class / TMEC</option>
+                    <option value="boxstock">Box Stock</option>
+                    <option value="expert">Expert Classica</option>
+                    <option value="street">Street Mini 4WD</option>
+                  </select>
+                </div>
+                <div class="col-md-8">
+                  <label class="form-label small text-muted">Tagline / Sottotitolo Categoria</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" id="adminCategoryTagline">
+                </div>
+                <div class="col-12">
+                  <label class="form-label small text-muted">Aggiungi Nuova Regola Ufficiale</label>
+                  <div class="input-group">
+                    <select class="form-select bg-dark text-white border-secondary" style="max-width: 170px;" id="adminRuleType">
+                      <option value="allowed">Consentito (Verde)</option>
+                      <option value="forbidden">Vietato (Rosso)</option>
+                    </select>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" id="adminRuleText" placeholder="Descrizione della regola tecnica...">
+                    <button class="btn btn-outline-info" type="button" id="adminBtnAddRule">
+                      <i class="bi bi-plus-lg me-1"></i> Inserisci Regola
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3: IMPORT / EXPORT & SYNC -->
+            <div class="tab-pane fade" id="adminTabSync">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 h-100">
+                    <h6 class="text-white fw-bold font-heading mb-2"><i class="bi bi-cloud-arrow-down text-info me-2"></i>Esporta Database (Backup / Deploy)</h6>
+                    <p class="text-muted small mb-3">
+                      Scarica il file completo <code>tamiya_db.json</code> contenente tutti gli articoli, le categorie, le modifiche e i consigli attuali. Puoi salvarlo nella cartella <code>data/</code> o caricarlo sul tuo hosting.
+                    </p>
+                    <button class="btn btn-outline-info w-100" id="adminBtnExportJson">
+                      <i class="bi bi-download me-1"></i> Scarica File JSON Aggiornato
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 h-100">
+                    <h6 class="text-white fw-bold font-heading mb-2"><i class="bi bi-cloud-arrow-up text-warning me-2"></i>Importa File JSON</h6>
+                    <p class="text-muted small mb-3">
+                      Carica un file <code>tamiya_db.json</code> precedentemente modificato o sincronizzato dallo script automatico per aggiornare istantaneamente il sito.
+                    </p>
+                    <input type="file" id="adminJsonFileInput" accept=".json" class="form-control form-control-sm bg-dark text-white border-secondary mb-2">
+                    <button class="btn btn-outline-warning w-100" id="adminBtnImportJson">
+                      <i class="bi bi-upload me-1"></i> Carica nel Sito
+                    </button>
+                  </div>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <div class="p-3 rounded bg-dark border border-danger border-opacity-25 d-flex justify-content-between align-items-center">
+                    <div>
+                      <strong class="text-danger font-heading d-block">RIPRISTINA DATABASE ORIGINALE</strong>
+                      <span class="text-muted small">Azzera le modifiche locali salvate nel browser e ricarica i dati ufficiali di fabbrica.</span>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger" id="adminBtnResetDefault">
+                      <i class="bi bi-arrow-counterclockwise me-1"></i> Ripristina Fabbrica
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Chiudi Pannello</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090; margin-bottom: 70px;">
+    <div id="appToast" class="toast align-items-center text-white bg-dark border-info" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill text-info fs-5" id="toastIcon"></i>
+          <span id="toastMessage">Notifica</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Chiudi"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3 Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Application Logic -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
