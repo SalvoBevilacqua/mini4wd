@@ -63,7 +63,14 @@ def update_database():
     print(f"[*] Articoli nel catalogo non ancora mappati nel DB: {len(new_found)}")
     if new_found:
         print(f"[*] Campione nuovi codici: {new_found[:10]}")
-        print("[*] E possibile aggiungerli tramite il 'Pannello Gestione Database' sul sito con relative regole di omologazione.")
+        print("[*] E possibile aggiungerli tramite CLI: python scripts/manage_db.py add --item <codice>")
+
+    # Esegui compilazione js/data.js
+    try:
+        from manage_db import build_js_data
+        build_js_data(db)
+    except Exception as err:
+        pass
 
     print("\n[V] Sincronizzazione completata con successo!")
 

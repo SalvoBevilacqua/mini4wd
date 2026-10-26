@@ -27,37 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fallback SVG image for components if remote CDN image is offline
   const FALLBACK_IMAGE = "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22200%22%20viewBox%3D%220%200%20300%20200%22%3E%3Crect%20fill%3D%22%2318202e%22%20width%3D%22300%22%20height%3D%22200%22%2F%3E%3Ctext%20fill%3D%22%2300d2ff%22%20font-family%3D%22sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%20x%3D%2250%25%22%20y%3D%2245%25%22%20text-anchor%3D%22middle%22%3ETAMIYA%20MINI%204WD%3C%2Ftext%3E%3Ctext%20fill%3D%22%2394a3b8%22%20font-family%3D%22sans-serif%22%20font-size%3D%2211%22%20x%3D%2250%25%22%20y%3D%2260%25%22%20text-anchor%3D%22middle%22%3EOfficial%20Tune-Up%20Part%3C%2Ftext%3E%3C%2Fsvg%3E";
 
-  // Dynamic Data Store (Load from localStorage if custom updates exist, otherwise default)
-  let componentsData = [...TAMIYA_COMPONENTS];
-  let categoriesData = { ...MINI4WD_CATEGORIES };
-
+  // Clean up any old localStorage override from previous versions
   try {
-    const saved = localStorage.getItem("tamiya_custom_db");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      if (parsed.componentsData && Array.isArray(parsed.componentsData)) {
-        componentsData = parsed.componentsData;
-      }
-      if (parsed.categoriesData && typeof parsed.categoriesData === "object") {
-        categoriesData = parsed.categoriesData;
-      }
-    }
-  } catch (err) {
-    console.warn("Storage load error:", err);
+    localStorage.removeItem("tamiya_custom_db");
+  } catch (e) {
+    // ignore
   }
 
-  function persistDb() {
-    try {
-      localStorage.setItem("tamiya_custom_db", JSON.stringify({
-        componentsData: componentsData,
-        categoriesData: categoriesData,
-        RECOMMENDED_BUILDS: typeof RECOMMENDED_BUILDS !== "undefined" ? RECOMMENDED_BUILDS : {},
-        CATEGORY_PADDOCK_TIPS: typeof CATEGORY_PADDOCK_TIPS !== "undefined" ? CATEGORY_PADDOCK_TIPS : {}
-      }));
-    } catch (e) {
-      console.warn("Storage save error:", e);
-    }
-  }
+  // Official Data Store directly from js/data.js (maintained via Python scripts)
+  const componentsData = TAMIYA_COMPONENTS;
+  const categoriesData = MINI4WD_CATEGORIES;
 
   // Bootstrap Modals & Toasts instances
   const lightboxModalEl = document.getElementById("lightboxModal");
@@ -1023,157 +1002,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadPreset(state.currentCategory);
   });
 
-  // =========================================================================
-  // ADMIN PANEL / DATABASE MANAGER EVENT LISTENERS
-  // =========================================================================
-  const adminModalEl = document.getElementById("adminModal");
-  const adminModal = adminModalEl ? new bootstrap.Modal(adminModalEl) : null;
 
-  // 1. Add New Component Form
-  document.getElementById("adminNewPartForm")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const itemNumber = document.getElementById("adminPartNumber")?.value.trim();
-    const name = document.getElementById("adminPartName")?.value.trim();
-    const price = parseFloat(document.getElementById("adminPartPrice")?.value) || 0;
-    const category = document.getElementById("adminPartCategory")?.value;
-    const chassisType = document.getElementById("adminPartChassisType")?.value;
-    let imageUrl = document.getElementById("adminPartImageUrl")?.value.trim();
-    const desc = document.getElementById("adminPartDesc")?.value.trim();
-
-    if (!itemNumber || !name) return;
-
-    // Build allowed categories array
-    const allowedCats = [];
-    if (document.getElementById("checkCatBmax")?.checked) allowedCats.push("bmax");
-    if (document.getElementById("checkCatOpen")?.checked) allowedCats.push("open");
-    if (document.getElementById("checkCatTuned")?.checked) allowedCats.push("tuned");
-    if (document.getElementById("checkCatBoxStock")?.checked) allowedCats.push("boxstock");
-    if (document.getElementById("checkCatExpert")?.checked) allowedCats.push("expert");
-    if (document.getElementById("checkCatStreet")?.checked) allowedCats.push("street");
-
-    if (!imageUrl) {
-      imageUrl = `https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/${itemNumber[0]}/${itemNumber}/${itemNumber}_1.jpg`;
-    }
-
-    const newPart = {
-      id: `part_${itemNumber}_${Date.now()}`,
-      itemNumber: itemNumber,
-      name: name,
-      category: category,
-      chassisType: chassisType,
-      price: price,
-      description: desc || "Nuovo componente aggiunto al catalogo.",
-      specs: {
-        "Categoria": category.toUpperCase(),
-        "Telaio": chassisType.toUpperCase(),
-        "Data Inserimento": new Date().toLocaleDateString("it-IT")
-      },
-      images: [imageUrl],
-      tamiyaUrl: `https://www.tamiya.com/japan/products/${itemNumber}/index.html`,
-      allowedCategories: allowedCats,
-      rulesNotes: {}
-    };
-
-    componentsData.unshift(newPart);
-    persistDb();
-
-    // Reset and close
-    e.target.reset();
-    adminModal?.hide();
-
-    renderComponentsGrid();
-    updateSummaryAndLegality();
-    showToast(`Componente Item #${itemNumber} (${name}) aggiunto con successo al catalogo live!`, "bi-check-circle-fill", "text-success");
-  });
-
-  // 2. Add Category Rule
-  document.getElementById("adminBtnAddRule")?.addEventListener("click", () => {
-    const catId = document.getElementById("adminCategorySelect")?.value;
-    const ruleType = document.getElementById("adminRuleType")?.value;
-    const ruleInput = document.getElementById("adminRuleText");
-    const ruleText = ruleInput?.value.trim();
-
-    if (!ruleText || !categoriesData[catId]) return;
-
-    if (ruleType === "allowed") {
-      categoriesData[catId].rulesAllowed.push(ruleText);
-    } else {
-      categoriesData[catId].rulesForbidden.push(ruleText);
-    }
-
-    persistDb();
-    ruleInput.value = "";
-    renderCategoryGuide();
-    showToast(`Nuova regola inserita in ${categoriesData[catId].badge}!`, "bi-check-circle-fill", "text-success");
-  });
-
-  // 3. Export Database to JSON File
-  document.getElementById("adminBtnExportJson")?.addEventListener("click", () => {
-    const fullDb = {
-      MINI4WD_CATEGORIES: categoriesData,
-      TAMIYA_COMPONENTS: componentsData,
-      RECOMMENDED_BUILDS: typeof RECOMMENDED_BUILDS !== "undefined" ? RECOMMENDED_BUILDS : {},
-      CATEGORY_PADDOCK_TIPS: typeof CATEGORY_PADDOCK_TIPS !== "undefined" ? CATEGORY_PADDOCK_TIPS : {}
-    };
-
-    const jsonStr = JSON.stringify(fullDb, null, 2);
-    const blob = new Blob([jsonStr], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "tamiya_db.json";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-
-    showToast("File tamiya_db.json generato e scaricato!", "bi-download", "text-info");
-  });
-
-  // 4. Import Database from JSON File
-  document.getElementById("adminBtnImportJson")?.addEventListener("click", () => {
-    const fileInput = document.getElementById("adminJsonFileInput");
-    const file = fileInput?.files?.[0];
-    if (!file) {
-      showToast("Seleziona prima un file .json da caricare!", "bi-exclamation-circle", "text-warning");
-      return;
-    }
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const imported = JSON.parse(e.target.result);
-        if (imported.TAMIYA_COMPONENTS && Array.isArray(imported.TAMIYA_COMPONENTS)) {
-          componentsData = imported.TAMIYA_COMPONENTS;
-        }
-        if (imported.MINI4WD_CATEGORIES && typeof imported.MINI4WD_CATEGORIES === "object") {
-          categoriesData = imported.MINI4WD_CATEGORIES;
-        }
-
-        persistDb();
-        renderCategoryCards();
-        renderCategoryGuide();
-        renderPaddockTips();
-        renderComponentsGrid();
-        updateSummaryAndLegality();
-        adminModal?.hide();
-
-        showToast("Database importato con successo! Tutti i dati sono stati aggiornati.", "bi-check-circle-fill", "text-success");
-      } catch (err) {
-        showToast("Errore nel formato del file JSON caricato.", "bi-x-circle", "text-danger");
-      }
-    };
-    reader.readAsText(file);
-  });
-
-  // 5. Reset to Factory Default Database
-  document.getElementById("adminBtnResetDefault")?.addEventListener("click", () => {
-    if (confirm("Vuoi davvero ripristinare il database ufficiale di fabbrica? Tutte le modifiche locali verranno azzerate.")) {
-      localStorage.removeItem("tamiya_custom_db");
-      location.reload();
-    }
-  });
 
   // =========================================================================
   // INITIAL BOOTSTRAP

@@ -1,22 +1,25 @@
 /**
  * TAMIYA MINI 4WD ITALIA - DATABASE CATEGORIE E COMPONENTI
- * Regolamento Ufficiale Italiano Mini 4WD (CIREMINI / R.U.M. / B-Max GP / Japan Cup Style / Street)
+ * Generato automaticamente da scripts/manage_db.py
+ * 
+ * NOTA: Questo file e di sola lettura nel frontend.
+ * Le modifiche devono essere eseguite tramite: python scripts/manage_db.py
  */
 
 const MINI4WD_CATEGORIES = {
-  bmax: {
-    id: "bmax",
-    name: "B-Max GP (Basic Max)",
-    badge: "B-MAX GP",
-    tagline: "Massime prestazioni senza modifiche distruttive: la classe regina 'Bolt-On'",
-    icon: "bi-shield-check",
-    color: "#0066cc",
-    difficulty: "Intermedio",
-    costIndex: "€€ (Accessibile)",
-    speedIndex: "30 - 38 km/h",
-    description: `La categoria **B-Max GP (Basic Max)** è oggi tra le classi più popolari e competitive in Italia e nel mondo. Nasce con un principio cardine: **nessuna modifica distruttiva o irreversibile**. I piloti possono attingere liberamente all'immenso catalogo Tune-Up Tamiya originale, ma tutti i pezzi devono essere montati rigorosamente 'bolt-on' tramite viti e colonnine, sfruttando solo i fori di fabbrica e senza tagliare telai o piastre in carbonio/vetroresina.`,
-    trackType: "Piste tecniche 3 o 5 corsie con salti (Table Top, Dragon Back, Slopes)",
-    rulesAllowed: [
+  "bmax": {
+    "id": "bmax",
+    "name": "B-Max GP (Basic Max)",
+    "badge": "B-MAX GP",
+    "tagline": "Massime prestazioni senza modifiche distruttive: la classe regina 'Bolt-On'",
+    "icon": "bi-shield-check",
+    "color": "#0066cc",
+    "difficulty": "Intermedio",
+    "costIndex": "€€ (Accessibile)",
+    "speedIndex": "30 - 38 km/h",
+    "description": "La categoria **B-Max GP (Basic Max)** è oggi tra le classi più popolari e competitive in Italia e nel mondo. Nasce con un principio cardine: **nessuna modifica distruttiva o irreversibile**. I piloti possono attingere liberamente all'immenso catalogo Tune-Up Tamiya originale, ma tutti i pezzi devono essere montati rigorosamente 'bolt-on' tramite viti e colonnine, sfruttando solo i fori di fabbrica e senza tagliare telai o piastre in carbonio/vetroresina.",
+    "trackType": "Piste tecniche 3 o 5 corsie con salti (Table Top, Dragon Back, Slopes)",
+    "rulesAllowed": [
       "Tutti i componenti Tune-Up originali Tamiya montati senza alterarne la forma originale (bolt-on).",
       "Carrozzerie RIGIDE in plastica (Cowl rigido da kit). Sono ammessi abbinamenti cross-kit con telai differenti.",
       "Motori Tune-Up (Torque, Atomic, Rev) e serie DASH (Hyper-Dash 3/PRO, Mach-Dash/PRO secondo regolamento di gara locale).",
@@ -26,7 +29,7 @@ const MINI4WD_CATEGORIES = {
       "Spugne freno Tamiya originali (blu, rosse, bianche, nere) posizionate su staffe freno.",
       "Pila stilo AA: solo 2 elementi alcalini 1.5V o Ni-MH ricaricabili ammessi (Tamiya Neo Champ, Fujitsu Pink/White, Eneloop Lite)."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "VIETATO tagliare, limare o sagomare piastre in carbonio (HG Carbon) o fibra (FRP).",
       "VIETATO tagliare o fresare il telaio (niente telai tagliati per MS-Flexible o alleggerimenti strutturali).",
       "VIETATE le carrozzerie in policarbonato / Lexan (ammessa SOLO carrozzeria in plastica rigida).",
@@ -36,32 +39,31 @@ const MINI4WD_CATEGORIES = {
       "VIETATI i motori fuori scala Ultra-Dash e Plasma-Dash (vietati su tutti i circuiti ufficiali).",
       "VIETATA la trazione a 2 ruote (la trazione 4WD deve essere perfettamente funzionante)."
     ],
-    dimensions: {
-      maxLength: "165 mm",
-      maxWidth: "105 mm (rulli inclusi)",
-      maxHeight: "70 mm",
-      minGroundClearance: "1.0 mm (misurata con dima su tutta l'auto)",
-      minWeight: "90 grammi (con motore e batterie inseriti)",
-      tireDiameter: "Da 22.0 mm a 35.0 mm",
-      tireWidth: "Minimo 8 mm per ruota",
-      rollerLimit: "Massimo 6 rulli (o secondo dima standard)"
+    "dimensions": {
+      "maxLength": "165 mm",
+      "maxWidth": "105 mm (rulli inclusi)",
+      "maxHeight": "70 mm",
+      "minGroundClearance": "1.0 mm (misurata con dima su tutta l'auto)",
+      "minWeight": "90 grammi (con motore e batterie inseriti)",
+      "tireDiameter": "Da 22.0 mm a 35.0 mm",
+      "tireWidth": "Minimo 8 mm per ruota",
+      "rollerLimit": "Massimo 6 rulli (o secondo dima standard)"
     },
-    setupTips: "Nel B-Max la differenza la fanno il baricentro basso e la precisione chirurgica dell'assemblaggio. Usa rondelle e distanziali per allineare perfettamente i rulli a 104.5mm di larghezza (lasciando 0.5mm di margine dalla dima di 105mm). Installa piastre HG Carbon da 1.5mm montate doppie al posteriore per impedire flessioni sui salti, e calibra con cura l'altezza della spugna freno posteriore a circa 1.2-1.5mm da terra per frenare dritto senza impuntarsi."
+    "setupTips": "Nel B-Max la differenza la fanno il baricentro basso e la precisione chirurgica dell'assemblaggio. Usa rondelle e distanziali per allineare perfettamente i rulli a 104.5mm di larghezza (lasciando 0.5mm di margine dalla dima di 105mm). Installa piastre HG Carbon da 1.5mm montate doppie al posteriore per impedire flessioni sui salti, e calibra con cura l'altezza della spugna freno posteriore a circa 1.2-1.5mm da terra per frenare dritto senza impuntarsi."
   },
-
-  open: {
-    id: "open",
-    name: "Open Class (Japan Cup / Top Jump)",
-    badge: "OPEN CLASS",
-    tagline: "La Formula 1 delle Mini 4WD: ingegneria estrema, sospensioni flessibili e Chochin",
-    icon: "bi-lightning-charge-fill",
-    color: "#e60012",
-    difficulty: "Esperto / Avanzato",
-    costIndex: "€€€ (Alto)",
-    speedIndex: "35 - 45+ km/h",
-    description: `La **Open Class** (ispirata alla celebre categoria Japan Cup Open Class) rappresenta la massima espressione tecnica e costruttiva del modellismo Mini 4WD da salto. Qui ogni limite costruttivo decade, purché si utilizzino componenti e telai originali Tamiya. I piloti progettano prototipi con sospensioni flessibili scavate nel telaio MS, paraurti pivotanti con molle di richiamo, sistemi a lanterna ('Body Damper' o 'Chochin') e ancore posteriori in grado di rientrare in traiettoria dopo salti parabolici estremi.`,
-    trackType: "Circuiti da salto 5 corsie Japan Cup con ostacoli estremi (Rainbow Downhill, Mohican Slope, Bouncing Straight)",
-    rulesAllowed: [
+  "open": {
+    "id": "open",
+    "name": "Open Class (Japan Cup / Top Jump)",
+    "badge": "OPEN CLASS",
+    "tagline": "La Formula 1 delle Mini 4WD: ingegneria estrema, sospensioni flessibili e Chochin",
+    "icon": "bi-lightning-charge-fill",
+    "color": "#e60012",
+    "difficulty": "Esperto / Avanzato",
+    "costIndex": "€€€ (Alto)",
+    "speedIndex": "35 - 45+ km/h",
+    "description": "La **Open Class** (ispirata alla celebre categoria Japan Cup Open Class) rappresenta la massima espressione tecnica e costruttiva del modellismo Mini 4WD da salto. Qui ogni limite costruttivo decade, purché si utilizzino componenti e telai originali Tamiya. I piloti progettano prototipi con sospensioni flessibili scavate nel telaio MS, paraurti pivotanti con molle di richiamo, sistemi a lanterna ('Body Damper' o 'Chochin') e ancore posteriori in grado di rientrare in traiettoria dopo salti parabolici estremi.",
+    "trackType": "Circuiti da salto 5 corsie Japan Cup con ostacoli estremi (Rainbow Downhill, Mohican Slope, Bouncing Straight)",
+    "rulesAllowed": [
       "Libertà totale di taglio, foratura, fresatura e incollaggio su parti e telai originali Tamiya.",
       "Sospensioni interne 'MS-Flexible' (taglio dei supporti telaio MS con molle, boccole e gommini interni).",
       "Sistemi di smorzamento avanzati 'Chochin / Lantern' ancorati a bracci in carbonio basculanti solidali al baricentro.",
@@ -71,7 +73,7 @@ const MINI4WD_CATEGORIES = {
       "Tutti i motori Dash ammessi (Mach-Dash, Hyper-Dash 3/PRO, Power-Dash, Sprint-Dash).",
       "Cuscinetti sgrassati e cuscinetti speciali HG 620 montati a filo assale."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "VIETATE parti non originali Tamiya (cloni, carbonio cinese senza logo o parti 3D artigianali vietate in gara titolata).",
       "VIETATO superare le misure massime sagoma: 105 mm larghezza x 165 mm lunghezza x 70 mm altezza.",
       "VIETATA luce a terra inferiore a 1.0 mm (inclusi viti, supporti e spugne freno non compresse).",
@@ -80,32 +82,31 @@ const MINI4WD_CATEGORIES = {
       "VIETATE pile oltre 1.5V nominali per elemento (no batterie Li-Po, Li-Ion o pacchi modificati).",
       "VIETATI spigoli metallici vivi non smussati che potrebbero graffiare o danneggiare le corsie della pista."
     ],
-    dimensions: {
-      maxLength: "165 mm",
-      maxWidth: "105 mm",
-      maxHeight: "70 mm",
-      minGroundClearance: "1.0 mm",
-      minWeight: "90 grammi",
-      tireDiameter: "Da 22.0 mm a 35.0 mm (consigliato 23.5-24.5 mm)",
-      tireWidth: "Minimo 8 mm",
-      rollerLimit: "Massimo 6 rulli (o libero con diametri max 19mm)"
+    "dimensions": {
+      "maxLength": "165 mm",
+      "maxWidth": "105 mm",
+      "maxHeight": "70 mm",
+      "minGroundClearance": "1.0 mm",
+      "minWeight": "90 grammi",
+      "tireDiameter": "Da 22.0 mm a 35.0 mm (consigliato 23.5-24.5 mm)",
+      "tireWidth": "Minimo 8 mm",
+      "rollerLimit": "Massimo 6 rulli (o libero con diametri max 19mm)"
     },
-    setupTips: "Il segreto di una Open vincente è la sinergia tra l'MS-Flexible e il Chochin: quando l'auto salta, la lanterna si alza sfruttando l'inerzia e poi sbatte sul telaio all'atterraggio azzerando il rimbalzo. Usa gomme anteriori Super Hard e posteriori Maroon Low Friction per consentire al retrotreno di scivolare leggermente in curva senza impuntamento."
+    "setupTips": "Il segreto di una Open vincente è la sinergia tra l'MS-Flexible e il Chochin: quando l'auto salta, la lanterna si alza sfruttando l'inerzia e poi sbatte sul telaio all'atterraggio azzerando il rimbalzo. Usa gomme anteriori Super Hard e posteriori Maroon Low Friction per consentire al retrotreno di scivolare leggermente in curva senza impuntamento."
   },
-
-  tuned: {
-    id: "tuned",
-    name: "Tuned Class / TMEC (Entry-Level)",
-    badge: "TUNED / TMEC",
-    tagline: "Gare accessibili, costi contenuti e massima enfasi sulla pulizia di guida",
-    icon: "bi-speedometer2",
-    color: "#28a745",
-    difficulty: "Principiante / Intermedio",
-    costIndex: "€ (Economico)",
-    speedIndex: "26 - 32 km/h",
-    description: `La **Tuned Class** (spesso codificata in Italia con le sigle TMEC o Semi-Stock) è il punto di partenza perfetto per i neofiti e per chi vuole competizioni serrate e ad armi pari. Il regolamento limita severamente le parti in fibra/carbonio (spesso max 3 rinforzi) ed esclude categoricamente i motori ad altissima velocità serie Dash, consentendo **esclusivamente i motori serie Tuned**. In questo modo le auto non decollano ad ogni dosso e l'abilità sta nel bilanciamento dei pesi e nella fluidità dei rulli.`,
-    trackType: "Piste tecniche 3 corsie con curve veloci, ponti e salti moderati",
-    rulesAllowed: [
+  "tuned": {
+    "id": "tuned",
+    "name": "Tuned Class / TMEC (Entry-Level)",
+    "badge": "TUNED / TMEC",
+    "tagline": "Gare accessibili, costi contenuti e massima enfasi sulla pulizia di guida",
+    "icon": "bi-speedometer2",
+    "color": "#28a745",
+    "difficulty": "Principiante / Intermedio",
+    "costIndex": "€ (Economico)",
+    "speedIndex": "26 - 32 km/h",
+    "description": "La **Tuned Class** (spesso codificata in Italia con le sigle TMEC o Semi-Stock) è il punto di partenza perfetto per i neofiti e per chi vuole competizioni serrate e ad armi pari. Il regolamento limita severamente le parti in fibra/carbonio (spesso max 3 rinforzi) ed esclude categoricamente i motori ad altissima velocità serie Dash, consentendo **esclusivamente i motori serie Tuned**. In questo modo le auto non decollano ad ogni dosso e l'abilità sta nel bilanciamento dei pesi e nella fluidità dei rulli.",
+    "trackType": "Piste tecniche 3 corsie con curve veloci, ponti e salti moderati",
+    "rulesAllowed": [
       "Solo motori Tamiya della serie TUNED: Torque-Tuned 2, Atomic-Tuned 2, Rev-Tuned 2 (e versioni PRO a doppio pignone).",
       "Numero limitato di piastre di rinforzo FRP o Carbonio (da regolamento: massimo 3 piastre totali installabili).",
       "Rulli in plastica di serie o rulli a basso attrito in plastica POM (spesso i rulli con cuscinetti sono vietati o limitati in TMEC).",
@@ -114,7 +115,7 @@ const MINI4WD_CATEGORIES = {
       "Mass damper standard montati su fori predisposti.",
       "Spugne freno Tamiya di serie."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "VIETATI tutti i motori serie DASH (Hyper-Dash, Mach-Dash, Sprint-Dash, Power-Dash, ecc.).",
       "VIETATO superare il numero massimo di 3 piastre di rinforzo FRP/Carbonio montate.",
       "VIETATI i cuscinetti a sfere su ruote (obbligatorie boccole standard POM/ottone nelle varianti entry-level).",
@@ -122,32 +123,31 @@ const MINI4WD_CATEGORIES = {
       "VIETATE le carrozzerie in Lexan tagliate liberamente (obbligatoria carrozzeria originale).",
       "VIETATI sistemi ammortizzanti artigianali complessi."
     ],
-    dimensions: {
-      maxLength: "165 mm",
-      maxWidth: "105 mm",
-      maxHeight: "70 mm",
-      minGroundClearance: "1.0 mm",
-      minWeight: "90 grammi",
-      tireDiameter: "Da 22.0 mm a 35.0 mm",
-      tireWidth: "Minimo 8 mm",
-      rollerLimit: "Massimo 6 rulli (solo plastica)"
+    "dimensions": {
+      "maxLength": "165 mm",
+      "maxWidth": "105 mm",
+      "maxHeight": "70 mm",
+      "minGroundClearance": "1.0 mm",
+      "minWeight": "90 grammi",
+      "tireDiameter": "Da 22.0 mm a 35.0 mm",
+      "tireWidth": "Minimo 8 mm",
+      "rollerLimit": "Massimo 6 rulli (solo plastica)"
     },
-    setupTips: "Con i motori Tuned la potenza è limitata: ogni milligrammo di attrito superfluo nelle bronzine o negli ingranaggi costa decimi di secondo. Pulisci con alcool isopropilico le boccole POM, usa una goccia di lubrificante per cuscinetti a bassa densità e monta il rapporto al ponte 3.5:1 (Super Speed Gear) se la pista ha lunghi rettilinei, o 3.7:1 / 4:1 per tracciati molto guidati."
+    "setupTips": "Con i motori Tuned la potenza è limitata: ogni milligrammo di attrito superfluo nelle bronzine o negli ingranaggi costa decimi di secondo. Pulisci con alcool isopropilico le boccole POM, usa una goccia di lubrificante per cuscinetti a bassa densità e monta il rapporto al ponte 3.5:1 (Super Speed Gear) se la pista ha lunghi rettilinei, o 3.7:1 / 4:1 per tracciati molto guidati."
   },
-
-  boxstock: {
-    id: "boxstock",
-    name: "Box Stock (Categoria Scatola)",
-    badge: "BOX STOCK",
-    tagline: "Pura precisione da manuale: nessun componente opzionale, vince il miglior montaggio",
-    icon: "bi-box-seam",
-    color: "#fd7e14",
-    difficulty: "Principiante",
-    costIndex: "€ (Costo kit singolo)",
-    speedIndex: "20 - 25 km/h",
-    description: `La **Box Stock** (detta anche 'Categoria Scatola' o 'Standard') è l'essenza pura del modellismo Mini 4WD. I modelli vengono assemblati utilizzando **esclusivamente ciò che è contenuto nella scatola originale del kit acquistato**. Nessuna piastra in carbonio, nessun cuscinetto non fornito, nessun mass damper, nessun motore speciale. La vittoria si decide sui dettagli: la precisione maniacale nel rimuovere le bave di plastica dai pezzi (deburring), l'allineamento dei pignoni, la perfetta centratura delle ruote e il rodaggio (break-in) del motore normale di serie.`,
-    trackType: "Piste standard 3 corsie (Junior Circuit Tamiya) con scambio ponte classico",
-    rulesAllowed: [
+  "boxstock": {
+    "id": "boxstock",
+    "name": "Box Stock (Categoria Scatola)",
+    "badge": "BOX STOCK",
+    "tagline": "Pura precisione da manuale: nessun componente opzionale, vince il miglior montaggio",
+    "icon": "bi-box-seam",
+    "color": "#fd7e14",
+    "difficulty": "Principiante",
+    "costIndex": "€ (Costo kit singolo)",
+    "speedIndex": "20 - 25 km/h",
+    "description": "La **Box Stock** (detta anche 'Categoria Scatola' o 'Standard') è l'essenza pura del modellismo Mini 4WD. I modelli vengono assemblati utilizzando **esclusivamente ciò che è contenuto nella scatola originale del kit acquistato**. Nessuna piastra in carbonio, nessun cuscinetto non fornito, nessun mass damper, nessun motore speciale. La vittoria si decide sui dettagli: la precisione maniacale nel rimuovere le bave di plastica dai pezzi (deburring), l'allineamento dei pignoni, la perfetta centratura delle ruote e il rodaggio (break-in) del motore normale di serie.",
+    "trackType": "Piste standard 3 corsie (Junior Circuit Tamiya) con scambio ponte classico",
+    "rulesAllowed": [
       "Solo ed esclusivamente i pezzi inclusi nella scatola originale del modello prescelto.",
       "Motore normale Tamiya FA-130 con tappo metallico / fondello grigio o bianco presente nel kit.",
       "Rulli in plastica e boccole fornite nel kit.",
@@ -155,7 +155,7 @@ const MINI4WD_CATEGORIES = {
       "Carrozzeria originale da kit applicata con gli adesivi ufficiali inclusi.",
       "Pile AA alcaline da 1.5V o ricaricabili 1.2V da regolamento di gara."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "ASSOLUTAMENTE VIETATA qualsiasi parte Tune-Up opzionale (niente FRP, piastre, spugne freno o mass damper).",
       "VIETATI tutti i motori aftermarket, Tuned o Dash (ammesso SOLO il motore originale da scatola).",
       "VIETATO forare o limare il telaio per alleggerirlo.",
@@ -163,32 +163,31 @@ const MINI4WD_CATEGORIES = {
       "VIETATI oli chimici o additivi per pneumatici non conformi.",
       "VIETATO modificare i rapporti degli ingranaggi rispetto a quelli forniti nella scatola."
     ],
-    dimensions: {
-      maxLength: "165 mm (entro sagoma kit)",
-      maxWidth: "105 mm (entro sagoma kit)",
-      maxHeight: "70 mm",
-      minGroundClearance: "1.0 mm",
-      minWeight: "Peso di serie del kit completo",
-      tireDiameter: "Ruote fornite nel kit (Low profile o Large dia)",
-      tireWidth: "Di serie",
-      rollerLimit: "Rulli forniti nel kit"
+    "dimensions": {
+      "maxLength": "165 mm (entro sagoma kit)",
+      "maxWidth": "105 mm (entro sagoma kit)",
+      "maxHeight": "70 mm",
+      "minGroundClearance": "1.0 mm",
+      "minWeight": "Peso di serie del kit completo",
+      "tireDiameter": "Ruote fornite nel kit (Low profile o Large dia)",
+      "tireWidth": "Di serie",
+      "rollerLimit": "Rulli forniti nel kit"
     },
-    setupTips: "Nella Box Stock il rodaggio del motore di scatola è fondamentale: effettua un break-in a 1.5V alternando il senso di rotazione e raffreddando il motore. Rimuovi ogni minuscola bava di sprue con una lama da modellismo affilata, e assicurati che le ruote girino liberamente senza oscillazioni (wobble) sull'assale."
+    "setupTips": "Nella Box Stock il rodaggio del motore di scatola è fondamentale: effettua un break-in a 1.5V alternando il senso di rotazione e raffreddando il motore. Rimuovi ogni minuscola bava di sprue con una lama da modellismo affilata, e assicurati che le ruote girino liberamente senza oscillazioni (wobble) sull'assale."
   },
-
-  expert: {
-    id: "expert",
-    name: "Expert Classica (Tradizione Pista Piana Italiana - Monobarra)",
-    badge: "EXPERT R.U.M.",
-    tagline: "La storia delle gare in Italia: piste piane, ponti parabolici e l'iconica configurazione a Monobarra",
-    icon: "bi-trophy-fill",
-    color: "#6f42c1",
-    difficulty: "Molto Esperto",
-    costIndex: "€€ (Specialistica)",
-    speedIndex: "38 - 48 km/h su pista piana",
-    description: `L'**Expert Classica** rappresenta la gloriosa tradizione delle Mini 4WD in Italia, codificata sin dagli anni '90 nel regolamento **R.U.M. (Regolamento Unico Mani 4WD) / CIREMINI**. A differenza delle gare moderne Japan Cup con salti, qui le piste sono totalmente **piane** (Flat Track) e l'unico ostacolo critico è lo scambio ponte (spesso con scambio parabolico o classico). I modelli non montano ammortizzatori né freni a terra, ma impiegano l'iconica **Monobarra laterale** asimmetrica: una barra guida anteriore e posteriore studiata per caricare le forze centrifughe ed evitare che il modello decolli nello scambio a velocità supersoniche.`,
-    trackType: "Piste piane veloci in legno o plastica (Flat Track) con scambio ponte parabolico o 'over-bridge'",
-    rulesAllowed: [
+  "expert": {
+    "id": "expert",
+    "name": "Expert Classica (Tradizione Pista Piana Italiana - Monobarra)",
+    "badge": "EXPERT R.U.M.",
+    "tagline": "La storia delle gare in Italia: piste piane, ponti parabolici e l'iconica configurazione a Monobarra",
+    "icon": "bi-trophy-fill",
+    "color": "#6f42c1",
+    "difficulty": "Molto Esperto",
+    "costIndex": "€€ (Specialistica)",
+    "speedIndex": "38 - 48 km/h su pista piana",
+    "description": "L'**Expert Classica** rappresenta la gloriosa tradizione delle Mini 4WD in Italia, codificata sin dagli anni '90 nel regolamento **R.U.M. (Regolamento Unico Mani 4WD) / CIREMINI**. A differenza delle gare moderne Japan Cup con salti, qui le piste sono totalmente **piane** (Flat Track) e l'unico ostacolo critico è lo scambio ponte (spesso con scambio parabolico o classico). I modelli non montano ammortizzatori né freni a terra, ma impiegano l'iconica **Monobarra laterale** asimmetrica: una barra guida anteriore e posteriore studiata per caricare le forze centrifughe ed evitare che il modello decolli nello scambio a velocità supersoniche.",
+    "trackType": "Piste piane veloci in legno o plastica (Flat Track) con scambio ponte parabolico o 'over-bridge'",
+    "rulesAllowed": [
       "Configurazione a Monobarra (guida laterale singola su piastre sagomate in carbonio/vetroresina).",
       "Motori serie TUNED con fondello originale (Atomic-Tuned, Torque-Tuned, Rev-Tuned) non manomessi.",
       "Cuscinetti 620 ad altissima scorrevolezza, sgrassati e lubrificati con oli a bassissima viscosità.",
@@ -197,7 +196,7 @@ const MINI4WD_CATEGORIES = {
       "Gomme lisce tornite o cerchi carbonio per massima rigidità.",
       "Rapporti ultra-lunghi (3.5:1 Super Speed o ingranaggi custom consentiti dal regolamento R.U.M.)."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "VIETATI mass damper e contrappesi da salto (appesantirebbero inutilmente l'auto).",
       "VIETATE le spugne freno rasoterra (su pista piana creerebbero solo attrito e surriscaldamento).",
       "VIETATI i motori Dash nella Expert classica (nella sorella 'Top Classica' sono ammessi, nella Expert solo Tuned).",
@@ -205,32 +204,31 @@ const MINI4WD_CATEGORIES = {
       "VIETATI motori aperti o riavvolti.",
       "VIETATI telai tagliati per flessibilità (su pista piana il telaio deve essere il più rigido possibile)."
     ],
-    dimensions: {
-      maxLength: "165 mm",
-      maxWidth: "105 mm",
-      maxHeight: "70 mm",
-      minGroundClearance: "1.0 mm",
-      minWeight: "90 grammi",
-      tireDiameter: "22.0 - 35.0 mm",
-      tireWidth: "Minimo 8 mm",
-      rollerLimit: "Configurazione monobarra con rulli alluminio/cuscinetti"
+    "dimensions": {
+      "maxLength": "165 mm",
+      "maxWidth": "105 mm",
+      "maxHeight": "70 mm",
+      "minGroundClearance": "1.0 mm",
+      "minWeight": "90 grammi",
+      "tireDiameter": "22.0 - 35.0 mm",
+      "tireWidth": "Minimo 8 mm",
+      "rollerLimit": "Configurazione monobarra con rulli alluminio/cuscinetti"
     },
-    setupTips: "La taratura dell'inclinazione (downthrust) del rullo superiore della monobarra è la chiave: un grado in meno ti fa volare via sullo scambio ponte, un grado in più rallenta la macchina in rettilineo. Il telaio Super-II o VS è storicamente il più amato per la sua leggerezza e rigidità sui tracciati piani."
+    "setupTips": "La taratura dell'inclinazione (downthrust) del rullo superiore della monobarra è la chiave: un grado in meno ti fa volare via sullo scambio ponte, un grado in più rallenta la macchina in rettilineo. Il telaio Super-II o VS è storicamente il più amato per la sua leggerezza e rigidità sui tracciati piani."
   },
-
-  street: {
-    id: "street",
-    name: "Street Mini 4WD (Outdoor / Cross-Country)",
-    badge: "STREET MINI 4WD",
-    tagline: "Nata in Italia: corsa all'aperto al fianco del modello con bastone di guida",
-    icon: "bi-compass-fill",
-    color: "#20c997",
-    difficulty: "Intermedio / Sportivo",
-    costIndex: "€€ (Robusto)",
-    speedIndex: "18 - 28 km/h (passo di corsa)",
-    description: `La **Street Mini 4WD** è un fenomeno atletico e modellistico straordinario nato proprio in Italia e diffusosi rapidamente in tutto il mondo (Giappone compreso). I modelli non corrono in corsie chiuse, ma all'aperto su asfalto, piste ciclabili, sentieri sterrati o parchi cittadini. Il pilota corre fisicamente a fianco della macchina indirizzandola tramite una **mazza da guida (guide stick)** simile a un bastone da hockey. L'auto necessita di un assetto rialzato, protezioni anteriori antiurto, gomme con battistrada e massima robustezza meccanica.`,
-    trackType: "Percorsi outdoor liberi: asfalto cittadino, terra battuta, parchi, salite e discese",
-    rulesAllowed: [
+  "street": {
+    "id": "street",
+    "name": "Street Mini 4WD (Outdoor / Cross-Country)",
+    "badge": "STREET MINI 4WD",
+    "tagline": "Nata in Italia: corsa all'aperto al fianco del modello con bastone di guida",
+    "icon": "bi-compass-fill",
+    "color": "#20c997",
+    "difficulty": "Intermedio / Sportivo",
+    "costIndex": "€€ (Robusto)",
+    "speedIndex": "18 - 28 km/h (passo di corsa)",
+    "description": "La **Street Mini 4WD** è un fenomeno atletico e modellistico straordinario nato proprio in Italia e diffusosi rapidamente in tutto il mondo (Giappone compreso). I modelli non corrono in corsie chiuse, ma all'aperto su asfalto, piste ciclabili, sentieri sterrati o parchi cittadini. Il pilota corre fisicamente a fianco della macchina indirizzandola tramite una **mazza da guida (guide stick)** simile a un bastone da hockey. L'auto necessita di un assetto rialzato, protezioni anteriori antiurto, gomme con battistrada e massima robustezza meccanica.",
+    "trackType": "Percorsi outdoor liberi: asfalto cittadino, terra battuta, parchi, salite e discese",
+    "rulesAllowed": [
       "Altezza da terra rialzata (ground clearance consigliata 3.0 - 6.0 mm per non impigliarsi su foglie e sassi).",
       "Protezioni anteriori e pattini guida (Bumper Skid Plate / Guide Stick guard) per accogliere il tocco della mazza.",
       "Gomme tassellate tipo rally pin/spike (Item 15077) o gomme in spugna ad alta aderenza per asfalto ruvido.",
@@ -239,7 +237,7 @@ const MINI4WD_CATEGORIES = {
       "Roll-bar e rinforzi in carbonio/FRP su carrozzeria e paraurti per resistere a urti con marciapiedi.",
       "Sigillatura antipolvere per vano ingranaggi e cuscinetti schermati."
     ],
-    rulesForbidden: [
+    "rulesForbidden": [
       "VIETATI rulli metallici affilati o sporgenti che potrebbero ferire le caviglie del pilota o rompere la mazza da guida.",
       "VIETATI assetti ultra-bassi (< 2 mm da terra): toccherebbero immediatamente sul fondo stradale.",
       "VIETATE le spugne freno da pista a pochi millimetri dal suolo (brucerebbero sull'asfalto).",
@@ -247,17 +245,17 @@ const MINI4WD_CATEGORIES = {
       "VIETATI telai indeboliti da tagli drastici non protetti contro sassi e polvere.",
       "VIETATI motori eccessivamente veloci (Mach-Dash) che renderebbero impossibile al pilota seguire l'auto di corsa in sicurezza."
     ],
-    dimensions: {
-      maxLength: "165 mm (con paraurti guida)",
-      maxWidth: "105 mm",
-      maxHeight: "75 mm (roll-bar consentito)",
-      minGroundClearance: "Minimo consigliato 3.0 mm",
-      minWeight: "Nessun vincolo severo, consigliati 110-130g per stabilità su dossi",
-      tireDiameter: "Ruote larghe o tassellate da 26-31 mm",
-      tireWidth: "Gomme larghe per aderenza",
-      rollerLimit: "Rulli con bordi protetti o piastre sagomate per mazza da guida"
+    "dimensions": {
+      "maxLength": "165 mm (con paraurti guida)",
+      "maxWidth": "105 mm",
+      "maxHeight": "75 mm (roll-bar consentito)",
+      "minGroundClearance": "Minimo consigliato 3.0 mm",
+      "minWeight": "Nessun vincolo severo, consigliati 110-130g per stabilità su dossi",
+      "tireDiameter": "Ruote larghe o tassellate da 26-31 mm",
+      "tireWidth": "Gomme larghe per aderenza",
+      "rollerLimit": "Rulli con bordi protetti o piastre sagomate per mazza da guida"
     },
-    setupTips: "Il paraurti anteriore deve avere una guida liscia per permettere al bastone di indirizzare l'auto senza scatti violenti. Il telaio FM-A con motore anteriore offre una trazione eccezionale in salita e mantiene il muso incollato a terra sui sentieri sterrati."
+    "setupTips": "Il paraurti anteriore deve avere una guida liscia per permettere al bastone di indirizzare l'auto senza scatti violenti. Il telaio FM-A con motore anteriore offre una trazione eccezionale in salita e mantiene il muso incollato a terra sui sentieri sterrati."
   }
 };
 
@@ -266,18 +264,15 @@ const MINI4WD_CATEGORIES = {
  * Verified Tamiya items with official item numbers, descriptions, specs, images, and category legality rules.
  */
 const TAMIYA_COMPONENTS = [
-  // ==========================================
-  // TELAI / CHASSIS & STARTER KITS
-  // ==========================================
   {
-    id: "kit_18656",
-    itemNumber: "18656",
-    name: "Robo Race DevBot 2.0 (MA Chassis)",
-    category: "chassis",
-    chassisType: "double",
-    price: 13.90,
-    description: "Modello all'avanguardia con telaio MA (Midship Aero). Il telaio MA monoblocco a doppio pignone è celeberrimo per la straordinaria rigidità strutturale, il perfetto bilanciamento dei pesi al 50/50 e l'eccezionale efficienza di trasmissione senza rinvii ad albero.",
-    specs: {
+    "id": "kit_18656",
+    "itemNumber": "18656",
+    "name": "Robo Race DevBot 2.0 (MA Chassis)",
+    "category": "chassis",
+    "chassisType": "double",
+    "price": 13.9,
+    "description": "Modello all'avanguardia con telaio MA (Midship Aero). Il telaio MA monoblocco a doppio pignone è celeberrimo per la straordinaria rigidità strutturale, il perfetto bilanciamento dei pesi al 50/50 e l'eccezionale efficienza di trasmissione senza rinvii ad albero.",
+    "specs": {
       "Telaio": "MA Chassis (Nero/Grigio)",
       "Trasmissione": "Doppio albero (Double Shaft)",
       "Rapporto di serie": "3.5:1 Super Speed Gear",
@@ -285,30 +280,36 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida ABS stile prototipo autonomo DevBot",
       "Ruote": "Cerchi a raggi e gomme a profilo ribassato 26mm"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18656/18656_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18656/18656_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/18656/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Carrozzeria in plastica rigida conforme e telaio MA ultra-rigido perfetto per il montaggio bolt-on.",
-      open: "100% Legale. Ottima base di partenza rigida, anche se molti scelgono l'MS per le sospensioni flessibili.",
-      tuned: "100% Legale. Il telaio MA è uno dei più scorrevoli in assoluto con motori Tuned PRO.",
-      boxstock: "100% Legale per gare Box Stock con il modello Robo Race DevBot 2.0.",
-      expert: "Non consigliato su pista piana tradizionale (si preferiscono telai a singolo pignone tipo Super-II).",
-      street: "100% Legale e solidissimo per resistere agli urti con mazza da guida all'aperto."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18656/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Carrozzeria in plastica rigida conforme e telaio MA ultra-rigido perfetto per il montaggio bolt-on.",
+      "open": "100% Legale. Ottima base di partenza rigida, anche se molti scelgono l'MS per le sospensioni flessibili.",
+      "tuned": "100% Legale. Il telaio MA è uno dei più scorrevoli in assoluto con motori Tuned PRO.",
+      "boxstock": "100% Legale per gare Box Stock con il modello Robo Race DevBot 2.0.",
+      "expert": "Non consigliato su pista piana tradizionale (si preferiscono telai a singolo pignone tipo Super-II).",
+      "street": "100% Legale e solidissimo per resistere agli urti con mazza da guida all'aperto."
     }
   },
   {
-    id: "kit_18096",
-    itemNumber: "18096",
-    name: "Dual Ridge Jr. (VZ Chassis)",
-    category: "chassis",
-    chassisType: "single",
-    price: 14.50,
-    description: "Disegnato dal celebre designer Takayuki Yamazaki. Il telaio VZ è l'evoluzione moderna del celeberrimo VS: telaio leggero, compatto, con paraurti rimovibili e flessibilità torsionale calibrata per assorbire i colpi delle curve veloci.",
-    specs: {
+    "id": "kit_18096",
+    "itemNumber": "18096",
+    "name": "Dual Ridge Jr. (VZ Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 14.5,
+    "description": "Disegnato dal celebre designer Takayuki Yamazaki. Il telaio VZ è l'evoluzione moderna del celeberrimo VS: telaio leggero, compatto, con paraurti rimovibili e flessibilità torsionale calibrata per assorbire i colpi delle curve veloci.",
+    "specs": {
       "Telaio": "VZ Chassis (Nero rinforzato)",
       "Trasmissione": "Singolo albero con albero di rinvio",
       "Rapporto di serie": "3.5:1 Super Speed Gear",
@@ -316,30 +317,37 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida ABS aerodinamica",
       "Ruote": "Cerchi argento V-Spoke e gomme Super Hard"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18096/18096_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18096/18096_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/18096/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Uno dei telai più competitivi e vincenti della classe B-Max per la sua agilità.",
-      open: "100% Legale. Telaio facile da lavorare, paraurti anteriore e posteriore rimovibili per montare AT-Bumper.",
-      tuned: "100% Legale. Leggerezza al vertice della categoria per massimizzare la resa dei motori Tuned.",
-      boxstock: "100% Legale per la classe scatola.",
-      expert: "Ottimo per pista piana grazie al peso ridotto del telaio VZ.",
-      street: "Legale e versatile con assetti rialzati."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18096/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Uno dei telai più competitivi e vincenti della classe B-Max per la sua agilità.",
+      "open": "100% Legale. Telaio facile da lavorare, paraurti anteriore e posteriore rimovibili per montare AT-Bumper.",
+      "tuned": "100% Legale. Leggerezza al vertice della categoria per massimizzare la resa dei motori Tuned.",
+      "boxstock": "100% Legale per la classe scatola.",
+      "expert": "Ottimo per pista piana grazie al peso ridotto del telaio VZ.",
+      "street": "Legale e versatile con assetti rialzati."
     }
   },
   {
-    id: "kit_18714",
-    itemNumber: "18714",
-    name: "Mach Frame (FM-A Chassis)",
-    category: "chassis",
-    chassisType: "single",
-    price: 14.90,
-    description: "Vincitore del concorso di design Mini 4WD 2018. Il telaio FM-A a motore anteriore (Front-Midship Aero) è insuperabile sui tracciati con grandi salti: il baricentro avanzato garantisce atterraggi stabili 'a muso in giù', evitando che la macchina decolli con il retrotreno.",
-    specs: {
+    "id": "kit_18714",
+    "itemNumber": "18714",
+    "name": "Mach Frame (FM-A Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 14.9,
+    "description": "Vincitore del concorso di design Mini 4WD 2018. Il telaio FM-A a motore anteriore (Front-Midship Aero) è insuperabile sui tracciati con grandi salti: il baricentro avanzato garantisce atterraggi stabili 'a muso in giù', evitando che la macchina decolli con il retrotreno.",
+    "specs": {
       "Telaio": "FM-A Chassis (Motore anteriore)",
       "Trasmissione": "Singolo albero inverso con skid bar integrata",
       "Rapporto di serie": "3.5:1 Super Speed Gear",
@@ -347,30 +355,36 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida multiparte Mach Frame",
       "Ruote": "Cerchi bianchi e gomme Low Profile"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18714/18714_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18714/18714_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/18714/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Punto di riferimento assoluto per circuiti tecnici con salti alti nel B-Max.",
-      open: "100% Legale. Molto utilizzato anche in Open per assetti con motore anteriore.",
-      tuned: "100% Legale. Ottima stabilità sui ponti anche con velocità ridotta.",
-      boxstock: "100% Legale.",
-      expert: "Sconsigliato su pista piana pura (la trazione anteriore assorbe leggermente più energia nei lunghi rettilinei).",
-      street: "Incredibilmente performante su sterrato: la trazione anteriore tira l'auto fuori da buche e foglie."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18714/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Punto di riferimento assoluto per circuiti tecnici con salti alti nel B-Max.",
+      "open": "100% Legale. Molto utilizzato anche in Open per assetti con motore anteriore.",
+      "tuned": "100% Legale. Ottima stabilità sui ponti anche con velocità ridotta.",
+      "boxstock": "100% Legale.",
+      "expert": "Sconsigliato su pista piana pura (la trazione anteriore assorbe leggermente più energia nei lunghi rettilinei).",
+      "street": "Incredibilmente performante su sterrato: la trazione anteriore tira l'auto fuori da buche e foglie."
     }
   },
   {
-    id: "kit_18626",
-    itemNumber: "18626",
-    name: "Avante Mk.III Azure (MS Chassis)",
-    category: "chassis",
-    chassisType: "double",
-    price: 13.50,
-    description: "Il leggendario telaio MS in 3 parti (anteriore, centrale, posteriore). È il telaio in assoluto più titolato nella storia della categoria Open mondiale, grazie alla possibilità di sezionare i supporti e realizzare le famose sospensioni 'MS-Flexible'.",
-    specs: {
+    "id": "kit_18626",
+    "itemNumber": "18626",
+    "name": "Avante Mk.III Azure (MS Chassis)",
+    "category": "chassis",
+    "chassisType": "double",
+    "price": 13.5,
+    "description": "Il leggendario telaio MS in 3 parti (anteriore, centrale, posteriore). È il telaio in assoluto più titolato nella storia della categoria Open mondiale, grazie alla possibilità di sezionare i supporti e realizzare le famose sospensioni 'MS-Flexible'.",
+    "specs": {
       "Telaio": "MS Chassis (3-Piece Modular)",
       "Trasmissione": "Doppio albero (Double Shaft)",
       "Rapporto di serie": "3.5:1 & 4:1 inclusi",
@@ -378,30 +392,35 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida Avante Mk.III",
       "Ruote": "Cerchi Large Dia. con gomme slick"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18626/18626_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18626/18626_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/18626/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock"],
-    rulesNotes: {
-      bmax: "100% Legale se montato SENZA tagli (in versione rigida standard).",
-      open: "RE DELLA OPEN CLASS. La quasi totalità delle vetture vincenti Japan Cup usa il telaio centrale MS lavorato a sospensione flessibile.",
-      tuned: "100% Legale in assetto standard.",
-      boxstock: "100% Legale per gare con kit Avante Mk.III.",
-      expert: "Non utilizzato nella tradizione piana monobarra.",
-      street: "Troppo rigido e basso per impieghi outdoor su sterrato."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18626/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale se montato SENZA tagli (in versione rigida standard).",
+      "open": "RE DELLA OPEN CLASS. La quasi totalità delle vetture vincenti Japan Cup usa il telaio centrale MS lavorato a sospensione flessibile.",
+      "tuned": "100% Legale in assetto standard.",
+      "boxstock": "100% Legale per gare con kit Avante Mk.III.",
+      "expert": "Non utilizzato nella tradizione piana monobarra.",
+      "street": "Troppo rigido e basso per impieghi outdoor su sterrato."
     }
   },
   {
-    id: "kit_18701",
-    itemNumber: "18701",
-    name: "Aero Avante (AR Chassis)",
-    category: "chassis",
-    chassisType: "single",
-    price: 13.90,
-    description: "Il telaio AR è un capolavoro di aerodinamica: tunnel dell'aria integrati per il raffreddamento del motore, vano pile e motore accessibili dal fondo senza rimuovere la carrozzeria, e una rigidità torsionale eccezionale.",
-    specs: {
+    "id": "kit_18701",
+    "itemNumber": "18701",
+    "name": "Aero Avante (AR Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 13.9,
+    "description": "Il telaio AR è un capolavoro di aerodinamica: tunnel dell'aria integrati per il raffreddamento del motore, vano pile e motore accessibili dal fondo senza rimuovere la carrozzeria, e una rigidità torsionale eccezionale.",
+    "specs": {
       "Telaio": "AR Chassis (Aerodynamic Monocoque)",
       "Trasmissione": "Singolo albero con tunnel aria",
       "Rapporto di serie": "3.5:1 Super Speed",
@@ -409,29 +428,35 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida Aero Avante",
       "Ruote": "Cerchi Medium Low Profile"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18701/18701_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18701/18701_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/18701/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Telaio indistruttibile con eccellente alloggiamento per piastre freno posteriori AR.",
-      open: "100% Legale, anche se più pesante rispetto a VZ ed MS.",
-      tuned: "100% Legale. Raffredda ottimamente i motori Tuned nelle finali a più manche.",
-      boxstock: "100% Legale.",
-      street: "Ottimo telaio protetto per asfalto all'aperto."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18701/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Telaio indistruttibile con eccellente alloggiamento per piastre freno posteriori AR.",
+      "open": "100% Legale, anche se più pesante rispetto a VZ ed MS.",
+      "tuned": "100% Legale. Raffredda ottimamente i motori Tuned nelle finali a più manche.",
+      "boxstock": "100% Legale.",
+      "street": "Ottimo telaio protetto per asfalto all'aperto."
     }
   },
   {
-    id: "kit_19431",
-    itemNumber: "19431",
-    name: "Magnum Saber Premium (Super-II Chassis)",
-    category: "chassis",
-    chassisType: "single",
-    price: 13.50,
-    description: "Il mitico modello della serie 'Let's & Go!' in versione Premium su telaio Super-II. Il telaio Super-II è leggero, scattante e offre montaggi per roll-bar e rulli a sgancio rapido. È una delle basi predilette per le competizioni su pista piana.",
-    specs: {
+    "id": "kit_19431",
+    "itemNumber": "19431",
+    "name": "Magnum Saber Premium (Super-II Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 13.5,
+    "description": "Il mitico modello della serie 'Let's & Go!' in versione Premium su telaio Super-II. Il telaio Super-II è leggero, scattante e offre montaggi per roll-bar e rulli a sgancio rapido. È una delle basi predilette per le competizioni su pista piana.",
+    "specs": {
       "Telaio": "Super-II Chassis (Nero rinforzato)",
       "Trasmissione": "Singolo albero compatto",
       "Rapporto di serie": "3.5:1 Super Speed",
@@ -439,34 +464,36 @@ const TAMIYA_COMPONENTS = [
       "Carrozzeria": "Plastica rigida Magnum Saber Premium",
       "Ruote": "Cerchi Small Dia. e gomme slick"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/19431/19431_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/19431/19431_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/19431/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "boxstock", "expert"],
-    rulesNotes: {
-      bmax: "100% Legale.",
-      open: "100% Legale.",
-      tuned: "100% Legale.",
-      boxstock: "100% Legale.",
-      expert: "SCELTA TOP PER LA PISTA PIANA ITALIANA: peso piuma e trasmissione diretta perfetta per la monobarra.",
-      street: "Troppo delicato per asfalto ruvido."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/19431/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "expert"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "boxstock": "100% Legale.",
+      "expert": "SCELTA TOP PER LA PISTA PIANA ITALIANA: peso piuma e trasmissione diretta perfetta per la monobarra.",
+      "street": "Troppo delicato per asfalto ruvido."
     }
   },
-
-  // ==========================================
-  // MOTORI / MOTORS
-  // ==========================================
   {
-    id: "motor_15477",
-    itemNumber: "15477",
-    name: "Hyper-Dash 3 Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 6.90,
-    description: "Il re indiscusso dei motori da competizione Tamiya a singolo albero. Spazzole in composto argento/carbone per minimizzare le scintille elettriche, massimizzare il rendimento e garantire una longevità superiore. Offre il compromesso perfetto tra velocità di punta e accelerazione all'uscita dai salti.",
-    specs: {
+    "id": "motor_15477",
+    "itemNumber": "15477",
+    "name": "Hyper-Dash 3 Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 6.9,
+    "description": "Il re indiscusso dei motori da competizione Tamiya a singolo albero. Spazzole in composto argento/carbone per minimizzare le scintille elettriche, massimizzare il rendimento e garantire una longevità superiore. Offre il compromesso perfetto tra velocità di punta e accelerazione all'uscita dai salti.",
+    "specs": {
       "Albero": "Singolo pignone (Single Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "17.200 - 21.200 rpm",
@@ -474,30 +501,33 @@ const TAMIYA_COMPONENTS = [
       "Consumo corrente": "1.6 - 3.0 A",
       "Spazzole": "Silver-Carbon Compound"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15477/15477_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15477/15477_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15477/index.html",
-    allowedCategories: ["bmax", "open"],
-    rulesNotes: {
-      bmax: "100% Legale nelle tappe B-Max che consentono motori Dash (lo standard italiano più comune).",
-      open: "100% Legale e largamente impiegato per la sua stabilità di erogazione sui salti.",
-      tuned: "VIETATO! Nella Tuned / TMEC sono ammessi esclusivamente i motori della serie Tuned.",
-      boxstock: "VIETATO! Ammesso solo il motore standard di scatola.",
-      expert: "VIETATO nella Expert Classica R.U.M. (ammesso invece nella Top Classica).",
-      street: "Sconsigliato perché troppo veloce da seguire a piedi in sicurezza."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15477/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale nelle tappe B-Max che consentono motori Dash (lo standard italiano più comune).",
+      "open": "100% Legale e largamente impiegato per la sua stabilità di erogazione sui salti.",
+      "tuned": "VIETATO! Nella Tuned / TMEC sono ammessi esclusivamente i motori della serie Tuned.",
+      "boxstock": "VIETATO! Ammesso solo il motore standard di scatola.",
+      "expert": "VIETATO nella Expert Classica R.U.M. (ammesso invece nella Top Classica).",
+      "street": "Sconsigliato perché troppo veloce da seguire a piedi in sicurezza."
     }
   },
   {
-    id: "motor_15478",
-    itemNumber: "15478",
-    name: "Hyper-Dash Motor PRO",
-    category: "motor",
-    chassisType: "double",
-    price: 6.90,
-    description: "Versione a doppio pignone (Double Shaft) del celebre Hyper-Dash, progettata specificamente per i telai PRO (MS e MA). Spazzole argento-carbone e rotore bilanciato ad alta efficienza.",
-    specs: {
+    "id": "motor_15478",
+    "itemNumber": "15478",
+    "name": "Hyper-Dash Motor PRO",
+    "category": "motor",
+    "chassisType": "double",
+    "price": 6.9,
+    "description": "Versione a doppio pignone (Double Shaft) del celebre Hyper-Dash, progettata specificamente per i telai PRO (MS e MA). Spazzole argento-carbone e rotore bilanciato ad alta efficienza.",
+    "specs": {
       "Albero": "Doppio pignone (Double Shaft PRO)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "17.200 - 21.200 rpm",
@@ -505,974 +535,2457 @@ const TAMIYA_COMPONENTS = [
       "Consumo corrente": "1.6 - 3.0 A",
       "Compatibilità": "Esclusivamente telai MS e MA"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15478/15478_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15478/15478_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15478/index.html",
-    allowedCategories: ["bmax", "open"],
-    rulesNotes: {
-      bmax: "100% Legale per telai MA o MS rigidi.",
-      open: "IL MOTORE PIÙ USATO IN OPEN CLASS con telaio MS-Flexible.",
-      tuned: "VIETATO nella Tuned Class.",
-      boxstock: "VIETATO nella Box Stock.",
-      expert: "Non compatibile con telai piana a singolo pignone."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15478/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale per telai MA o MS rigidi.",
+      "open": "IL MOTORE PIÙ USATO IN OPEN CLASS con telaio MS-Flexible.",
+      "tuned": "VIETATO nella Tuned Class.",
+      "boxstock": "VIETATO nella Box Stock.",
+      "expert": "Non compatibile con telai piana a singolo pignone."
     }
   },
   {
-    id: "motor_15433",
-    itemNumber: "15433",
-    name: "Mach-Dash Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 7.20,
-    description: "Il motore più veloce della serie Dash a singolo pignone per circuiti ad alta scorrevolezza. Regime di rotazione straordinario oltre i 23.000 giri al minuto, ideale per tracciati con lunghi rettilinei e curve veloci ad ampio raggio.",
-    specs: {
-      "Albero": "Singolo pignone (Single Shaft)",
+    "id": "motor_15433",
+    "itemNumber": "15433",
+    "name": "Mach-Dash Motor PRO",
+    "category": "motor",
+    "chassisType": "double",
+    "price": 7.2,
+    "description": "Il celebre motore ad altissima velocità della serie Dash a doppio pignone per telai MA ed MS. Con un regime oltre i 23.400 giri al minuto e spazzole al carbone, è il re indiscusso delle piste veloci con lunghi rettilinei e curvoni ad ampio raggio.",
+    "specs": {
+      "Albero": "Doppio pignone (Double Shaft PRO)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "20.000 - 23.400 rpm",
       "Coppia": "1.3 - 1.8 mN·m",
       "Consumo corrente": "2.0 - 4.0 A",
-      "Spazzole": "Carbonio ad alta velocità"
+      "Spazzole": "Carbonio ad alta velocità",
+      "Telaio compatibile": "MA Chassis, MS Chassis"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15433/15433_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15433/15433_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15433/index.html",
-    allowedCategories: ["bmax", "open"],
-    rulesNotes: {
-      bmax: "100% Legale nelle gare B-Max veloci.",
-      open: "100% Legale, ideale per sezioni paraboliche veloci.",
-      tuned: "VIETATO!",
-      boxstock: "VIETATO!",
-      expert: "VIETATO nella Expert (ammesso solo nella Top Classica)."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15433/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale nelle gare B-Max veloci.",
+      "open": "100% Legale, ideale per sezioni paraboliche veloci.",
+      "tuned": "VIETATO!",
+      "boxstock": "VIETATO!",
+      "expert": "VIETATO nella Expert (ammesso solo nella Top Classica)."
     }
   },
   {
-    id: "motor_15484",
-    itemNumber: "15484",
-    name: "Torque-Tuned 2 Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 5.50,
-    description: "Il motore di riferimento per i circuiti ricchi di salite, curve strette e frenate repentine. La serie Tuned 2 presenta magneti ottimizzati per erogare una coppia poderosa mantenendo un consumo di batteria molto contenuto.",
-    specs: {
+    "id": "motor_15484",
+    "itemNumber": "15484",
+    "name": "Torque-Tuned 2 Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 5.5,
+    "description": "Il motore di riferimento per i circuiti ricchi di salite, curve strette e frenate repentine. La serie Tuned 2 presenta magneti ottimizzati per erogare una coppia poderosa mantenendo un consumo di batteria molto contenuto.",
+    "specs": {
       "Albero": "Singolo pignone (Single Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "12.200 - 14.400 rpm",
       "Coppia": "1.6 - 2.0 mN·m (Coppia elevatissima)",
       "Consumo corrente": "1.5 - 2.2 A"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15484/15484_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15484/15484_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15484/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale, consigliato su piste con molti salti dove serve ripresa immediata.",
-      open: "100% Legale.",
-      tuned: "IL MOTORE PIÙ VINCENTE DELLA TUNED CLASS per circuiti tecnici.",
-      boxstock: "VIETATO nella Box Stock.",
-      expert: "100% Legale nella Expert Classica R.U.M.",
-      street: "PERFETTO PER LO STREET MINI 4WD: la coppia alta affronta salite e piccoli ostacoli senza sforzo."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15484/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale, consigliato su piste con molti salti dove serve ripresa immediata.",
+      "open": "100% Legale.",
+      "tuned": "IL MOTORE PIÙ VINCENTE DELLA TUNED CLASS per circuiti tecnici.",
+      "boxstock": "VIETATO nella Box Stock.",
+      "expert": "100% Legale nella Expert Classica R.U.M.",
+      "street": "PERFETTO PER LO STREET MINI 4WD: la coppia alta affronta salite e piccoli ostacoli senza sforzo."
     }
   },
   {
-    id: "motor_15486",
-    itemNumber: "15486",
-    name: "Atomic-Tuned 2 Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 5.50,
-    description: "Il motore più bilanciato e versatile di casa Tamiya. L'Atomic-Tuned 2 unisce una generosa velocità di punta con un'ottima coppia di ripartenza, rendendolo l'asso nella manica per i tracciati misti.",
-    specs: {
+    "id": "motor_15486",
+    "itemNumber": "15486",
+    "name": "Atomic-Tuned 2 Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 5.5,
+    "description": "Il motore più bilanciato e versatile di casa Tamiya. L'Atomic-Tuned 2 unisce una generosa velocità di punta con un'ottima coppia di ripartenza, rendendolo l'asso nella manica per i tracciati misti.",
+    "specs": {
       "Albero": "Singolo pignone (Single Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "12.700 - 14.900 rpm",
       "Coppia": "1.5 - 1.8 mN·m",
       "Consumo corrente": "1.5 - 2.2 A"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15486/15486_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15486/15486_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15486/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale.",
-      open: "100% Legale.",
-      tuned: "100% Legale. Punto di riferimento assoluto per tracciati bilanciati.",
-      boxstock: "VIETATO nella Box Stock.",
-      expert: "100% Legale e storicamente il motore più usato nelle piste piane italiane.",
-      street: "100% Legale con ottima progressione."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15486/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale. Punto di riferimento assoluto per tracciati bilanciati.",
+      "boxstock": "VIETATO nella Box Stock.",
+      "expert": "100% Legale e storicamente il motore più usato nelle piste piane italiane.",
+      "street": "100% Legale con ottima progressione."
     }
   },
   {
-    id: "motor_15485",
-    itemNumber: "15485",
-    name: "Rev-Tuned 2 Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 5.50,
-    description: "Motore orientato al regime di rotazione ad alti giri. Privilegia l'allungo nei rettilinei prolungati e nelle curve ad ampio raggio.",
-    specs: {
+    "id": "motor_15485",
+    "itemNumber": "15485",
+    "name": "Rev-Tuned 2 Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 5.5,
+    "description": "Motore orientato al regime di rotazione ad alti giri. Privilegia l'allungo nei rettilinei prolungati e nelle curve ad ampio raggio.",
+    "specs": {
       "Albero": "Singolo pignone (Single Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min (RPM sotto carico)": "13.400 - 15.200 rpm",
       "Coppia": "1.2 - 1.5 mN·m",
       "Consumo corrente": "1.6 - 2.4 A"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15485/15485_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15485/15485_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15485/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert"],
-    rulesNotes: {
-      bmax: "100% Legale.",
-      tuned: "100% Legale per piste veloci con pochi ponti.",
-      expert: "100% Legale.",
-      boxstock: "VIETATO."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15485/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "tuned": "100% Legale per piste veloci con pochi ponti.",
+      "expert": "100% Legale.",
+      "boxstock": "VIETATO."
     }
   },
   {
-    id: "motor_15487",
-    itemNumber: "15487",
-    name: "Torque-Tuned 2 Motor PRO",
-    category: "motor",
-    chassisType: "double",
-    price: 5.50,
-    description: "Versione a doppio pignone (Double Shaft) del Torque-Tuned 2 per telai MS e MA. Eroga una coppia impressionante fin dai bassi regimi, ideale per riprendere velocità all'uscita dalle chicane e dai salti.",
-    specs: {
+    "id": "motor_15487",
+    "itemNumber": "15487",
+    "name": "Torque-Tuned 2 Motor PRO",
+    "category": "motor",
+    "chassisType": "double",
+    "price": 5.5,
+    "description": "Versione a doppio pignone (Double Shaft) del Torque-Tuned 2 per telai MS e MA. Eroga una coppia impressionante fin dai bassi regimi, ideale per riprendere velocità all'uscita dalle chicane e dai salti.",
+    "specs": {
       "Albero": "Doppio pignone PRO (Double Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min": "12.200 - 14.400 rpm",
       "Coppia": "1.6 - 2.0 mN·m",
       "Compatibilità": "Telai MS e MA"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15487/15487_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15487/15487_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15487/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% Legale su telaio MA o MS.",
-      open: "100% Legale.",
-      tuned: "100% Legale per categorie Tuned PRO.",
-      boxstock: "VIETATO."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15487/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale su telaio MA o MS.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale per categorie Tuned PRO.",
+      "boxstock": "VIETATO."
     }
   },
   {
-    id: "motor_15317",
-    itemNumber: "15317",
-    name: "Power-Dash Motor",
-    category: "motor",
-    chassisType: "single",
-    price: 7.50,
-    description: "Motore Dash a singolo pignone focalizzato sulla coppia estrema (end-bell verde). Perfetto per piste con molteplici salite, pendenze ripide e cambi di corsia impegnativi.",
-    specs: {
+    "id": "motor_15317",
+    "itemNumber": "15317",
+    "name": "Power-Dash Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 7.5,
+    "description": "Motore Dash a singolo pignone focalizzato sulla coppia estrema (end-bell verde). Perfetto per piste con molteplici salite, pendenze ripide e cambi di corsia impegnativi.",
+    "specs": {
       "Albero": "Singolo pignone (Single Shaft)",
       "Tensione nominale": "2.4 - 3.0 V",
       "Giri/min": "19.900 - 23.600 rpm",
       "Coppia": "1.6 - 2.0 mN·m",
       "Fondello": "Verde scuro"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15317/15317_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15317/15317_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15317/index.html",
-    allowedCategories: ["bmax", "open", "street"],
-    rulesNotes: {
-      bmax: "100% Legale.",
-      open: "100% Legale.",
-      tuned: "VIETATO!",
-      boxstock: "VIETATO!",
-      street: "Ottimo per arrampicarsi su rampe ripide all'aperto."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15317/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "VIETATO!",
+      "boxstock": "VIETATO!",
+      "street": "Ottimo per arrampicarsi su rampe ripide all'aperto."
     }
   },
-
-  // ==========================================
-  // STAFFE & PIASTRE (PLATES & STAYS)
-  // ==========================================
   {
-    id: "stay_15499",
-    itemNumber: "15499",
-    name: "HG Carbon Wide Rear Plate (1.5mm)",
-    category: "plate",
-    chassisType: "universal",
-    price: 11.90,
-    description: "La piastra posteriore in fibra di carbonio ad alto modulo (HG Carbon) da 1.5 mm è il pilastro indiscusso di qualsiasi preparazione moderna. Offre fori multipli per rulli da 9mm, 13mm e 19mm a piena larghezza sagoma (105mm), con una rigidità alla flessione imbattibile.",
-    specs: {
+    "id": "stay_15499",
+    "itemNumber": "15499",
+    "name": "HG Carbon Wide Rear Plate (1.5mm)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 11.9,
+    "description": "La piastra posteriore in fibra di carbonio ad alto modulo (HG Carbon) da 1.5 mm è il pilastro indiscusso di qualsiasi preparazione moderna. Offre fori multipli per rulli da 9mm, 13mm e 19mm a piena larghezza sagoma (105mm), con una rigidità alla flessione imbattibile.",
+    "specs": {
       "Materiale": "Fibra di carbonio pura 1.5mm (Carbon Weave Pattern)",
       "Posizione": "Posteriore (Rear Stay)",
       "Fori rulli": "Supporta 9mm, 13mm, 19mm a quota 105mm",
       "Peso": "2.2 grammi",
       "Logo": "Serigrafia ufficiale Tamiya bianca"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15499/15499_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15499/15499_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15499/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale a patto di montarla SENZA tagliarla o forarla. Si consiglia montaggio sandwich doppio per massima rigidità.",
-      open: "100% Legale. Base perfetta per ancore posteriori sagomate o supporti rulli rigidi.",
-      tuned: "100% Legale (conteggiata come 1 delle 3 piastre massime consentite).",
-      boxstock: "VIETATA nella Box Stock.",
-      expert: "Ottima per prolunghe posteriori di tenuta.",
-      street: "Consigliata per proteggere il retrotreno da urti stradali."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15499/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale a patto di montarla SENZA tagliarla o forarla. Si consiglia montaggio sandwich doppio per massima rigidità.",
+      "open": "100% Legale. Base perfetta per ancore posteriori sagomate o supporti rulli rigidi.",
+      "tuned": "100% Legale (conteggiata come 1 delle 3 piastre massime consentite).",
+      "boxstock": "VIETATA nella Box Stock.",
+      "expert": "Ottima per prolunghe posteriori di tenuta.",
+      "street": "Consigliata per proteggere il retrotreno da urti stradali."
     }
   },
   {
-    id: "stay_15498",
-    itemNumber: "15498",
-    name: "HG Carbon Wide Front Plate (1.5mm)",
-    category: "plate",
-    chassisType: "universal",
-    price: 11.90,
-    description: "Piastra anteriore in fibra di carbonio ad alto modulo da 1.5 mm. Sagomata per ospitare rulli da 9mm, 13mm e 19mm all'anteriore, fornendo la rigidità necessaria ad affrontare ingressi in curva a oltre 35 km/h senza flettere.",
-    specs: {
+    "id": "stay_15498",
+    "itemNumber": "15498",
+    "name": "HG Carbon Wide Front Plate (1.5mm)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 11.9,
+    "description": "Piastra anteriore in fibra di carbonio ad alto modulo da 1.5 mm. Sagomata per ospitare rulli da 9mm, 13mm e 19mm all'anteriore, fornendo la rigidità necessaria ad affrontare ingressi in curva a oltre 35 km/h senza flettere.",
+    "specs": {
       "Materiale": "HG Carbon 1.5mm",
       "Posizione": "Anteriore (Front Stay)",
       "Fori rulli": "9mm, 13mm, 19mm",
       "Compatibilità": "AR, MA, VZ, MS, FM-A, Super-II"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15498/15498_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15498/15498_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15498/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale se montata intatta senza modifiche.",
-      open: "100% Legale.",
-      tuned: "100% Legale (conteggiata nel limite di 3 piastre).",
-      boxstock: "VIETATA."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15498/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale se montata intatta senza modifiche.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale (conteggiata nel limite di 3 piastre).",
+      "boxstock": "VIETATA."
     }
   },
   {
-    id: "stay_15518",
-    itemNumber: "15518",
-    name: "FRP Rear Brake Stay Set",
-    category: "plate",
-    chassisType: "universal",
-    price: 5.90,
-    description: "Il set piastra freno posteriore in fibra di vetro (FRP) più diffuso al mondo. La sua ampia superficie inferiore piana è disegnata specificamente per accogliere le spugne freno Tamiya da 1mm, 2mm o 3mm, garantendo frenate simmetriche sui tratti di salita e sui salti.",
-    specs: {
+    "id": "stay_15518",
+    "itemNumber": "15518",
+    "name": "FRP Rear Brake Stay Set",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 5.9,
+    "description": "Il set piastra freno posteriore in fibra di vetro (FRP) più diffuso al mondo. La sua ampia superficie inferiore piana è disegnata specificamente per accogliere le spugne freno Tamiya da 1mm, 2mm o 3mm, garantendo frenate simmetriche sui tratti di salita e sui salti.",
+    "specs": {
       "Materiale": "Fibra di vetro FRP rinforzata",
       "Posizione": "Inferiore posteriore (Brake Stay)",
       "Viti incluse": "Viti 2mm a testa svasata e distanziali inclusi"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15518/15518_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15518/15518_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15518/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% Legale. È la piastra freno obbligata per quasi tutti i setup B-Max da salto.",
-      open: "100% Legale. Spesso usata come piastra freno inferiore.",
-      tuned: "100% Legale (conta come 1 delle 3 piastre).",
-      boxstock: "VIETATA.",
-      expert: "Sconsigliata su pista piana (su pista piana non si usano freni).",
-      street: "Non consigliata per outdoor (riduce troppo la luce da terra)."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15518/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. È la piastra freno obbligata per quasi tutti i setup B-Max da salto.",
+      "open": "100% Legale. Spesso usata come piastra freno inferiore.",
+      "tuned": "100% Legale (conta come 1 delle 3 piastre).",
+      "boxstock": "VIETATA.",
+      "expert": "Sconsigliata su pista piana (su pista piana non si usano freni).",
+      "street": "Non consigliata per outdoor (riduce troppo la luce da terra)."
     }
   },
   {
-    id: "stay_15451_frp",
-    itemNumber: "15451",
-    name: "FRP Wide Front Plate (for AR Chassis)",
-    category: "plate",
-    chassisType: "universal",
-    price: 4.80,
-    description: "Piastra anteriore in fibra di vetro rinforzata FRP a basso costo. Ottima resistenza meccanica e flessibilità calibrata per attutire i colpi sui cordoli della pista.",
-    specs: {
+    "id": "stay_15451_frp",
+    "itemNumber": "15451",
+    "name": "FRP Wide Front Plate (for AR Chassis)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 4.8,
+    "description": "Piastra anteriore in fibra di vetro rinforzata FRP a basso costo. Ottima resistenza meccanica e flessibilità calibrata per attutire i colpi sui cordoli della pista.",
+    "specs": {
       "Materiale": "FRP",
       "Posizione": "Anteriore",
       "Rulli compatibili": "9mm, 11mm, 13mm, 19mm"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15451/15451_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15451/15451_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15451/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Alternativa economica al carbonio HG.",
-      tuned: "100% Legale. Molto utilizzata per il rispetto del budget e del regolamento TMEC."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15451/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Alternativa economica al carbonio HG.",
+      "tuned": "100% Legale. Molto utilizzata per il rispetto del budget e del regolamento TMEC."
     }
   },
   {
-    id: "stay_95275",
-    itemNumber: "95275",
-    name: "HG Carbon Multi Roller Setting Stay (1.5mm) J-Cup",
-    category: "plate",
-    chassisType: "universal",
-    price: 12.50,
-    description: "Edizione limitata Japan Cup della celebre piastra Multi Roller. Estremamente versatile, permette il montaggio su una vastissima gamma di telai allargando la carreggiata anteriore a 104.5 mm.",
-    specs: {
+    "id": "stay_95275",
+    "itemNumber": "95275",
+    "name": "HG Carbon Multi Roller Setting Stay (1.5mm) J-Cup",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 12.5,
+    "description": "Edizione limitata Japan Cup della celebre piastra Multi Roller. Estremamente versatile, permette il montaggio su una vastissima gamma di telai allargando la carreggiata anteriore a 104.5 mm.",
+    "specs": {
       "Materiale": "Carbonio HG 1.5mm con grafica serigrafata oro/bianco",
       "Posizione": "Anteriore / Posteriore versatile"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15498/15498_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15498/15498_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15498/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15498/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert"
+    ]
   },
-
-  // ==========================================
-  // DUMPER / MASS DAMPERS
-  // ==========================================
   {
-    id: "damp_15459",
-    itemNumber: "15459",
-    name: "AR Chassis Side Mass Damper Set",
-    category: "damper",
-    chassisType: "universal",
-    price: 8.90,
-    description: "Il kit di smorzatori laterali (Side Mass Damper) più utilizzato nelle competizioni B-Max. Include le speciali staffe in FRP sagomate per i supporti laterali dei telai AR, MA e VZ, e i pesi cilindrici in ottone con profilo bombato per azzerare il rimbalzo all'atterraggio.",
-    specs: {
+    "id": "damp_15459",
+    "itemNumber": "15459",
+    "name": "AR Chassis Side Mass Damper Set",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 8.9,
+    "description": "Il kit di smorzatori laterali (Side Mass Damper) più utilizzato nelle competizioni B-Max. Include le speciali staffe in FRP sagomate per i supporti laterali dei telai AR, MA e VZ, e i pesi cilindrici in ottone con profilo bombato per azzerare il rimbalzo all'atterraggio.",
+    "specs": {
       "Pesi inclusi": "2x pesi cilindrici in ottone (Bowl Damper ~3.4g ciascuno)",
       "Piastre incluse": "2x piastre laterali FRP",
       "Posizione": "Fiancate laterali (Side Stay)",
       "Accessori": "Colonnine filettate, distanziali e dadi autobloccanti"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15459/15459_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15459/15459_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15459/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% LEGALE E FONDAMENTALE. Nel B-Max i side dampers sono il componente chiave per non volare fuori pista sui salti.",
-      open: "100% Legale, spesso abbinato o integrato col Chochin.",
-      tuned: "100% Legale (attenzione al conteggio delle piastre FRP in base al regolamento locale).",
-      boxstock: "VIETATO nella Box Stock.",
-      expert: "VIETATO / SCONSIGLIATO nella Expert Classica su pista piana."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15459/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE E FONDAMENTALE. Nel B-Max i side dampers sono il componente chiave per non volare fuori pista sui salti.",
+      "open": "100% Legale, spesso abbinato o integrato col Chochin.",
+      "tuned": "100% Legale (attenzione al conteggio delle piastre FRP in base al regolamento locale).",
+      "boxstock": "VIETATO nella Box Stock.",
+      "expert": "VIETATO / SCONSIGLIATO nella Expert Classica su pista piana."
     }
   },
   {
-    id: "damp_15501",
-    itemNumber: "15501",
-    name: "Slim Mass Damper Set",
-    category: "damper",
-    chassisType: "universal",
-    price: 7.20,
-    description: "Set di pesi smorzatori con profilo compatto e allungato ('Slim'). Perfetti per essere posizionati in spazi ristretti tra la carrozzeria e i paraurti o dietro le ruote posteriori per abbassare il baricentro complessivo.",
-    specs: {
+    "id": "damp_15501",
+    "itemNumber": "15501",
+    "name": "Slim Mass Damper Set",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 7.2,
+    "description": "Set di pesi smorzatori con profilo compatto e allungato ('Slim'). Perfetti per essere posizionati in spazi ristretti tra la carrozzeria e i paraurti o dietro le ruote posteriori per abbassare il baricentro complessivo.",
+    "specs": {
       "Pesi": "2x pesi slim corti (~1.5g) e 2x pesi slim lunghi (~3g)",
       "Materiale": "Ottone argentato",
       "Compatibilità": "Universale su tutti i telai"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15501/15501_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15501/15501_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15501/index.html",
-    allowedCategories: ["bmax", "open", "tuned"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15501/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ]
   },
   {
-    id: "damp_15451_mass",
-    itemNumber: "15451",
-    name: "AR Chassis Mass Damper Set (Bowl & Block)",
-    category: "damper",
-    chassisType: "universal",
-    price: 7.50,
-    description: "Kit classico di mass damper con pesi semisferici ('Bowl') per una risposta rapida e progressiva nei salti verticali.",
-    specs: {
+    "id": "damp_15460",
+    "itemNumber": "15460",
+    "name": "AR Chassis Mass Damper Set (Bowl & Block)",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 7.5,
+    "description": "Kit classico di mass damper con pesi semisferici ('Bowl') per una risposta rapida e progressiva nei salti verticali.",
+    "specs": {
       "Pesi inclusi": "Pesi in ottone sferici e rondelle di taratura",
-      "Fissaggio": "Viti da 25mm e 30mm con dadi in alluminio"
+      "Fissaggio": "Viti da 25mm e 30mm con dadi in alluminio",
+      "Item Ufficiale": "Tamiya #15460"
     },
-    images: [
-      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15451/15451_1.jpg",
-      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15451/15451_s.jpg"
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15460/15460_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15460/15460_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15451/index.html",
-    allowedCategories: ["bmax", "open", "tuned"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15460/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ]
   },
-
-  // ==========================================
-  // RULLI & CUSCINETTI (ROLLERS & BEARINGS)
-  // ==========================================
   {
-    id: "roller_15497",
-    itemNumber: "15497",
-    name: "HG 13mm All-Aluminum Ball-Race Rollers (Ringless)",
-    category: "roller",
-    chassisType: "universal",
-    price: 10.90,
-    description: "I leggendari rulli in alluminio da 13 mm torniti di precisione con cuscinetto a sfere 520 integrato sigillato. Senza anello in gomma (Ringless) per minimizzare l'attrito radente sulle sponde delle curve e garantire traiettorie stabili ad altissima velocità.",
-    specs: {
+    "id": "roller_15497",
+    "itemNumber": "15497",
+    "name": "HG 13mm All-Aluminum Ball-Race Rollers (Ringless)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 10.9,
+    "description": "I leggendari rulli in alluminio da 13 mm torniti di precisione con cuscinetto a sfere 520 integrato sigillato. Senza anello in gomma (Ringless) per minimizzare l'attrito radente sulle sponde delle curve e garantire traiettorie stabili ad altissima velocità.",
+    "specs": {
       "Diametro": "13 mm",
       "Materiale": "Alluminio tornito CNC anodizzato naturale",
       "Cuscinetto": "Cuscinetto a sfera 520 ad alta precisione integrato",
       "Contenuto": "Coppia da 2 rulli completi di viti e spessori"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15497/15497_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15497/15497_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15497/index.html",
-    allowedCategories: ["bmax", "open", "expert"],
-    rulesNotes: {
-      bmax: "100% LEGALE. È la misura di rullo standard e più efficace sia all'anteriore che al posteriore.",
-      open: "100% Legale e ampiamente utilizzata sui paraurti Pivot / AT.",
-      tuned: "VIETATA se il regolamento TMEC locale impone solo rulli in plastica senza cuscinetti.",
-      boxstock: "VIETATA.",
-      expert: "100% Legale su monobarra per pista piana."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15497/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "expert"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE. È la misura di rullo standard e più efficace sia all'anteriore che al posteriore.",
+      "open": "100% Legale e ampiamente utilizzata sui paraurti Pivot / AT.",
+      "tuned": "VIETATA se il regolamento TMEC locale impone solo rulli in plastica senza cuscinetti.",
+      "boxstock": "VIETATA.",
+      "expert": "100% Legale su monobarra per pista piana."
     }
   },
   {
-    id: "roller_15464",
-    itemNumber: "15464",
-    name: "HG 19mm Aluminum Ball-Race Rollers (Ringless)",
-    category: "roller",
-    chassisType: "universal",
-    price: 11.50,
-    description: "Rulli ad altissima scorrevolezza con diametro maggiorato da 19 mm. Il diametro grande scavalca con facilità microscopiche imperfezioni o giunture tra le corsie di pista, assicurando una scorrevolezza eccelsa nelle paraboliche veloci.",
-    specs: {
+    "id": "roller_15464",
+    "itemNumber": "15464",
+    "name": "HG 19mm Aluminum Ball-Race Rollers (Ringless)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 11.5,
+    "description": "Rulli ad altissima scorrevolezza con diametro maggiorato da 19 mm. Il diametro grande scavalca con facilità microscopiche imperfezioni o giunture tra le corsie di pista, assicurando una scorrevolezza eccelsa nelle paraboliche veloci.",
+    "specs": {
       "Diametro": "19 mm",
       "Materiale": "Alluminio tornito ad alta precisione",
       "Cuscinetto": "Cuscinetto a sfera 520 sigillato",
       "Contenuto": "2 rulli per confezione"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15464/15464_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15464/15464_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15464/index.html",
-    allowedCategories: ["bmax", "open", "expert"],
-    rulesNotes: {
-      bmax: "100% Legale, consigliatissimo al posteriore per stabilizzare l'auto in uscita dai dossi.",
-      open: "100% Legale.",
-      tuned: "Non ammesso in TMEC per via del cuscinetto a sfere metallico.",
-      expert: "Ottimo sul rullo guida posteriore."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15464/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "expert"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale, consigliatissimo al posteriore per stabilizzare l'auto in uscita dai dossi.",
+      "open": "100% Legale.",
+      "tuned": "Non ammesso in TMEC per via del cuscinetto a sfere metallico.",
+      "expert": "Ottimo sul rullo guida posteriore."
     }
   },
   {
-    id: "roller_15398",
-    itemNumber: "15398",
-    name: "Double Aluminum Rollers (13-12mm)",
-    category: "roller",
-    chassisType: "universal",
-    price: 12.90,
-    description: "Il celebre rullo doppio in alluminio a due stadi (13mm inferiore, 12mm superiore). In rettilineo e in curva normale lavora solo il rullo inferiore da 13mm; quando la macchina tende a scomporsi o inclinarsi sui salti, entra in contatto il rullo superiore da 12mm riportando la vettura in assetto orizzontale.",
-    specs: {
+    "id": "roller_15398",
+    "itemNumber": "15398",
+    "name": "Double Aluminum Rollers (13-12mm)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 12.9,
+    "description": "Il celebre rullo doppio in alluminio a due stadi (13mm inferiore, 12mm superiore). In rettilineo e in curva normale lavora solo il rullo inferiore da 13mm; quando la macchina tende a scomporsi o inclinarsi sui salti, entra in contatto il rullo superiore da 12mm riportando la vettura in assetto orizzontale.",
+    "specs": {
       "Diametro": "13 mm inferiore / 12 mm superiore (2-Stage)",
       "Materiale": "Alluminio tornito monoblocco con cuscinetto a sfere",
       "Funzione": "Anti-ribaltamento automatico all'anteriore"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15398/15398_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15398/15398_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15398/index.html",
-    allowedCategories: ["bmax", "open"],
-    rulesNotes: {
-      bmax: "100% LEGALE. È la scelta anteriore numero 1 nei campionati B-Max per evitare ribaltamenti nelle esse veloci.",
-      open: "100% Legale.",
-      tuned: "Non ammesso in varianti con divieto cuscinetti a sfere.",
-      boxstock: "VIETATO."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15398/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE. È la scelta anteriore numero 1 nei campionati B-Max per evitare ribaltamenti nelle esse veloci.",
+      "open": "100% Legale.",
+      "tuned": "Non ammesso in varianti con divieto cuscinetti a sfere.",
+      "boxstock": "VIETATO."
     }
   },
   {
-    id: "roller_15447",
-    itemNumber: "15447",
-    name: "19mm Low Friction Plastic Double Rollers",
-    category: "roller",
-    chassisType: "universal",
-    price: 4.50,
-    description: "Rulli in speciale plastica POM a bassissimo coefficiente d'attrito. Leggeri, economici e totalmente privi di cuscinetti metallici, sono la scelta ideale per le classi che limitano i cuscinetti.",
-    specs: {
+    "id": "roller_15447",
+    "itemNumber": "15447",
+    "name": "19mm Low Friction Plastic Double Rollers",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 4.5,
+    "description": "Rulli in speciale plastica POM a bassissimo coefficiente d'attrito. Leggeri, economici e totalmente privi di cuscinetti metallici, sono la scelta ideale per le classi che limitano i cuscinetti.",
+    "specs": {
       "Diametro": "19 mm",
       "Materiale": "Resina POM a basso attrito (Nero)",
       "Cuscinetto": "Nessuno (rotazione su boccola liscia)"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15447/15447_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15447/15447_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15447/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% Legale.",
-      tuned: "100% LEGALE E RACCOMANDATO PER LA TUNED CLASS / TMEC: rispetta il divieto di cuscinetti a sfere offrendo massima scorrevolezza.",
-      boxstock: "VIETATO (nella Box Stock solo rulli da scatola)."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15447/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "tuned": "100% LEGALE E RACCOMANDATO PER LA TUNED CLASS / TMEC: rispetta il divieto di cuscinetti a sfere offrendo massima scorrevolezza.",
+      "boxstock": "VIETATO (nella Box Stock solo rulli da scatola)."
     }
   },
   {
-    id: "bear_15423",
-    itemNumber: "15423",
-    name: "HG 620 Ball Bearings (2 pcs)",
-    category: "roller",
-    chassisType: "universal",
-    price: 8.90,
-    description: "I mitici cuscinetti Tamiya 620 per gli assali delle ruote. Considerati da tutti i preparatori il punto di riferimento assoluto per scorrevolezza e tolleranze dimensionali. Sgrassati con apposito solvente e lubrificati con micro-gocce di olio fluido garantiscono giri ruota senza attrito.",
-    specs: {
+    "id": "bear_15423",
+    "itemNumber": "15423",
+    "name": "HG 620 Ball Bearings (2 pcs)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 8.9,
+    "description": "I mitici cuscinetti Tamiya 620 per gli assali delle ruote. Considerati da tutti i preparatori il punto di riferimento assoluto per scorrevolezza e tolleranze dimensionali. Sgrassati con apposito solvente e lubrificati con micro-gocce di olio fluido garantiscono giri ruota senza attrito.",
+    "specs": {
       "Dimensioni": "Diametro esterno 6mm, spessore 2mm, foro assale 2mm",
       "Tipo": "Cuscinetto a sfera radiale schermato ad altissima precisione",
       "Quantità": "2 pezzi per confezione"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15423/15423_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15423/15423_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15423/index.html",
-    allowedCategories: ["bmax", "open", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Installabili negli alloggiamenti perni ruota del telaio.",
-      open: "100% Legale e onnipresente nelle vetture Open.",
-      tuned: "VIETATO nella TMEC base (obbligatorie boccole standard).",
-      boxstock: "VIETATO.",
-      expert: "FONDAMENTALE SU PISTA PIANA ITALIANA: azzera ogni dissipazione di potenza."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15423/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Installabili negli alloggiamenti perni ruota del telaio.",
+      "open": "100% Legale e onnipresente nelle vetture Open.",
+      "tuned": "VIETATO nella TMEC base (obbligatorie boccole standard).",
+      "boxstock": "VIETATO.",
+      "expert": "FONDAMENTALE SU PISTA PIANA ITALIANA: azzera ogni dissipazione di potenza."
     }
   },
-
-  // ==========================================
-  // RUOTE & GOMME (WHEELS & TIRES)
-  // ==========================================
   {
-    id: "tire_15527",
-    itemNumber: "15527",
-    name: "Low Friction Maroon Low Profile Tires (26mm)",
-    category: "wheel",
-    chassisType: "universal",
-    price: 4.90,
-    description: "Le leggendarie gomme Tamiya color amaranto ('Maroon') a bassissimo attrito. Riducendo drasticamente il grip rispetto alle gomme tradizionali, impediscono il rimbalzo dopo i salti e permettono al retrotreno di scivolare nelle curve strette senza impuntarsi.",
-    specs: {
+    "id": "tire_15527",
+    "itemNumber": "15527",
+    "name": "Low Friction Maroon Low Profile Tires (26mm)",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 4.9,
+    "description": "Le leggendarie gomme Tamiya color amaranto ('Maroon') a bassissimo attrito. Riducendo drasticamente il grip rispetto alle gomme tradizionali, impediscono il rimbalzo dopo i salti e permettono al retrotreno di scivolare nelle curve strette senza impuntarsi.",
+    "specs": {
       "Diametro": "26 mm (Low Profile)",
       "Mescola": "Low Friction Resinated Compound (Maroon)",
       "Quantità": "Set da 2 pneumatici",
       "Utilizzo ideale": "Asse posteriore per limitare il grip o asse anteriore per curvare liscio"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15527/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% LEGALE. La mescola Maroon è l'upgrade gomma più importante del B-Max moderno.",
-      open: "100% Legale, usatissima per mezze gomme o gomme tornite.",
-      tuned: "100% Legale.",
-      boxstock: "VIETATO.",
-      expert: "Sconsigliata su pista piana (sulla piana si preferisce più aderenza laterale con Super Hard).",
-      street: "Non consigliata per outdoor: troppo poco grip su asfalto stradale o erba."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15527/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE. La mescola Maroon è l'upgrade gomma più importante del B-Max moderno.",
+      "open": "100% Legale, usatissima per mezze gomme o gomme tornite.",
+      "tuned": "100% Legale.",
+      "boxstock": "VIETATO.",
+      "expert": "Sconsigliata su pista piana (sulla piana si preferisce più aderenza laterale con Super Hard).",
+      "street": "Non consigliata per outdoor: troppo poco grip su asfalto stradale o erba."
     }
   },
   {
-    id: "tire_superhard",
-    itemNumber: "95543",
-    name: "Super Hard Low Profile Tires (White Lettering)",
-    category: "wheel",
-    chassisType: "universal",
-    price: 5.50,
-    description: "Pneumatici a profilo ribassato a mescola Super Hard con scritte bianche tampografate sul fianco. Offrono un rimbalzo ridotto rispetto alle gomme da scatola e una velocità di percorrenza in curva fulminea.",
-    specs: {
+    "id": "tire_superhard",
+    "itemNumber": "95543",
+    "name": "Super Hard Low Profile Tires (White Lettering)",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 5.5,
+    "description": "Pneumatici a profilo ribassato a mescola Super Hard con scritte bianche tampografate sul fianco. Offrono un rimbalzo ridotto rispetto alle gomme da scatola e una velocità di percorrenza in curva fulminea.",
+    "specs": {
       "Diametro": "26 mm Low Profile",
       "Mescola": "Super Hard Rubber (Nero)",
       "Scritte": "'TAMIYA MINI 4WD JAPAN CUP'",
       "Quantità": "4 pneumatici (2 anteriori + 2 posteriori)"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15527/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale. Accoppiata vincente: Super Hard all'anteriore e Maroon al posteriore.",
-      open: "100% Legale.",
-      expert: "Ottime su pista piana per bilanciare trazione e scorrevolezza.",
-      street: "Adatte per asfalto liscio outdoor."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15527/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Accoppiata vincente: Super Hard all'anteriore e Maroon al posteriore.",
+      "open": "100% Legale.",
+      "expert": "Ottime su pista piana per bilanciare trazione e scorrevolezza.",
+      "street": "Adatte per asfalto liscio outdoor."
     }
   },
   {
-    id: "tire_spike",
-    itemNumber: "15077",
-    name: "Off-Road Spike Tires & Wheels Set",
-    category: "wheel",
-    chassisType: "universal",
-    price: 6.50,
-    description: "Ruote e pneumatici speciali chiodati/tassellati (Spike) nati per fuoristrada, terra battuta ed erba sintetica. I tasselli in gomma morbida scavano nel terreno garantendo aderenza insuperabile nei percorsi all'aperto.",
-    specs: {
+    "id": "tire_spike",
+    "itemNumber": "15077",
+    "name": "Off-Road Spike Tires & Wheels Set",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 6.5,
+    "description": "Ruote e pneumatici speciali chiodati/tassellati (Spike) nati per fuoristrada, terra battuta ed erba sintetica. I tasselli in gomma morbida scavano nel terreno garantendo aderenza insuperabile nei percorsi all'aperto.",
+    "specs": {
       "Diametro": "29 mm",
       "Battistrada": "Chiodato/tassellato Off-Road Spike",
       "Terreno ideale": "Terra, asfalto ruvido, ghiaia fine, sentieri outdoor"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15527/15527_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15527/index.html",
-    allowedCategories: ["street"],
-    rulesNotes: {
-      street: "COMPONENTI ELETTIVI PER STREET MINI 4WD: la trazione tassellata garantisce che l'auto non scivoli sulle foglie o sulla polvere stradale.",
-      bmax: "Vietato / non idoneo (i tasselli potrebbero danneggiare la superficie delle piste in plastica o creare vibrazioni eccessive).",
-      open: "Non idoneo per piste da gara classiche."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15527/index.html",
+    "allowedCategories": [
+      "street"
+    ],
+    "rulesNotes": {
+      "street": "COMPONENTI ELETTIVI PER STREET MINI 4WD: la trazione tassellata garantisce che l'auto non scivoli sulle foglie o sulla polvere stradale.",
+      "bmax": "Vietato / non idoneo (i tasselli potrebbero danneggiare la superficie delle piste in plastica o creare vibrazioni eccessive).",
+      "open": "Non idoneo per piste da gara classiche."
     }
   },
-
-  // ==========================================
-  // FRENI & TRASMISSIONE (BRAKES & GEARS)
-  // ==========================================
   {
-    id: "brake_15525",
-    itemNumber: "15525",
-    name: "Brake Sponge Set (1mm, 2mm, 3mm Red/Blue)",
-    category: "brake",
-    chassisType: "universal",
-    price: 6.90,
-    description: "Il set essenziale per la messa a punto dei freni. Include strisce adesive di spugna freno ad alta aderenza (Rossa = High Grip) e media aderenza (Blu = Mild) in tre diversi spessori (1mm, 2mm, 3mm). Permette di dosare al millimetro la decelerazione prima dei ponti e dei salti.",
-    specs: {
+    "id": "brake_15525",
+    "itemNumber": "15525",
+    "name": "Brake Sponge Set (1mm, 2mm, 3mm Red/Blue)",
+    "category": "brake",
+    "chassisType": "universal",
+    "price": 6.9,
+    "description": "Il set essenziale per la messa a punto dei freni. Include strisce adesive di spugna freno ad alta aderenza (Rossa = High Grip) e media aderenza (Blu = Mild) in tre diversi spessori (1mm, 2mm, 3mm). Permette di dosare al millimetro la decelerazione prima dei ponti e dei salti.",
+    "specs": {
       "Mescole": "Rossa (Grip elevato) e Blu (Grip progressivo)",
       "Spessori": "1 mm, 2 mm, 3 mm",
       "Fissaggio": "Adesivo Tamiya ad alta tenuta pre-applicato",
       "Regolazione": "Tagliabile su misura per la piastra freno"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15525/15525_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15525/15525_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15525/index.html",
-    allowedCategories: ["bmax", "open", "tuned"],
-    rulesNotes: {
-      bmax: "100% LEGALE. Regolare con cura l'altezza: la spugna a riposo deve mantenere rigorosamente almeno 1.0mm di luce da terra dalla dima!",
-      open: "100% Legale e indispensabile.",
-      tuned: "100% Legale.",
-      boxstock: "VIETATO nella Box Stock.",
-      expert: "VIETATO / INUTILE su pista piana.",
-      street: "VIETATO su strada: toccherebbe immediatamente sul terreno irregolare."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15525/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE. Regolare con cura l'altezza: la spugna a riposo deve mantenere rigorosamente almeno 1.0mm di luce da terra dalla dima!",
+      "open": "100% Legale e indispensabile.",
+      "tuned": "100% Legale.",
+      "boxstock": "VIETATO nella Box Stock.",
+      "expert": "VIETATO / INUTILE su pista piana.",
+      "street": "VIETATO su strada: toccherebbe immediatamente sul terreno irregolare."
     }
   },
   {
-    id: "gear_15456",
-    itemNumber: "15456",
-    name: "AR Chassis Setting Gear Set (3.5:1 & 3.7:1)",
-    category: "gear",
-    chassisType: "single",
-    price: 4.90,
-    description: "Kit di ingranaggi di precisione per telai AR e VZ. Include il rapporto Super Speed 3.5:1 (corona gialla / pignone azzurro) per piste veloci, il rapporto 3.7:1 ad alta accelerazione e cuscinetto a sfera per l'alberino ingranaggio centrale.",
-    specs: {
+    "id": "gear_15456",
+    "itemNumber": "15456",
+    "name": "AR Chassis Setting Gear Set (3.5:1 & 3.7:1)",
+    "category": "gear",
+    "chassisType": "single",
+    "price": 4.9,
+    "description": "Kit di ingranaggi di precisione per telai AR e VZ. Include il rapporto Super Speed 3.5:1 (corona gialla / pignone azzurro) per piste veloci, il rapporto 3.7:1 ad alta accelerazione e cuscinetto a sfera per l'alberino ingranaggio centrale.",
+    "specs": {
       "Rapporti inclusi": "3.5:1 (Super Speed) e 3.7:1 (High Speed)",
       "Cuscinetto": "Include cuscinetto per albero ingranaggio contatore",
       "Compatibilità": "Telai AR, VZ, Super-II"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15456/15456_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15456/15456_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15456/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% Legale per accordare la velocità alle dimensioni della pista.",
-      open: "100% Legale.",
-      tuned: "100% Legale.",
-      expert: "100% Legale.",
-      boxstock: "VIETATO nella Box Stock (si usa solo il rapporto incluso nel kit)."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15456/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale per accordare la velocità alle dimensioni della pista.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "100% Legale.",
+      "boxstock": "VIETATO nella Box Stock (si usa solo il rapporto incluso nel kit)."
     }
   },
   {
-    id: "shaft_15440",
-    itemNumber: "15440",
-    name: "Hollow Propeller Shaft Set",
-    category: "gear",
-    chassisType: "single",
-    price: 3.80,
-    description: "Albero di rinvio della trazione cavo in acciaio speciale temprato con pignoni in resina alleggerita. Riduce sensibilmente le masse rotanti migliorando la reattività del motore ad ogni accelerazione.",
-    specs: {
+    "id": "shaft_15440",
+    "itemNumber": "15440",
+    "name": "Hollow Propeller Shaft Set",
+    "category": "gear",
+    "chassisType": "single",
+    "price": 3.8,
+    "description": "Albero di rinvio della trazione cavo in acciaio speciale temprato con pignoni in resina alleggerita. Riduce sensibilmente le masse rotanti migliorando la reattività del motore ad ogni accelerazione.",
+    "specs": {
       "Materiale": "Acciaio cavo ad alta resistenza",
       "Pignoni": "Plastica ingranaggi a basso attrito",
       "Risparmio peso": "Circa 35% in meno rispetto all'albero pieno di serie"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15417/15417_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15417/15417_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15417/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15417/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ]
   },
-
-  // ==========================================
-  // ACCESSORI & MINUTERIA (HARDWARE)
-  // ==========================================
   {
-    id: "screw_15454",
-    itemNumber: "15454",
-    name: "2mm Stainless Steel Cap Screws (25mm, 30mm)",
-    category: "accessory",
-    chassisType: "universal",
-    price: 5.50,
-    description: "Viti a brugola (Cap Screws) in acciaio inossidabile speciale ad altissima resistenza meccanica. Indispensabili per fissare le colonnine dei rulli e dei mass damper: a differenza delle normali viti a croce, non si piegano e non si svitano neanche dopo atterraggi violenti.",
-    specs: {
+    "id": "screw_15454",
+    "itemNumber": "15454",
+    "name": "2mm Stainless Steel Cap Screws (25mm, 30mm)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 5.5,
+    "description": "Viti a brugola (Cap Screws) in acciaio inossidabile speciale ad altissima resistenza meccanica. Indispensabili per fissare le colonnine dei rulli e dei mass damper: a differenza delle normali viti a croce, non si piegano e non si svitano neanche dopo atterraggi violenti.",
+    "specs": {
       "Filettatura": "2.0 mm metrica Tamiya",
       "Lunghezze": "2x viti da 25mm + 2x viti da 30mm",
       "Testa": "Brugola esagonale interna (chiave inclusa)",
       "Materiale": "Acciaio Inox temprato"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15454/15454_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15454/15454_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15454/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"],
-    rulesNotes: {
-      bmax: "100% LEGALE E CONSIGLIATISSIMO. Evita che i montanti dei rulli si pieghino durante la manche.",
-      open: "100% Legale.",
-      tuned: "100% Legale."
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15454/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% LEGALE E CONSIGLIATISSIMO. Evita che i montanti dei rulli si pieghino durante la manche.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
     }
   },
   {
-    id: "spacer_15473",
-    itemNumber: "15473",
-    name: "Aluminum Spacer Set (12mm, 6.7mm, 6mm, 3mm, 1.5mm)",
-    category: "accessory",
-    chassisType: "universal",
-    price: 4.20,
-    description: "Set di distanziali in alluminio leggero per regolare al decimo di millimetro l'altezza di montaggio di rulli, piastre e contrappesi rispetto al telaio.",
-    specs: {
+    "id": "spacer_15473",
+    "itemNumber": "15473",
+    "name": "Aluminum Spacer Set (12mm, 6.7mm, 6mm, 3mm, 1.5mm)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 4.2,
+    "description": "Set di distanziali in alluminio leggero per regolare al decimo di millimetro l'altezza di montaggio di rulli, piastre e contrappesi rispetto al telaio.",
+    "specs": {
       "Spessori": "12mm, 6.7mm, 6mm, 3mm, 1.5mm",
       "Materiale": "Alluminio tornito anodizzato naturale"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15473/15473_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15473/15473_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15473/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "expert", "street"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15473/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ]
   },
   {
-    id: "stab_15528",
-    itemNumber: "15528",
-    name: "Hi-Mount Tube Stabilizer Set (Clear)",
-    category: "accessory",
-    chassisType: "universal",
-    price: 4.80,
-    description: "Stabilizzatori cilindrici superiori in materiale plastico anti-attrito. Posizionati in cima alle viti dei rulli anteriori, toccano la sponda della pista se l'auto si impenna, impedendole di ribaltarsi all'indietro.",
-    specs: {
+    "id": "stab_15528",
+    "itemNumber": "15528",
+    "name": "Hi-Mount Tube Stabilizer Set (Clear)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 4.8,
+    "description": "Stabilizzatori cilindrici superiori in materiale plastico anti-attrito. Posizionati in cima alle viti dei rulli anteriori, toccano la sponda della pista se l'auto si impenna, impedendole di ribaltarsi all'indietro.",
+    "specs": {
       "Colore": "Trasparente (Clear)",
       "Funzione": "Anti-ribaltamento superiore",
       "Compatibilità": "Viti da 2mm standard e cap screws"
     },
-    images: [
+    "images": [
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15528/15528_1.jpg",
       "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15528/15528_s.jpg"
     ],
-    tamiyaUrl: "https://www.tamiya.com/japan/products/15528/index.html",
-    allowedCategories: ["bmax", "open", "tuned", "street"]
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15528/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ]
+  },
+  {
+    "id": "kit_18094",
+    "itemNumber": "18094",
+    "name": "Neo-VQS (VZ Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 13.9,
+    "description": "L'erede moderno della leggendaria serie Vanquish su innovativo telaio VZ. Carrozzeria filante e aggressiva in plastica rigida nera con sticker metallizzati, cerchi a 5 razze e telaio compatto con interasse corto da 80mm che garantisce una maneggevolezza fulminea nelle curve a gomito.",
+    "specs": {
+      "Telaio": "VZ Chassis (Nero rinforzato)",
+      "Trasmissione": "Singolo albero con rinvio",
+      "Rapporto di serie": "3.5:1 Super Speed Gear",
+      "Interasse": "80 mm",
+      "Carrozzeria": "ABS rigido nero lucido aerodinamico",
+      "Ruote": "Cerchi neri 5-Spoke e gomme nere low-profile 26mm"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18094/18094_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18094/18094_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18094/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Carrozzeria rigida conforme, telaio leggero con eccellente flessibilità controllata.",
+      "open": "100% Legale. Ottima piattaforma per telai tagliati e Chochin anteriori.",
+      "tuned": "100% Legale. Maneggevolezza eccezionale con motori Tuned 2.",
+      "boxstock": "100% Legale per gare monomarca Box Stock Neo-VQS.",
+      "street": "100% Legale per corse outdoor."
+    }
+  },
+  {
+    "id": "kit_18707",
+    "itemNumber": "18707",
+    "name": "Rowdy Bull (FM-A Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 14.2,
+    "description": "Il celebre modello apripista del telaio FM-A a motore anteriore (Front Midship Aero). Con linee muscolose da muscle car americana, sposta il baricentro in avanti consentendo atterraggi stabili e dritti dai dossi, evitando l'impennamento del muso in fase di salto.",
+    "specs": {
+      "Telaio": "FM-A Chassis (Nero ad alta resistenza)",
+      "Trasmissione": "Motore anteriore a singolo albero",
+      "Rapporto di serie": "3.5:1 Super Speed Gear",
+      "Interasse": "83 mm",
+      "Carrozzeria": "ABS rigido finitura argento metallizzato",
+      "Ruote": "Cerchi argento Low-Profile e gomme nere A-spoke 26mm"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18707/18707_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18707/18707_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18707/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Il telaio FM-A con Skid Bar integrata è ideale per piste tecniche B-Max.",
+      "open": "100% Legale. Molto usato nelle piste con salti a discesa rapida.",
+      "tuned": "100% Legale.",
+      "boxstock": "100% Legale in Box Stock.",
+      "street": "Eccezionale stabilità su fondi accidentati."
+    }
+  },
+  {
+    "id": "kit_18637",
+    "itemNumber": "18637",
+    "name": "Festa Jaune (MA Chassis)",
+    "category": "chassis",
+    "chassisType": "double",
+    "price": 14.5,
+    "description": "Splendida supercar ispirata alle granturismo da competizione moderne. Il telaio MA monoblocco a doppio albero centrale garantisce un allineamento perfetto dei pignoni motore senza dispersioni di potenza e un raffreddamento ottimale grazie ai condotti aerodinamici inferiori.",
+    "specs": {
+      "Telaio": "MA Chassis (Grigio scuro ad alta rigidità)",
+      "Trasmissione": "Doppio albero centrale Double Shaft",
+      "Rapporto di serie": "3.5:1 Super Speed",
+      "Interasse": "80 mm",
+      "Carrozzeria": "ABS rigido giallo brillante stile GT",
+      "Ruote": "Cerchi neri Fin Type e gomme a profilo ribassato"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18637/18637_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/18637/18637_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/18637/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Telaio rigido monoblocco che preserva l'assetto anche dopo atterraggi duri.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "boxstock": "100% Legale per gare Box Stock Festa Jaune.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "kit_19601",
+    "itemNumber": "19601",
+    "name": "Max Breaker TRF (Super X Chassis)",
+    "category": "chassis",
+    "chassisType": "single",
+    "price": 13.5,
+    "description": "Versione TRF da competizione dell'iconica vettura di Gouki Ichimonji. Il telaio Super X si contraddistingue per la carreggiata larga (interasse 84mm), il motore smontabile dal fondo senza rimuovere carrozzeria o ingranaggi e una stabilità sui rettilinei senza eguali.",
+    "specs": {
+      "Telaio": "Super X Chassis (Policarbonato/ABS ad alta tenacità)",
+      "Trasmissione": "Singolo albero con pozzetto motore a sgancio rapido dal basso",
+      "Rapporto di serie": "3.5:1",
+      "Interasse": "84 mm",
+      "Carrozzeria": "ABS rigido con prese d'aria TRF aperte",
+      "Ruote": "Cerchi larghi e gomme slick semi-pneumatiche"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/19601/19601_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/19601/19601_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/19601/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ottima stabilità grazie alla carreggiata allargata da 84mm.",
+      "open": "100% Legale.",
+      "expert": "Tra i telai storici più apprezzati nella categoria Expert / R.U.M. per piste Flat Track veloci.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "motor_15438",
+    "itemNumber": "15438",
+    "name": "Mach-Dash Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 7.2,
+    "description": "Il motore a singolo pignone più veloce della celebre gamma Dash Tamiya per telai tradizionali (VZ, FM-A, AR, Super-II, VS). Campana rossa, spazzole metalliche in carbonio ad alta conducibilità e regime fino a 23.400 rpm: devastante sui rettilinei delle gare B-Max veloci.",
+    "specs": {
+      "Albero": "Singolo pignone (Single Shaft)",
+      "Tensione nominale": "2.4 - 3.0 V",
+      "Giri/min (RPM sotto carico)": "20.000 - 23.400 rpm",
+      "Coppia": "1.3 - 1.8 mN·m",
+      "Consumo corrente": "2.0 - 4.0 A",
+      "Campana": "Rossa",
+      "Spazzole": "Miste carbone ad alto scorrimento"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15438/15438_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15438/15438_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15438/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ideale quando il tracciato presenta lunghi rettilinei e poche curve strette.",
+      "open": "100% Legale.",
+      "tuned": "VIETATO! Nella categoria Tuned sono ammessi solo motori serie Tuned.",
+      "boxstock": "VIETATO! Ammesso solo motore stock di serie.",
+      "expert": "Consentito solo nelle manifestazioni Expert libere (altrimenti motori serie Tuned/Sprint)."
+    }
+  },
+  {
+    "id": "motor_15318",
+    "itemNumber": "15318",
+    "name": "Sprint-Dash Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 6.9,
+    "description": "Motore a singolo albero progettato esclusivamente per velocità pura e allungo estremo su circuiti pianeggianti o con ampie curve paraboliche. Campana grigio chiaro, spazzole in carbonio e regime massimo fino a 27.200 giri/minuto.",
+    "specs": {
+      "Albero": "Singolo pignone (Single Shaft)",
+      "Tensione nominale": "2.4 - 3.0 V",
+      "Giri/min (RPM sotto carico)": "20.700 - 27.200 rpm",
+      "Coppia": "1.2 - 1.6 mN·m",
+      "Consumo corrente": "2.8 - 3.8 A",
+      "Campana": "Grigia",
+      "Spazzole": "Carbone da competizione"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15318/15318_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15318/15318_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15318/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "expert"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Richiede freni molto efficienti per gestire la tremenda velocità d'entrata sui salti.",
+      "open": "100% Legale.",
+      "tuned": "VIETATO nelle classi Tuned.",
+      "expert": "Spesso impiegato nelle gare storiche veloci su Flat Track senza salti."
+    }
+  },
+  {
+    "id": "motor_15455",
+    "itemNumber": "15455",
+    "name": "Light-Dash Motor",
+    "category": "motor",
+    "chassisType": "single",
+    "price": 6.5,
+    "description": "L'anello di congiunzione perfetto tra i docili motori Tuned e i potenti Dash. Campana gialla, offre un'erogazione lineare con consumo moderato di corrente, ideale per piste tecniche con molti salti dove un Mach-Dash rischierebbe di decollare fuori pista.",
+    "specs": {
+      "Albero": "Singolo pignone (Single Shaft)",
+      "Tensione nominale": "2.4 - 3.0 V",
+      "Giri/min (RPM sotto carico)": "14.600 - 17.800 rpm",
+      "Coppia": "1.3 - 1.9 mN·m",
+      "Consumo corrente": "1.5 - 2.2 A",
+      "Campana": "Gialla",
+      "Spazzole": "Miste metallo-carbone"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15455/15455_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15455/15455_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15455/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Scelta tattica preferita su piste con ostacoli Dragon Back consecutivi.",
+      "open": "100% Legale.",
+      "tuned": "VIETATO nelle classi Tuned.",
+      "street": "Ottimo per garantire autonomia elevata durante lunghe sessioni all'aperto."
+    }
+  },
+  {
+    "id": "motor_15488",
+    "itemNumber": "15488",
+    "name": "Rev-Tuned 2 Motor PRO",
+    "category": "motor",
+    "chassisType": "double",
+    "price": 5.5,
+    "description": "Versione a doppio pignone per telai MA ed MS della serie Tuned 2 orientata all'allungo e agli alti regimi. Campana blu brillante, eroga fino a 15.200 giri/min, perfetta per tracciati TMEC/Tuned veloci con curve ampie.",
+    "specs": {
+      "Albero": "Doppio pignone (Double Shaft PRO)",
+      "Tensione nominale": "2.4 - 3.0 V",
+      "Giri/min (RPM sotto carico)": "13.400 - 15.200 rpm",
+      "Coppia": "1.2 - 1.5 mN·m",
+      "Consumo corrente": "1.5 - 2.0 A",
+      "Campana": "Blu brillante",
+      "Spazzole": "Metallo speciale a bassa resistenza"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15488/15488_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15488/15488_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15488/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ideale per telai MA su piste guidate veloci.",
+      "tuned": "100% Legale. Uno dei motori cardine nei campionati italiani TMEC / Tuned Class.",
+      "open": "100% Legale."
+    }
+  },
+  {
+    "id": "motor_15489",
+    "itemNumber": "15489",
+    "name": "Atomic-Tuned 2 Motor PRO",
+    "category": "motor",
+    "chassisType": "double",
+    "price": 5.5,
+    "description": "Il motore a doppio albero più bilanciato e utilizzato nelle gare Tuned/TMEC italiane ed europee. Campana arancione, coniuga ottima coppia in uscita da curva e velocità di punta costante su ogni sezione del tracciato.",
+    "specs": {
+      "Albero": "Doppio pignone (Double Shaft PRO)",
+      "Tensione nominale": "2.4 - 3.0 V",
+      "Giri/min (RPM sotto carico)": "12.700 - 14.900 rpm",
+      "Coppia": "1.5 - 2.0 mN·m",
+      "Consumo corrente": "1.5 - 2.2 A",
+      "Campana": "Arancione",
+      "Spazzole": "Metallo speciale"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15489/15489_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15489/15489_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15489/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Straordinaria costanza di rendimento con calo termico minimo.",
+      "tuned": "100% Legale. Il motore PRO più venduto per le gare Tuned di tutta Europa.",
+      "open": "100% Legale."
+    }
+  },
+  {
+    "id": "stay_15452_frp",
+    "itemNumber": "15452",
+    "name": "FRP Wide Rear Plate (for AR Chassis)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 4.8,
+    "description": "Piastra posteriore larga in fibra di vetro FRP ad alta resistenza. Predisposta con fori multipli per l'installazione di rulli da 9mm, 11mm, 13mm, 17mm e 19mm a larghezza regolamentare di 105mm. Compatibile universalmente con AR, VZ, MA, MS, Super-II, FM-A.",
+    "specs": {
+      "Materiale": "Fibra FRP nera ad alta densità (1.5 mm)",
+      "Posizione montaggio": "Posteriore / Rear Stay",
+      "Compatibilità rulli": "9 mm, 11 mm, 13 mm, 17 mm, 19 mm",
+      "Viti e distanziali": "Inclusi nel blister originale"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15452/15452_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15452/15452_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15452/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La staffa posteriore 'bolt-on' più usata in configurazione doppia.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "stay_15394_frp",
+    "itemNumber": "15394",
+    "name": "FRP Multi Roller Setting Stay",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 4.5,
+    "description": "La staffa universale in fibra FRP più celebre nella storia delle Mini 4WD. Forma ricurva a banana con predisposizione fori per rulli da 9mm, 13mm e 19mm. Utilizzabile indistintamente all'anteriore e al posteriore per irrobustire qualsiasi paraurti.",
+    "specs": {
+      "Materiale": "Fibra FRP (1.5 mm)",
+      "Posizione montaggio": "Universale (Anteriore / Posteriore)",
+      "Compatibilità rulli": "9, 13, 19 mm",
+      "Profilo": "Curvo Multi-Roller"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15394/15394_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15394/15394_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15394/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Spesso montata come piastra di base sotto il telaio per proteggere le viti.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "street": "Ottima per montare pattini di scorrimento."
+    }
+  },
+  {
+    "id": "stay_15242_frp",
+    "itemNumber": "15242",
+    "name": "FRP Reinforcing Plate Set (Short)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 4.2,
+    "description": "Set di 2 barrette diritte in fibra FRP corte forate passo standard. Indispensabili per irrigidire i montanti laterali dei mass damper, raccordare piastre o creare ponti di collegamento rigidi nei punti ad alta sollecitazione strutturale.",
+    "specs": {
+      "Materiale": "Fibra FRP (1.5 mm)",
+      "Contenuto": "2 barrette corte forate + minuteria viti/dadi",
+      "Posizione": "Rinforzo strutturale e tiranti"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15242/15242_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15242/15242_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15242/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ideale per unire lateralmente le colonne mass damper.",
+      "open": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "stay_95155_carbon",
+    "itemNumber": "95155",
+    "name": "HG Carbon Rear Brake Stay (1.5mm) J-Cup",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 13.9,
+    "description": "La piastra freno in pura fibra di carbonio HG più ambita nei paddock internazionali. Superficie ad ampia area per incollare le spugne freno senza flessioni su salti violenti, serigrafie ufficiali Tamiya J-Cup in tiratura limitata.",
+    "specs": {
+      "Materiale": "Fibra di Carbonio HG ad alto modulo (1.5 mm)",
+      "Finitura": "Tessuto di carbonio satinato con grafiche J-Cup",
+      "Funzione": "Supporto rigido spugne freno posteriore",
+      "Compatibilità telai": "MA, MS, FM-A, AR, VZ, Super-II"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95155/95155_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95155/95155_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95155/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La staffa freno definitiva per il posteriore.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "stay_15495_carbon",
+    "itemNumber": "15495",
+    "name": "HG Carbon Reinforcing Plate (1.5mm / Straight)",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 10.9,
+    "description": "Barretta diritta in fibra di carbonio HG rigida da 1.5mm. Con foratura standard passo 2mm su tutta la lunghezza, è la base universale per rinforzare paraurti, costruire ponti di irrigidimento e sostenere colonne di mass damper senza aggiunta di peso superfluo.",
+    "specs": {
+      "Materiale": "Fibra di Carbonio HG (1.5 mm)",
+      "Lunghezza": "Formato diritto multi-foro",
+      "Rigidità": "3 volte superiore alla comune fibra FRP"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15495/15495_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15495/15495_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15495/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Perfetta come barra di irrigidimento centrale nel B-Max.",
+      "open": "100% Legale. La materia prima più usata per tagliare bracci Chochin.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "stay_95153_carbon",
+    "itemNumber": "95153",
+    "name": "HG Carbon Front Stay for Fully Cowled (1.5mm) J-Cup",
+    "category": "plate",
+    "chassisType": "universal",
+    "price": 13.5,
+    "description": "La piastra anteriore da gara definitiva per telai B-Max. La sagomatura arcuata è appositamente studiata per montare rulli da 9mm, 13mm o 19mm a dima massima senza toccare le carrozzerie integrali (Fully Cowled), evitando tagli vietati dal regolamento.",
+    "specs": {
+      "Materiale": "Fibra di Carbonio HG (1.5 mm)",
+      "Posizione": "Anteriore / Front Stay",
+      "Rulli supportati": "9 mm, 13 mm, 19 mm",
+      "Edizione": "Japan Cup Limited Edition con serigrafia dorata"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95153/95153_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95153/95153_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95153/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La staffa anteriore più consigliata in assoluto per carrozzerie avvolgenti.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "damp_15401",
+    "itemNumber": "15401",
+    "name": "Mass Damper Set (Heavy)",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 5.8,
+    "description": "Il set di zavorre smorzanti cilindriche fondamentali per l'assorbimento dell'energia cinetica verticale. Include pesi cilindrici pesanti in ottone tornito (6.8g e 3.6g) con colonnine filettate e dadi autobloccanti per atterraggi sicuri dopo salti da Table Top.",
+    "specs": {
+      "Materiale": "Ottone tornito lucido (Brass)",
+      "Pesi inclusi": "2x pesi cilindrici pesanti 6.8g + 2x pesi intermedi 3.6g",
+      "Montaggio": "Verticale con viti da 2mm e colonnine di scorrimento"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15401/15401_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15401/15401_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15401/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Montaggio verticale conforme a dima.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "damp_15479",
+    "itemNumber": "15479",
+    "name": "Mass Damper Set w/ Ball Heads",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 5.9,
+    "description": "Set di pesi smorzatori con testa semisferica arrotondata. Il profilo a fungo/sfera abbassa ulteriormente il baricentro e minimizza il rischio che le zavorre si impuntino sulle protezioni della pista in caso di ribaltamento parziale o sbandata laterale.",
+    "specs": {
+      "Materiale": "Ottone ad alta densità",
+      "Pesi": "2x pesi a fungo semisferici (circa 4.2g ciascuno)",
+      "Colonnine guida": "Viti da 25mm e 30mm con dadi esagonali e boccole"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15479/15479_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15479/15479_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15479/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "damp_15490",
+    "itemNumber": "15490",
+    "name": "MA Chassis Side Mass Damper Set",
+    "category": "damper",
+    "chassisType": "double",
+    "price": 8.5,
+    "description": "Set completo studiato appositamente per le paratie laterali dei telai MA. Include piastre in FRP sagomate su misura per i punti di fissaggio laterali MA, pesi smorzatori cilindrici e distanziali per stabilizzare il telaio sui salti della classe B-Max.",
+    "specs": {
+      "Compatibilità telaio": "Progettato per MA Chassis (adattabile anche su AR e VZ)",
+      "Contenuto": "2 piastre FRP laterali sagomate, pesi cilindrici in ottone, boccole e minuteria",
+      "Montaggio": "Laterale bolt-on a baricentro ribassato"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15490/15490_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15490/15490_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15490/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Il kit dumper laterale ufficiale più venduto per telai MA.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "damp_15449",
+    "itemNumber": "15449",
+    "name": "Mass Damper Block (6x6x32mm / 8.3g)",
+    "category": "damper",
+    "chassisType": "universal",
+    "price": 5.5,
+    "description": "Blocchetto smorzatore rettangolare monoblocco in ottone massiccio da 8.3 grammi. Montato trasversalmente sul paraurti posteriore o tra le colonnine centrali, offre uno smorzamento piatto ed estremamente bilanciato, azzerando i rimbalzi del treno posteriore.",
+    "specs": {
+      "Forma": "Parallelepipedo tornito 6 x 6 x 32 mm",
+      "Peso": "8.3 grammi",
+      "Fori guida": "2 fori verticali standard 2mm"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15449/15449_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15449/15449_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15449/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale se montato orizzontalmente su staffa senza toccare terra.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "roller_15403",
+    "itemNumber": "15403",
+    "name": "Double Aluminum Rollers (9-8mm)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 11.2,
+    "description": "Doppi rulli integrati in alluminio di precisione 9-8mm con cuscinetto a sfere 520 centrale. Il rullo inferiore da 9mm guida l'auto sul dritto; quando l'auto si inclina in curva, il rullo superiore da 8mm tocca la sponda creando un forte effetto stabilizzante antiribaltamento.",
+    "specs": {
+      "Diametro inferiore": "9 mm",
+      "Diametro superiore": "8 mm",
+      "Cuscinetto": "520 Ball Bearing integrato",
+      "Materiale": "Alluminio tornito anodizzato argento"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15403/15403_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15403/15403_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15403/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Conta come 1 singolo punto di contatto per lato.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "Molto usato all'anteriore nelle curve strette a gomito."
+    }
+  },
+  {
+    "id": "roller_15529",
+    "itemNumber": "15529",
+    "name": "Low Friction Plastic Double Rollers (13-12mm)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 4.2,
+    "description": "Doppi rulli ultraleggeri in speciale plastica tecnica POM a basso coefficiente d'attrito (Low Friction). Pesano circa la metà dei corrispettivi in alluminio, garantendo ottima scorrevolezza e un baricentro anteriore ridotto per categorie entry/mid level.",
+    "specs": {
+      "Diametro": "13 mm inferiore, 12 mm superiore",
+      "Materiale": "Resina POM a basso attrito autolubrificante",
+      "Colore": "Nero tecnico",
+      "Bronzine": "Bronzine in ottone e tubetti di scorrimento inclusi"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15529/15529_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15529/15529_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15529/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Alternativa economica e leggerissima ai rulli in alluminio.",
+      "tuned": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "roller_15426",
+    "itemNumber": "15426",
+    "name": "19mm Aluminum Rollers with Rubber Rings",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 9.8,
+    "description": "Coppia di rulli in alluminio da 19mm dotati di anello perimetrale in gomma ad alto grip. Utilizzati spesso in posizione superiore anteriore o posteriore per fungere da freno di sicurezza sulle pareti delle curve veloci paraboliche e corsie di cambio corsia (Lane Change).",
+    "specs": {
+      "Diametro": "19 mm",
+      "Anello": "Gomma nitrilica ad alta aderenza (sostituibile)",
+      "Cuscinetto": "520 Ball Bearing schermato incluso",
+      "Funzione": "Freno sulle pareti esterne in curva"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15426/15426_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15426/15426_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15426/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ottimo stabilizzatore antiribaltamento per il Lane Change.",
+      "open": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "roller_95540",
+    "itemNumber": "95540",
+    "name": "HG Lightweight 13mm Aluminum Rollers (5-Spoke)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 12.9,
+    "description": "I rulli da competizione da 13mm più leggeri prodotti da Tamiya. Il design a 5 razze sagomate al CNC riduce il peso rotante del 30% rispetto alla versione piena, offrendo una risposta immediata nei cambi di traiettoria delle chicane veloci.",
+    "specs": {
+      "Diametro": "13 mm esatto",
+      "Design": "5 razze ultraleggere fresate CNC (5-Spoke)",
+      "Bordo": "Profilo Ringless senza gommini",
+      "Cuscinetto": "520 Ball Bearing ad alta precisione"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95540/95540_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95540/95540_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95540/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La prima scelta dei campioni giapponesi e italiani al posteriore.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "bear_15467",
+    "itemNumber": "15467",
+    "name": "HG 520 Ball Bearings (2 pcs)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 6.9,
+    "description": "Micro-cuscinetti a sfere ad alta precisione da 5mm esterno x 2mm interno. Sono i cuscinetti di ricambio standard per tutti i rulli in alluminio Tamiya da 13mm, 17mm, 19mm e doppi rulli, ideali dopo sgrassaggio con oli leggeri sintetici.",
+    "specs": {
+      "Dimensioni": "Diametro esterno 5.0 mm, foro 2.0 mm, spessore 2.5 mm",
+      "Contenuto": "2 microcuscinetti di precisione schermati"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15467/15467_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15467/15467_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15467/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ricambio fondamentale per rulli in alluminio.",
+      "open": "100% Legale.",
+      "expert": "100% Legale."
+    }
+  },
+  {
+    "id": "bear_15111",
+    "itemNumber": "15111",
+    "name": "Round Hole Ball Bearing Set (4 pcs)",
+    "category": "roller",
+    "chassisType": "universal",
+    "price": 8.5,
+    "description": "Set di 4 cuscinetti a sfere con foro rotondo (Round Hole) da 6x2mm per gli assali ruota dei telai Mini 4WD. Riduce drasticamente l'attrito volvente rispetto alle bronzine in plastica fornite nei kit di serie, aumentando la scorrevolezza complessiva dell'auto.",
+    "specs": {
+      "Diametro esterno": "6.0 mm",
+      "Foro assale": "2.0 mm",
+      "Contenuto": "4 cuscinetti a sfere per i 4 alloggiamenti assale del telaio"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15111/15111_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15111/15111_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15111/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Upgrade basilare per qualsiasi vettura da gara.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "100% Legale."
+    }
+  },
+  {
+    "id": "shaft_15417",
+    "itemNumber": "15417",
+    "name": "72mm Reinforced Shafts (Black / 4 pcs)",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 3.8,
+    "description": "Assali ruota rinforzati da 72mm in acciaio speciale ad altissima resistenza con finitura brunita nera. Essenziali per la tecnica della 'foratura passante' dei cerchi ruota: impediscono ai cerchi di staccarsi o oscillare ad alte velocità.",
+    "specs": {
+      "Lunghezza": "72 mm (adatti a foratura passante)",
+      "Diametro": "2.0 mm calibrato",
+      "Materiale": "Acciaio speciale temprato ad alta tenacità",
+      "Quantità": "4 assali rinforzati"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15417/15417_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15417/15417_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15417/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La foratura passante dei cerchi è esplicitamente consentita nel B-Max.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "100% Legale."
+    }
+  },
+  {
+    "id": "shaft_15297",
+    "itemNumber": "15297",
+    "name": "60mm Hollow Stainless Steel Shafts (2 pcs)",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 3.5,
+    "description": "Assali cavi alleggeriti in acciaio inossidabile da 60mm. Circa il 30% più leggeri degli assali pieni tradizionali, riducono il momento d'inerzia rotazionale delle masse non sospese per partenze fulminee nei circuiti tecnici.",
+    "specs": {
+      "Lunghezza": "60 mm standard",
+      "Struttura": "Cava interna (Hollow Lightweight)",
+      "Materiale": "Acciaio inossidabile SUS",
+      "Quantità": "2 assali cavi"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15297/15297_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15297/15297_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15297/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "wheel_95245",
+    "itemNumber": "95245",
+    "name": "Carbon Reinforced Large Dia. Wheels w/ Soft Tires",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 6.8,
+    "description": "Cerchi a grande diametro da 31mm stampati in resina speciale caricata con fibra di carbonio. Estremamente rigidi, non si deformano sotto lo stress delle curve a 40 km/h, abbinati a gomme slick morbide ad alta aderenza per piste piatte e Street.",
+    "specs": {
+      "Diametro ruota": "31 mm (Large Diameter)",
+      "Cerchio": "Nylon caricato con fibra di carbonio nero satinato",
+      "Gomma": "Slick morbida ad alta trazione"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95245/95245_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95245/95245_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95245/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "street": "Eccellente per ottenere luce da terra rialzata sui percorsi outdoor."
+    }
+  },
+  {
+    "id": "wheel_15512",
+    "itemNumber": "15512",
+    "name": "Hard Low-Profile Tire & Carbon Wheel Set (Y-Spoke)",
+    "category": "wheel",
+    "chassisType": "universal",
+    "price": 6.5,
+    "description": "Combinazione ideale per telai da competizione: cerchi a razze Y rinforzati al carbonio abbinati a gomme a profilo ribassato Hard. Gomme a bassa aderenza laterale che riducono il deceleramento durante il rotolamento sulle pareti delle curve.",
+    "specs": {
+      "Diametro totale": "26 mm (Low-Profile)",
+      "Mescola gomma": "Hard (durezza elevata, rimbalzo ridotto)",
+      "Cerchi": "Disegno Y-Spoke in resina caricata carbonio",
+      "Colore cerchi/gomme": "Cerchi neri, gomme nere con scritta tampografata"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15512/15512_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15512/15512_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15512/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La misura 26mm Low-Profile è il benchmark assoluto nel B-Max.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "brake_15458",
+    "itemNumber": "15458",
+    "name": "Brake Set (for AR Chassis / Multi-Chassis)",
+    "category": "brake",
+    "chassisType": "universal",
+    "price": 5.5,
+    "description": "Kit freno modulare completo con slitta di scorrimento curva e piastra freno posteriore in plastica tecnica a basso attrito. Include spugne freno, viti e distanziali per regolare l'altezza del freno da terra a 1.0mm, 1.5mm o 2.0mm.",
+    "specs": {
+      "Compatibilità": "AR, MA, MS, VZ, FM-A",
+      "Componenti": "Pattino anteriore anti-impuntamento, staffa freno posteriore regolabile, spugne frenanti",
+      "Regolazione": "Altezza da 1.0 a 2.5 mm da terra"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15458/15458_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15458/15458_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15458/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "brake_15492",
+    "itemNumber": "15492",
+    "name": "Brake Sponge Set (1/2/3mm Blue - High Friction)",
+    "category": "brake",
+    "chassisType": "universal",
+    "price": 5.2,
+    "description": "Fogli di spugna adesiva blu ad altissimo coefficiente d'attrito (frenata potente). Include 3 spessori calibrati (1mm, 2mm, 3mm) che consentono di dosare millimetricamente la forza frenante prima delle rampe di salto.",
+    "specs": {
+      "Contenuto": "1 foglio 1mm, 1 foglio 2mm, 1 foglio 3mm (50x50 mm cad.)",
+      "Mescola": "Blu (Grip e attrito elevatissimi)",
+      "Adesivo": "Biadesivo Tamiya a tenuta extra resistente"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15492/15492_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15492/15492_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15492/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La spugna blu blocca all'istante l'auto se tocca la rampa.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "tape_95682",
+    "itemNumber": "95682",
+    "name": "Mini 4WD Setting Tape (10mm / 15mm Width)",
+    "category": "brake",
+    "chassisType": "universal",
+    "price": 5.5,
+    "description": "Nastro adesivo telato tecnico ufficiale Tamiya. Utilizzato da tutti i campioni per mascherare le spugne freno e variarne l'attrito al millimetro, fissare saldamente le batterie al telaio e proteggere la fibra di carbonio dall'abrasione dell'asfalto.",
+    "specs": {
+      "Lunghezza rotolo": "15 metri",
+      "Larghezza": "Altezza 10 mm e 15 mm",
+      "Materiale": "Tessuto rinforzato privo di residui gommosi"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95682/95682_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95682/95682_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95682/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Il nastro Tamiya originale è ammesso su tutto il telaio per fissare batterie o coprire freni.",
+      "open": "100% Legale.",
+      "street": "Fondamentale per sigillare il pozzetto ingranaggi da sabbia e polvere."
+    }
+  },
+  {
+    "id": "gear_15432",
+    "itemNumber": "15432",
+    "name": "Super Speed EX Gear Set (3.7:1 for Super-II/VS/AR)",
+    "category": "gear",
+    "chassisType": "single",
+    "price": 4.5,
+    "description": "Rapporto di trasmissione 3.7:1 (Giallo/Azzurro) per telai a singolo albero. Il compromesso perfetto tra accelerazione e velocità di punta per circuiti tecnici ricchi di salti e ripartenze a bassa aderenza.",
+    "specs": {
+      "Rapporto di riduzione": "3.7:1 Super Speed EX",
+      "Colorazione": "Ingranaggio contatore giallo, corona pignone azzurra",
+      "Compatibilità": "Super-II, VS, AR, VZ Chassis"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15432/15432_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15432/15432_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15432/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Ideale in combinazione con motori Dash su piste tecniche.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "shaft_15390",
+    "itemNumber": "15390",
+    "name": "Fluorine Coated Gear Shafts (Straight / 2 pcs)",
+    "category": "gear",
+    "chassisType": "universal",
+    "price": 3.2,
+    "description": "Alberini in acciaio per l'ingranaggio contatore centrale rivestiti con trattamento al fluoro (Fluorine Coated). Il coefficiente d'attrito ultra-basso azzera la resistenza di rotazione dell'ingranaggio anche agli altissimi regimi di oltre 25.000 giri/min.",
+    "specs": {
+      "Trattamento superficiale": "Rivestimento chimico al fluoro a bassissimo attrito",
+      "Diametro": "2.0 mm esatto di precisione",
+      "Contenuto": "2 alberini diritti"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15390/15390_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15390/15390_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15390/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "Consigliatissimo nella classe Expert per azzerare gli attriti."
+    }
+  },
+  {
+    "id": "gear_15453",
+    "itemNumber": "15453",
+    "name": "Carbon Reinforced Gear Set (G13 & 8T Pinions)",
+    "category": "gear",
+    "chassisType": "universal",
+    "price": 3.6,
+    "description": "Set di pignoni motore da 8 denti e ingranaggi intermedi G13 stampati in speciale resina caricata al carbonio. Resistono all'usura estrema e non si sgranano sotto la violenta coppia motrice dei motori Dash e Power-Dash.",
+    "specs": {
+      "Materiale": "Resina nylon caricata con fibre di carbonio ad alta durezza",
+      "Contenuto": "4 pignoni motore 8T + 2 ingranaggi corona G13"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15453/15453_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15453/15453_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15453/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Evita che il pignone slitti sull'albero motore.",
+      "open": "100% Legale.",
+      "street": "100% Legale."
+    }
+  },
+  {
+    "id": "shaft_15531",
+    "itemNumber": "15531",
+    "name": "Hollow Propeller Shaft Set (for VZ Chassis)",
+    "category": "gear",
+    "chassisType": "single",
+    "price": 3.8,
+    "description": "Albero di rinvio della trazione cavo in acciaio inox specifico per la geometria del telaio VZ. Pesa solo la metà dell'albero di serie in ferro pieno, riducendo l'inerzia rotazionale e aumentando la reattività in frenata e accelerazione.",
+    "specs": {
+      "Compatibilità": "VZ Chassis specifico",
+      "Materiale": "Tubo in acciaio inossidabile cavo con pignoni in resina termosaldata",
+      "Peso": "Circa 0.55 grammi (-45% rispetto all'originale pieno)"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15531/15531_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15531/15531_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15531/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "gear_15355",
+    "itemNumber": "15355",
+    "name": "High-Speed EX Counter Gear Set (3.7:1 for MS/MA PRO)",
+    "category": "gear",
+    "chassisType": "double",
+    "price": 4.8,
+    "description": "Set di ingranaggi contatori intermedi 3.7:1 dedicati alla trasmissione a doppio albero dei telai MS e MA Chassis. Fornisce maggiore coppia in salita rispetto al rapporto lungo 3.5:1 di serie, ottimale per motori Torque e Atomic nelle gare tecniche.",
+    "specs": {
+      "Rapporto": "3.7:1 High Speed EX",
+      "Compatibilità": "MS Chassis, MA Chassis (Doppio pignone)",
+      "Cuscinetti supportati": "Predisposto per alloggiare cuscinetto a sfere 520"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15355/15355_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15355/15355_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15355/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale su telai MA/MS.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "screw_15510",
+    "itemNumber": "15510",
+    "name": "Stainless Steel Countersunk Screws Set (10-30mm)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 4.9,
+    "description": "Viti svasate in acciaio inox a testa piatta. Permettono il montaggio a filo perfetto sul fondo del telaio e sotto le piastre freno/stay, eliminando le teste delle viti sporgenti che potrebbero grattare o impuntarsi sui bordi delle corsie.",
+    "specs": {
+      "Tipologia testa": "Svasata piana a filo (Countersunk)",
+      "Lunghezze incluse": "10mm, 12mm, 20mm, 25mm, 30mm (2 pezzi cad.)",
+      "Materiale": "Acciaio inossidabile SUS ad alta resistenza"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15510/15510_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15510/15510_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15510/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. La svasatura delle piastre in carbonio è consentita per montare queste viti a filo.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "100% Legale."
+    }
+  },
+  {
+    "id": "nut_15446",
+    "itemNumber": "15446",
+    "name": "2mm Aluminum Lock Nut Set (5 pcs - Red)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 4.9,
+    "description": "Dadi autobloccanti in alluminio ultraleggero anodizzato rosso con inserto filettato in nylon elastico. Non si allentano mai nemmeno dopo decine di giri di pista e violente vibrazioni sui salti, garantendo che le colonnine dei rulli rimangano salde.",
+    "specs": {
+      "Filettatura": "2.0 mm metrica",
+      "Inserto": "Anello in nylon antiallentamento",
+      "Materiale": "Alluminio aeronautico anodizzato rosso",
+      "Quantità": "5 dadi autobloccanti"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15446/15446_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15446/15446_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15446/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Obbligatori per fissare le colonnine dei rulli superiori.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale.",
+      "expert": "100% Legale."
+    }
+  },
+  {
+    "id": "ball_15383",
+    "itemNumber": "15383",
+    "name": "Mini 4WD F-1 Ball Cap / Stabilizer Ball Set",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 3.5,
+    "description": "Testine e sfere stabilizzatrici in resina fluorescente/nera da avvitare sulla sommità delle colonnine dei rulli anteriori e posteriori. Evitano che la vettura rimanga agganciata con le viti nude alle paratie della pista in caso di sbandata laterale.",
+    "specs": {
+      "Materiale": "Resina tecnica ad alto scorrimento",
+      "Contenuto": "Sfere tonde forate filettabili e terminali a cupola",
+      "Funzione": "Anti-aggancio perimetrale alle paratie del circuito"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15383/15383_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/1/15383/15383_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/15383/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "100% Legale. Proteggono le mani dei giudici di gara e la carrozzeria.",
+      "open": "100% Legale.",
+      "tuned": "100% Legale."
+    }
+  },
+  {
+    "id": "tool_95604",
+    "itemNumber": "95604",
+    "name": "Aluminum Setting Board (Car Inspection Gauge)",
+    "category": "accessory",
+    "chassisType": "universal",
+    "price": 19.9,
+    "description": "La piastra di controllo ufficiale Tamiya in alluminio spazzolato con incisioni laser al decimo di millimetro. Permette al pilota di verificare la planarità del telaio, l'altezza da terra delle spugne freno (1mm), la larghezza totale massima (105mm) e la lunghezza massima (165mm) prima delle verifiche tecniche di gara.",
+    "specs": {
+      "Materiale": "Alluminio aeronautico anodizzato blu scuro con incisioni laser",
+      "Dimensioni sagoma": "Dima ufficiale gara 165 mm x 105 mm",
+      "Scale incise": "Righello millimetrato e indicatori luce a terra da 1 mm a 3 mm"
+    },
+    "images": [
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95604/95604_1.jpg",
+      "https://d7z22c0gz59ng.cloudfront.net/japan_contents/img/usr/item/9/95604/95604_s.jpg"
+    ],
+    "tamiyaUrl": "https://www.tamiya.com/japan/products/95604/index.html",
+    "allowedCategories": [
+      "bmax",
+      "open",
+      "tuned",
+      "boxstock",
+      "expert",
+      "street"
+    ],
+    "rulesNotes": {
+      "bmax": "Strumento indispensabile di paddock per le verifiche tecniche ufficiali.",
+      "open": "Indispensabile per verificare l'ingombro massimo di 105mm.",
+      "tuned": "Indispensabile per altezza minima da terra 1.0mm.",
+      "expert": "Indispensabile per planarità assali e monobarra."
+    }
   }
 ];
 
 /**
- * PRE-CONFIGURED WINNING BUILDS (PRESET) FOR EACH CATEGORY
+ * RECOMMENDED BUILDS & PRESETS (BY CATEGORY)
  */
 const RECOMMENDED_BUILDS = {
-  bmax: {
-    name: "B-Max Champion Spec (VZ Chassis)",
-    description: "La configurazione da podio più collaudata nei campionati italiani B-Max: telaio VZ leggero, motore Hyper-Dash 3, HG Carbon anteriore/posteriore, doppio rullo 13-12mm e gomme Maroon posteriori.",
-    category: "bmax",
-    parts: ["kit_18096", "motor_15477", "stay_15498", "stay_15499", "stay_15518", "damp_15459", "roller_15398", "roller_15464", "bear_15423", "tire_15527", "brake_15525", "screw_15454", "spacer_15473"]
+  "bmax": {
+    "name": "B-Max Champion Spec (VZ Chassis)",
+    "description": "La configurazione da podio più collaudata nei campionati italiani B-Max: telaio VZ leggero, motore Hyper-Dash 3, HG Carbon anteriore/posteriore, doppio rullo 13-12mm e gomme Maroon posteriori.",
+    "category": "bmax",
+    "parts": [
+      "kit_18096",
+      "motor_15477",
+      "stay_15498",
+      "stay_15499",
+      "stay_15518",
+      "damp_15459",
+      "roller_15398",
+      "roller_15464",
+      "bear_15423",
+      "tire_15527",
+      "brake_15525",
+      "screw_15454",
+      "spacer_15473"
+    ]
   },
-  open: {
-    name: "Japan Cup Open Pro (MS-Flexible Spec)",
-    description: "Configurazione estrema da salto: telaio MS con Hyper-Dash PRO, piastre HG Carbon doppie, rulli in alluminio 13mm/19mm, mass damper multipli e gomme super scorrevoli.",
-    category: "open",
-    parts: ["kit_18626", "motor_15478", "stay_15498", "stay_15499", "stay_15518", "damp_15459", "damp_15501", "roller_15497", "roller_15464", "bear_15423", "tire_15527", "brake_15525", "screw_15454"]
+  "open": {
+    "name": "Japan Cup Open Pro (MS-Flexible Spec)",
+    "description": "Configurazione estrema da salto: telaio MS con Hyper-Dash PRO, piastre HG Carbon doppie, rulli in alluminio 13mm/19mm, mass damper multipli e gomme super scorrevoli.",
+    "category": "open",
+    "parts": [
+      "kit_18626",
+      "motor_15478",
+      "stay_15498",
+      "stay_15499",
+      "stay_15518",
+      "damp_15459",
+      "damp_15501",
+      "roller_15497",
+      "roller_15464",
+      "bear_15423",
+      "tire_15527",
+      "brake_15525",
+      "screw_15454"
+    ]
   },
-  tuned: {
-    name: "Tuned / TMEC Legal Spec (MA Chassis)",
-    description: "Setup 100% conforme alle limitazioni della Tuned Class: telaio MA solidissimo, motore Torque-Tuned 2 PRO, 3 piastre di rinforzo ammesse, rulli a basso attrito in POM e spugne freno blu.",
-    category: "tuned",
-    parts: ["kit_18656", "motor_15487", "stay_15451_frp", "stay_15518", "damp_15459", "roller_15447", "tire_superhard", "brake_15525", "screw_15454"]
+  "tuned": {
+    "name": "Tuned / TMEC Legal Spec (MA Chassis)",
+    "description": "Setup 100% conforme alle limitazioni della Tuned Class: telaio MA solidissimo, motore Torque-Tuned 2 PRO, 3 piastre di rinforzo ammesse, rulli a basso attrito in POM e spugne freno blu.",
+    "category": "tuned",
+    "parts": [
+      "kit_18656",
+      "motor_15487",
+      "stay_15451_frp",
+      "stay_15518",
+      "damp_15459",
+      "roller_15447",
+      "tire_superhard",
+      "brake_15525",
+      "screw_15454"
+    ]
   },
-  boxstock: {
-    name: "Pure Box Stock Kit (Dual Ridge Jr.)",
-    description: "Pura configurazione di serie da scatola: modello Dual Ridge Jr. montato secondo manuale Tamiya, motore di scatola, zero parti Tune-Up aggiuntive. Massima cura di ssbavatura e rodaggio.",
-    category: "boxstock",
-    parts: ["kit_18096"]
+  "boxstock": {
+    "name": "Pure Box Stock Kit (Dual Ridge Jr.)",
+    "description": "Pura configurazione di serie da scatola: modello Dual Ridge Jr. montato secondo manuale Tamiya, motore di scatola, zero parti Tune-Up aggiuntive. Massima cura di ssbavatura e rodaggio.",
+    "category": "boxstock",
+    "parts": [
+      "kit_18096"
+    ]
   },
-  expert: {
-    name: "Expert Classica R.U.M. Monobarra (Super-II)",
-    description: "La configurazione leggendaria della pista piana italiana: telaio Super-II leggerissimo, motore Atomic-Tuned 2, cuscinetti 620 sgrassati, rulli in alluminio scorrevoli e zero pesi superflui.",
-    category: "expert",
-    parts: ["kit_19431", "motor_15486", "stay_15498", "stay_15499", "roller_15497", "roller_15464", "bear_15423", "gear_15456", "shaft_15440", "screw_15454"]
+  "expert": {
+    "name": "Expert Classica R.U.M. Monobarra (Super-II)",
+    "description": "La configurazione leggendaria della pista piana italiana: telaio Super-II leggerissimo, motore Atomic-Tuned 2, cuscinetti 620 sgrassati, rulli in alluminio scorrevoli e zero pesi superflui.",
+    "category": "expert",
+    "parts": [
+      "kit_19431",
+      "motor_15486",
+      "stay_15498",
+      "stay_15499",
+      "roller_15497",
+      "roller_15464",
+      "bear_15423",
+      "gear_15456",
+      "shaft_15440",
+      "screw_15454"
+    ]
   },
-  street: {
-    name: "Street Mini 4WD Trail Scout (FM-A)",
-    description: "Assetto outdoor per corsa su strada e sentieri sterrati: telaio FM-A a motore anteriore per massima aderenza in salita, motore Torque-Tuned 2 ad alta coppia, gomme da fuoristrada e protezioni antiurto.",
-    category: "street",
-    parts: ["kit_18714", "motor_15484", "stay_15498", "stay_15499", "tire_spike", "gear_15456", "shaft_15440", "screw_15454", "stab_15528"]
+  "street": {
+    "name": "Street Mini 4WD Trail Scout (FM-A)",
+    "description": "Assetto outdoor per corsa su strada e sentieri sterrati: telaio FM-A a motore anteriore per massima aderenza in salita, motore Torque-Tuned 2 ad alta coppia, gomme da fuoristrada e protezioni antiurto.",
+    "category": "street",
+    "parts": [
+      "kit_18714",
+      "motor_15484",
+      "stay_15498",
+      "stay_15499",
+      "tire_spike",
+      "gear_15456",
+      "shaft_15440",
+      "screw_15454",
+      "stab_15528"
+    ]
   }
 };
 
 /**
- * PADDOCK TECH & ADVANCED SETUP TIPS (RECUPERATI DAI REGOLAMENTI & PADDOCK ITALIANI / JAPAN CUP)
- * Guide e approfondimenti tecnici dedicati per ciascuna categoria ufficiale.
+ * CATEGORY PADDOCK TIPS & TECHNICAL SECRETS
  */
 const CATEGORY_PADDOCK_TIPS = {
-  bmax: [
+  "bmax": [
     {
-      title: "Inclinazione Rulli Anteriori (Downthrust Angle)",
-      badge: "Aerodinamica & Stabilità",
-      icon: "bi-compass",
-      summary: "Come evitare che l'auto decolli nelle curve paraboliche veloci mantenendo velocità in rettilineo.",
-      content: `Nel regolamento B-Max non è possibile piegare a caldo o limare le piastre. Per dare l'inclinazione negativa necessaria (Downthrust di circa 3°-5°) all'anteriore, monta le apposite **rondelle coniche Tamiya** (Red Angle Washers presenti nei kit piastre o rondelle metalliche calibrate) tra il telaio e la piastra in carbonio HG. In questo modo il rullo superiore punta verso il basso spingendo l'avantreno verso il fondo della pista in percorrenza di curva.`
+      "title": "Inclinazione Rulli Anteriori (Downthrust Angle)",
+      "badge": "Aerodinamica & Stabilità",
+      "icon": "bi-compass",
+      "summary": "Come evitare che l'auto decolli nelle curve paraboliche veloci mantenendo velocità in rettilineo.",
+      "content": "Nel regolamento B-Max non è possibile piegare a caldo o limare le piastre. Per dare l'inclinazione negativa necessaria (Downthrust di circa 3°-5°) all'anteriore, monta le apposite **rondelle coniche Tamiya** (Red Angle Washers presenti nei kit piastre o rondelle metalliche calibrate) tra il telaio e la piastra in carbonio HG. In questo modo il rullo superiore punta verso il basso spingendo l'avantreno verso il fondo della pista in percorrenza di curva."
     },
     {
-      title: "Taratura Spugne Freno Posteriore (Altezza Dima 1.2 - 1.5 mm)",
-      badge: "Messa a Punto Freni",
-      icon: "bi-slash-circle",
-      summary: "L'equilibrio millimetrico per frenare solo sulle rampe e non perdere velocità sul piatto.",
-      content: `Il regolamento impone una luce da terra minima di 1.0 mm a vuoto. Monta la piastra freno posteriore FRP (Item #15518) usando distanziali in alluminio da 3mm e 1.5mm per posizionarla a esattamente **1.3 - 1.5 mm** dal piano. Applica spugna freno **Blu (Mild)** per piste con salti medi o **Rossa (Hard)** tagliata a strisce di 5x10 mm per rampe ripide. In questo modo la spugna toccherà la pista SOLO quando il muso si alza sulla salita del ponte o del Table Top.`
+      "title": "Taratura Spugne Freno Posteriore (Altezza Dima 1.2 - 1.5 mm)",
+      "badge": "Messa a Punto Freni",
+      "icon": "bi-slash-circle",
+      "summary": "L'equilibrio millimetrico per frenare solo sulle rampe e non perdere velocità sul piatto.",
+      "content": "Il regolamento impone una luce da terra minima di 1.0 mm a vuoto. Monta la piastra freno posteriore FRP (Item #15518) usando distanziali in alluminio da 3mm e 1.5mm per posizionarla a esattamente **1.3 - 1.5 mm** dal piano. Applica spugna freno **Blu (Mild)** per piste con salti medi o **Rossa (Hard)** tagliata a strisce di 5x10 mm per rampe ripide. In questo modo la spugna toccherà la pista SOLO quando il muso si alza sulla salita del ponte o del Table Top."
     },
     {
-      title: "Grip Differenziato: Cerchi Carbonio + Gomme Super Hard & Maroon",
-      badge: "Assetto & Ruote",
-      icon: "bi-disc",
-      summary: "La combinazione di mescole più vincente della scena competitiva italiana B-Max.",
-      content: `Per far girare rapidamente l'auto nei cambi di corsia stretti senza farla impuntare, monta cerchi rigidi rinforzati in carbonio forati con punta da 1.9mm per assali da 72mm. All'asse anteriore monta pneumatici **Super Hard** (per dare direzionalità precisa), mentre all'asse posteriore monta pneumatici **Maroon Low Friction** (Item #15527). Il posteriore a basso attrito scivolerà quel tanto che basta in curva da non strozzare la rotazione del motore.`
+      "title": "Grip Differenziato: Cerchi Carbonio + Gomme Super Hard & Maroon",
+      "badge": "Assetto & Ruote",
+      "icon": "bi-disc",
+      "summary": "La combinazione di mescole più vincente della scena competitiva italiana B-Max.",
+      "content": "Per far girare rapidamente l'auto nei cambi di corsia stretti senza farla impuntare, monta cerchi rigidi rinforzati in carbonio forati con punta da 1.9mm per assali da 72mm. All'asse anteriore monta pneumatici **Super Hard** (per dare direzionalità precisa), mentre all'asse posteriore monta pneumatici **Maroon Low Friction** (Item #15527). Il posteriore a basso attrito scivolerà quel tanto che basta in curva da non strozzare la rotazione del motore."
     },
     {
-      title: "Corsa e Taratura dei Mass Damper Laterali (Side Damper)",
-      badge: "Smorzamento Salti",
-      icon: "bi-bullseye",
-      summary: "Evitare rimbalzi all'atterraggio senza creare oscillazioni parasite sui rettilinei.",
-      content: `Installa le staffe laterali del kit #15459 sui supporti del telaio con viti Cap Screws ad alta resistenza. La corsa verticale del peso bombato ('Bowl') deve essere libera tra 8 e 12 mm. Inserisci un micro-tubicino in silicone o un dado autobloccante in testa alla vite. All'atterraggio da un salto, il peso scende per inerzia sbattendo contro la staffa proprio mentre il telaio tenta di rimbalzare, azzerando istantaneamente l'energia cinetica.`
+      "title": "Corsa e Taratura dei Mass Damper Laterali (Side Damper)",
+      "badge": "Smorzamento Salti",
+      "icon": "bi-bullseye",
+      "summary": "Evitare rimbalzi all'atterraggio senza creare oscillazioni parasite sui rettilinei.",
+      "content": "Installa le staffe laterali del kit #15459 sui supporti del telaio con viti Cap Screws ad alta resistenza. La corsa verticale del peso bombato ('Bowl') deve essere libera tra 8 e 12 mm. Inserisci un micro-tubicino in silicone o un dado autobloccante in testa alla vite. All'atterraggio da un salto, il peso scende per inerzia sbattendo contro la staffa proprio mentre il telaio tenta di rimbalzare, azzerando istantaneamente l'energia cinetica."
     }
   ],
-
-  open: [
+  "open": [
     {
-      title: "Costruzione & Tolleranze Telaio MS-Flexible",
-      badge: "Ingegneria Telaio",
-      icon: "bi-wrench-adjustable",
-      summary: "I segreti del telaio a sospensione elastica interna più famoso della categoria Open.",
-      content: `Il telaio MS si divide in tre parti (Nose, Center, Tail). Nella Open si tagliano le guide dei supporti a 45°, si alesano i perni interni a 4.0 mm e si alloggiano molle coniche Tamiya (dorate morbide o nere dure) protette da anelli O-ring in gomma. Quando l'auto atterra violently su una sola ruota, il modulo anteriore o posteriore flette indipendentemente di 2-3 mm assorbendo l'impatto senza che le ruote perdano aderenza.`
+      "title": "Costruzione & Tolleranze Telaio MS-Flexible",
+      "badge": "Ingegneria Telaio",
+      "icon": "bi-wrench-adjustable",
+      "summary": "I segreti del telaio a sospensione elastica interna più famoso della categoria Open.",
+      "content": "Il telaio MS si divide in tre parti (Nose, Center, Tail). Nella Open si tagliano le guide dei supporti a 45°, si alesano i perni interni a 4.0 mm e si alloggiano molle coniche Tamiya (dorate morbide o nere dure) protette da anelli O-ring in gomma. Quando l'auto atterra violently su una sola ruota, il modulo anteriore o posteriore flette indipendentemente di 2-3 mm assorbendo l'impatto senza che le ruote perdano aderenza."
     },
     {
-      title: "Sistemi a Lanterna Chochin / Body Damper",
-      badge: "Sistemi Dinamici",
-      icon: "bi-lightning-charge",
-      summary: "I bracci in carbonio basculanti che azzerano il rimbalzo picchiando sul baricentro.",
-      content: `Il Chochin (o Lantern) è una struttura a ponte ricavata tagliando piastre in carbonio, vincolata anteriormente o posteriormente tramite viti snodate. Quando l'auto decolla dal salto, la lanterna si solleva per inerzia; al momento del contatto col suolo, i pesi sbattono con violenza direttamente sulla piastra centrale del telaio nel baricentro esatto, incollando letteralmente la vettura a terra.`
+      "title": "Sistemi a Lanterna Chochin / Body Damper",
+      "badge": "Sistemi Dinamici",
+      "icon": "bi-lightning-charge",
+      "summary": "I bracci in carbonio basculanti che azzerano il rimbalzo picchiando sul baricentro.",
+      "content": "Il Chochin (o Lantern) è una struttura a ponte ricavata tagliando piastre in carbonio, vincolata anteriormente o posteriormente tramite viti snodate. Quando l'auto decolla dal salto, la lanterna si solleva per inerzia; al momento del contatto col suolo, i pesi sbattono con violenza direttamente sulla piastra centrale del telaio nel baricentro esatto, incollando letteralmente la vettura a terra."
     },
     {
-      title: "Paraurti Dinamici: AT-Bumper e Anchor Posteriore",
-      badge: "Anti-Ribaltamento",
-      icon: "bi-shield-shaded",
-      summary: "Come rientrare in traiettoria anche se la macchina atterra sul bordo del cordolo.",
-      content: `L'AT-Bumper (Auto Track Bumper) e l'Anchor posteriore sono montati su perni flottanti con molle di contrasto e anelli in gomma. Se l'auto atterra disallineata e un rullo impatta sulla parte superiore della paratia, il paraurti flette verso l'alto e verso l'interno permettendo all'auto di 'scivolare' all'interno della corsia senza incastrarsi e senza ribaltarsi.`
+      "title": "Paraurti Dinamici: AT-Bumper e Anchor Posteriore",
+      "badge": "Anti-Ribaltamento",
+      "icon": "bi-shield-shaded",
+      "summary": "Come rientrare in traiettoria anche se la macchina atterra sul bordo del cordolo.",
+      "content": "L'AT-Bumper (Auto Track Bumper) e l'Anchor posteriore sono montati su perni flottanti con molle di contrasto e anelli in gomma. Se l'auto atterra disallineata e un rullo impatta sulla parte superiore della paratia, il paraurti flette verso l'alto e verso l'interno permettendo all'auto di 'scivolare' all'interno della corsia senza incastrarsi e senza ribaltarsi."
     },
     {
-      title: "Tornitura Pneumatici (Trimmed Tires) a 23.5 mm",
-      badge: "Pneumatici & Inerzia",
-      icon: "bi-circle",
-      summary: "Abbassare il baricentro e diminuire l'inerzia rotazionale dell'asse ruote.",
-      content: `Utilizzando un tornio per Mini 4WD, le gomme di serie vengono assottigliate fino a uno spessore di appena 1.2 - 1.5 mm, portando il diametro complessivo a circa 23.5 - 24.0 mm. Questo riduce la massa non sospesa delle ruote del 40%, consentendo accelerazioni fulminee e un baricentro rasoterra imbattibile.`
+      "title": "Tornitura Pneumatici (Trimmed Tires) a 23.5 mm",
+      "badge": "Pneumatici & Inerzia",
+      "icon": "bi-circle",
+      "summary": "Abbassare il baricentro e diminuire l'inerzia rotazionale dell'asse ruote.",
+      "content": "Utilizzando un tornio per Mini 4WD, le gomme di serie vengono assottigliate fino a uno spessore di appena 1.2 - 1.5 mm, portando il diametro complessivo a circa 23.5 - 24.0 mm. Questo riduce la massa non sospesa delle ruote del 40%, consentendo accelerazioni fulminee e un baricentro rasoterra imbattibile."
     }
   ],
-
-  tuned: [
+  "tuned": [
     {
-      title: "Strategia di Scelta delle 3 Piastre FRP Ammesse",
-      badge: "Regolamento TMEC",
-      icon: "bi-layers",
-      summary: "Come massimizzare la rigidezza strutturale rispettando il limite severo delle 3 piastre.",
-      content: `Poiché il regolamento Tuned / TMEC impone un massimo di 3 piastre di rinforzo, la combinazione vincente è: 1x piastra anteriore FRP larga (Item #15451) per allargare i rulli a 104.5mm, 1x piastra posteriore FRP larga (Item #15452) e 1x piastra freno posteriore (Item #15518) montata inferiore. Questa configurazione assicura carreggiata massima e stabilità di frenata senza violare il conteggio delle verifiche tecniche.`
+      "title": "Strategia di Scelta delle 3 Piastre FRP Ammesse",
+      "badge": "Regolamento TMEC",
+      "icon": "bi-layers",
+      "summary": "Come massimizzare la rigidezza strutturale rispettando il limite severo delle 3 piastre.",
+      "content": "Poiché il regolamento Tuned / TMEC impone un massimo di 3 piastre di rinforzo, la combinazione vincente è: 1x piastra anteriore FRP larga (Item #15451) per allargare i rulli a 104.5mm, 1x piastra posteriore FRP larga (Item #15452) e 1x piastra freno posteriore (Item #15518) montata inferiore. Questa configurazione assicura carreggiata massima e stabilità di frenata senza violare il conteggio delle verifiche tecniche."
     },
     {
-      title: "Pulizia & Lappatura Boccole POM (Low Friction)",
-      badge: "Scorrevolezza Meccanica",
-      icon: "bi-gear",
-      summary: "Pareggiare la scorrevolezza dei cuscinetti a sfere pur gareggiando con le boccole di plastica.",
-      content: `Con il divieto dei cuscinetti a sfere nella classe entry level, la differenza la fa il trattamento delle boccole in plastica POM fornite nel kit: inserisci un assale dritto nel mandrino di un minidremel, applica pasta lucidante fine (Tamiya Polishing Compound) sulla boccola e falla girare a bassi giri per 30 secondi. Rimuovi ogni traccia di residuo e applica una goccia di lubrificante sintetico leggero.`
+      "title": "Pulizia & Lappatura Boccole POM (Low Friction)",
+      "badge": "Scorrevolezza Meccanica",
+      "icon": "bi-gear",
+      "summary": "Pareggiare la scorrevolezza dei cuscinetti a sfere pur gareggiando con le boccole di plastica.",
+      "content": "Con il divieto dei cuscinetti a sfere nella classe entry level, la differenza la fa il trattamento delle boccole in plastica POM fornite nel kit: inserisci un assale dritto nel mandrino di un minidremel, applica pasta lucidante fine (Tamiya Polishing Compound) sulla boccola e falla girare a bassi giri per 30 secondi. Rimuovi ogni traccia di residuo e applica una goccia di lubrificante sintetico leggero."
     },
     {
-      title: "Selezione Rapporti: 3.5:1 (Super Speed) vs 3.7:1 (High Speed)",
-      badge: "Trasmissione",
-      icon: "bi-speedometer2",
-      summary: "Adattare la coppia del motore Tuned al profilo altimetrico del circuito.",
-      content: `I motori Tuned erogano circa metà della potenza rispetto a un Mach-Dash. Se la pista presenta ponti ravvicinati o chicane continue, il rapporto 3.7:1 (corona rossa e pignone verde/marrone) rilancia la macchina 0.3 secondi più velocemente dopo ogni frenata. Su piste con lunghi rettilinei, il 3.5:1 resta imbattibile.`
+      "title": "Selezione Rapporti: 3.5:1 (Super Speed) vs 3.7:1 (High Speed)",
+      "badge": "Trasmissione",
+      "icon": "bi-speedometer2",
+      "summary": "Adattare la coppia del motore Tuned al profilo altimetrico del circuito.",
+      "content": "I motori Tuned erogano circa metà della potenza rispetto a un Mach-Dash. Se la pista presenta ponti ravvicinati o chicane continue, il rapporto 3.7:1 (corona rossa e pignone verde/marrone) rilancia la macchina 0.3 secondi più velocemente dopo ogni frenata. Su piste con lunghi rettilinei, il 3.5:1 resta imbattibile."
     }
   ],
-
-  boxstock: [
+  "boxstock": [
     {
-      title: "Sbavatura Chirurgica delle Materozze (Deburring)",
-      badge: "Montaggio di Precisione",
-      icon: "bi-scissors",
-      summary: "Ogni decimo di grammo di bava di plastica su ingranaggi e telaio genera attrito distruttivo.",
-      content: `Nella classe scatola non si possono aggiungere pezzi opzionali: vince chi monta meglio. Taglia i pezzi dal telaio (sprue) lasciando 1mm di plastica, poi rifiniscili a filo con lama da bisturi affilata (#11) e carta abrasiva fine grana 1500. Assicurati che i denti del pignone motore e della corona centrale siano totalmente privi di bave microscopiche di stampaggio.`
+      "title": "Sbavatura Chirurgica delle Materozze (Deburring)",
+      "badge": "Montaggio di Precisione",
+      "icon": "bi-scissors",
+      "summary": "Ogni decimo di grammo di bava di plastica su ingranaggi e telaio genera attrito distruttivo.",
+      "content": "Nella classe scatola non si possono aggiungere pezzi opzionali: vince chi monta meglio. Taglia i pezzi dal telaio (sprue) lasciando 1mm di plastica, poi rifiniscili a filo con lama da bisturi affilata (#11) e carta abrasiva fine grana 1500. Assicurati che i denti del pignone motore e della corona centrale siano totalmente privi di bave microscopiche di stampaggio."
     },
     {
-      title: "Rodaggio Elettrico (Break-in) del Motore Stock FA-130",
-      badge: "Prestazioni Motore",
-      icon: "bi-cpu",
-      summary: "Come assestare le spazzole di rame del motorino normale di scatola senza bruciarle.",
-      content: `Il motore grigio fornito nel kit ha spazzole metalliche in rame. Collega il motore a una singola pila stilo da 1.2V o alimentatore da banco a 1.5V (mai a 3V per non sfiammare le spazzole) e fallo girare per 10 minuti in senso orario, lascialo raffreddare e ripeti per 10 minuti in senso antiorario. Pulisci con spray pulitore contatti per rimuovere le polveri di rame.`
+      "title": "Rodaggio Elettrico (Break-in) del Motore Stock FA-130",
+      "badge": "Prestazioni Motore",
+      "icon": "bi-cpu",
+      "summary": "Come assestare le spazzole di rame del motorino normale di scatola senza bruciarle.",
+      "content": "Il motore grigio fornito nel kit ha spazzole metalliche in rame. Collega il motore a una singola pila stilo da 1.2V o alimentatore da banco a 1.5V (mai a 3V per non sfiammare le spazzole) e fallo girare per 10 minuti in senso orario, lascialo raffreddare e ripeti per 10 minuti in senso antiorario. Pulisci con spray pulitore contatti per rimuovere le polveri di rame."
     },
     {
-      title: "Planarità e Centratura degli Assali Ruota",
-      badge: "Assetto Ruote",
-      icon: "bi-vinyl",
-      summary: "Eliminare qualsiasi oscillazione (wobble) delle ruote di scatola durante la marcia.",
-      content: `Fai rotolare gli assali metallici su uno specchio o su una superficie in vetro: se vedi filtrare luce o l'assale salta, è storto e va raddrizzato a mano con estrema cautela. Quando inserisci i cerchi, spingili perfettamente ortogonali all'assale senza forzare ad angolo, verificando che la ruota giri perfettamente concentrica senza sfarfallamenti.`
+      "title": "Planarità e Centratura degli Assali Ruota",
+      "badge": "Assetto Ruote",
+      "icon": "bi-vinyl",
+      "summary": "Eliminare qualsiasi oscillazione (wobble) delle ruote di scatola durante la marcia.",
+      "content": "Fai rotolare gli assali metallici su uno specchio o su una superficie in vetro: se vedi filtrare luce o l'assale salta, è storto e va raddrizzato a mano con estrema cautela. Quando inserisci i cerchi, spingili perfettamente ortogonali all'assale senza forzare ad angolo, verificando che la ruota giri perfettamente concentrica senza sfarfallamenti."
     }
   ],
-
-  expert: [
+  "expert": [
     {
-      title: "La Monobarra Asimmetrica: Geometria & Downthrust",
-      badge: "Tradizione Pista Piana",
-      icon: "bi-trophy",
-      summary: "La firma del regolamento storico italiano R.U.M. per divorare i ponti parabolici a 45 km/h.",
-      content: `Sulle piste piane storiche italiane (Flat Track) non ci sono salti verticali, ma solo scambi ponte con curve paraboliche da percorrere a tutta velocità. La Monobarra è una staffa rigida in alluminio o carbonio montata sul lato esterno dell'auto: monta due rulli sfasati in altezza. Il rullo superiore deve avere un'inclinazione millimetrica (downthrust di 1°-2°) che carica la forza centrifuga nello scambio ponte, impedendo al muso di sollevarsi senza rallentare sul dritto.`
+      "title": "La Monobarra Asimmetrica: Geometria & Downthrust",
+      "badge": "Tradizione Pista Piana",
+      "icon": "bi-trophy",
+      "summary": "La firma del regolamento storico italiano R.U.M. per divorare i ponti parabolici a 45 km/h.",
+      "content": "Sulle piste piane storiche italiane (Flat Track) non ci sono salti verticali, ma solo scambi ponte con curve paraboliche da percorrere a tutta velocità. La Monobarra è una staffa rigida in alluminio o carbonio montata sul lato esterno dell'auto: monta due rulli sfasati in altezza. Il rullo superiore deve avere un'inclinazione millimetrica (downthrust di 1°-2°) che carica la forza centrifuga nello scambio ponte, impedendo al muso di sollevarsi senza rallentare sul dritto."
     },
     {
-      title: "Trattamento & Sgrassaggio Cuscinetti HG 620",
-      badge: "Zero Attrito",
-      icon: "bi-droplet",
-      summary: "Eliminazione del grasso protettivo di fabbrica a favore di micro-oli sintetici per alte velocità.",
-      content: `I cuscinetti a sfere Tamiya 620 originali escono dalla confezione con un grasso denso per stoccaggio. Immergili in un bagnetto a ultrasuoni o in una boccetta con etanolo puro / benzina per accendini (Zippo), agita vigorosamente per 2 minuti e asciugali con aria compressa. Applica una singola micro-goccia di olio a bassissima viscosità (es. Tamiya Bearing Oil o olio per cuscinetti da skate di precisione). Il cuscinetto passerà da 3 a oltre 20 secondi di rotazione a vuoto.`
+      "title": "Trattamento & Sgrassaggio Cuscinetti HG 620",
+      "badge": "Zero Attrito",
+      "icon": "bi-droplet",
+      "summary": "Eliminazione del grasso protettivo di fabbrica a favore di micro-oli sintetici per alte velocità.",
+      "content": "I cuscinetti a sfere Tamiya 620 originali escono dalla confezione con un grasso denso per stoccaggio. Immergili in un bagnetto a ultrasuoni o in una boccetta con etanolo puro / benzina per accendini (Zippo), agita vigorosamente per 2 minuti e asciugali con aria compressa. Applica una singola micro-goccia di olio a bassissima viscosità (es. Tamiya Bearing Oil o olio per cuscinetti da skate di precisione). Il cuscinetto passerà da 3 a oltre 20 secondi di rotazione a vuoto."
     },
     {
-      title: "Rondellatura Ingranaggi & Azzeramento Giochi Assiali",
-      badge: "Tolleranze Meccaniche",
-      icon: "bi-sliders",
-      summary: "Regolazione dei giochi dell'ingranaggio contatore con rondelle calibrate da 0.1mm.",
-      content: `Nel telaio Super-II, l'ingranaggio contatore centrale ha circa 0.3mm di gioco assiale che fa oscillare i denti ad alti regimi. Inserisci rondelle metalliche Tamiya sottili (Item #15473) tra il pozzetto telaio e l'alberino dell'ingranaggio finché il gioco laterale è ridotto a meno di 0.05 mm, senza impuntamento.`
+      "title": "Rondellatura Ingranaggi & Azzeramento Giochi Assiali",
+      "badge": "Tolleranze Meccaniche",
+      "icon": "bi-sliders",
+      "summary": "Regolazione dei giochi dell'ingranaggio contatore con rondelle calibrate da 0.1mm.",
+      "content": "Nel telaio Super-II, l'ingranaggio contatore centrale ha circa 0.3mm di gioco assiale che fa oscillare i denti ad alti regimi. Inserisci rondelle metalliche Tamiya sottili (Item #15473) tra il pozzetto telaio e l'alberino dell'ingranaggio finché il gioco laterale è ridotto a meno di 0.05 mm, senza impuntamento."
     }
   ],
-
-  street: [
+  "street": [
     {
-      title: "Protezione Frontale Guide Stick (Pattino Anteriore)",
-      badge: "Corsa su Strada",
-      icon: "bi-compass",
-      summary: "Come conformare il paraurti anteriore per ricevere il tocco della mazza da guida outdoor.",
-      content: `Nello Street Mini 4WD il pilota indirizza l'auto correndo a piedi con un bastone da hockey o guida stick. Il paraurti anteriore non deve avere spigoli vivi o rulli scoperti: monta una piastra di protezione sagomata e arrotondata con pattini lisci in plastica POM o fibra FRP smussata, in modo che la paletta del bastone scivoli dolcemente sulla sagoma dell'auto indirizzandola senza bloccarla.`
+      "title": "Protezione Frontale Guide Stick (Pattino Anteriore)",
+      "badge": "Corsa su Strada",
+      "icon": "bi-compass",
+      "summary": "Come conformare il paraurti anteriore per ricevere il tocco della mazza da guida outdoor.",
+      "content": "Nello Street Mini 4WD il pilota indirizza l'auto correndo a piedi con un bastone da hockey o guida stick. Il paraurti anteriore non deve avere spigoli vivi o rulli scoperti: monta una piastra di protezione sagomata e arrotondata con pattini lisci in plastica POM o fibra FRP smussata, in modo che la paletta del bastone scivoli dolcemente sulla sagoma dell'auto indirizzandola senza bloccarla."
     },
     {
-      title: "Altezza Libera dal Suolo Rialzata (Ground Clearance 3.5 - 5.0 mm)",
-      badge: "Fuoristrada & Asfalto",
-      icon: "bi-signpost",
-      summary: "Evitare che l'auto si areni su foglie, fessure dell'asfalto o ramaglie all'aperto.",
-      content: `A differenza della pista chiusa dove si corre a 1mm da terra, all'aperto un assetto basso distrugge il telaio in pochi metri. Monta cerchi Large Diameter con gomme con battistrada scolpito o tassellato (Spike Tires #15077), rimuovi le piastre freno rasoterra e assicurati che tutta la sagoma inferiore abbia almeno 3.5 - 4.5 mm di luce libera da terra.`
+      "title": "Altezza Libera dal Suolo Rialzata (Ground Clearance 3.5 - 5.0 mm)",
+      "badge": "Fuoristrada & Asfalto",
+      "icon": "bi-signpost",
+      "summary": "Evitare che l'auto si areni su foglie, fessure dell'asfalto o ramaglie all'aperto.",
+      "content": "A differenza della pista chiusa dove si corre a 1mm da terra, all'aperto un assetto basso distrugge il telaio in pochi metri. Monta cerchi Large Diameter con gomme con battistrada scolpito o tassellato (Spike Tires #15077), rimuovi le piastre freno rasoterra e assicurati che tutta la sagoma inferiore abbia almeno 3.5 - 4.5 mm di luce libera da terra."
     },
     {
-      title: "Sigillatura Antipolvere del Pozzetto Ingranaggi",
-      badge: "Protezione Meccanica",
-      icon: "bi-shield-check",
-      summary: "Proteggere la trasmissione da polvere, terriccio e ghiaia dei parchi.",
-      content: `Durante la corsa all'aperto su asfalto o sentieri, le ruote sollevano polvere fine che entra nelle fessure del telaio distruggendo i denti degli ingranaggi. Applica nastro adesivo telato Tamiya rinforzato lungo le giunture dei carter motore e del coperchio ingranaggi, e utilizza cuscinetti con schermatura metallica (Rubber/Metal Shielded).`
+      "title": "Sigillatura Antipolvere del Pozzetto Ingranaggi",
+      "badge": "Protezione Meccanica",
+      "icon": "bi-shield-check",
+      "summary": "Proteggere la trasmissione da polvere, terriccio e ghiaia dei parchi.",
+      "content": "Durante la corsa all'aperto su asfalto o sentieri, le ruote sollevano polvere fine che entra nelle fessure del telaio distruggendo i denti degli ingranaggi. Applica nastro adesivo telato Tamiya rinforzato lungo le giunture dei carter motore e del coperchio ingranaggi, e utilizza cuscinetti con schermatura metallica (Rubber/Metal Shielded)."
     }
   ]
 };
-
