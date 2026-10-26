@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, .font-heading {
     color: #000 !important;
     padding-bottom: 0 !important;
   }
-  .sticky-summary-bar, .no-print, nav, #categoriesSection, #filtersSection {
+  .sticky-summary-bar, .floating-mobile-bar, .no-print, nav, #categoriesSection, #filtersSection {
     display: none !important;
   }
   .guide-card, .part-card, .modal-content {
@@ -375,5 +375,266 @@ h1, h2, h3, h4, h5, .font-heading {
   }
   #summarySection {
     display: block !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE REFINEMENTS (Spaziature, Allineamenti & Touch UX)
+   ========================================================================== */
+
+/* Equalized labels for metric & dimension cards */
+.metric-label, .dimension-label {
+  font-size: 0.72rem;
+  line-height: 1.2;
+  min-height: 1.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Summary Mobile Card Components (< 768px) */
+.summary-mobile-card {
+  background-color: var(--tamiya-card-bg);
+  border: 1px solid var(--tamiya-card-border);
+  border-radius: 12px;
+  padding: 12px;
+  transition: all 0.2s ease;
+}
+.summary-mobile-card:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+}
+.summary-mobile-thumb {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.summary-mobile-thumb img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.summary-mobile-actions .btn {
+  min-height: 36px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Mobile Build Dock */
+.floating-mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  background: rgba(15, 20, 29, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.6);
+  padding: 9px 0;
+  padding-bottom: max(9px, env(safe-area-inset-bottom));
+  transition: transform 0.25s ease;
+}
+.floating-category-badge {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--tamiya-blue);
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--tamiya-accent);
+  text-transform: uppercase;
+}
+
+/* General Touch Target & Card Button Improvements */
+.part-card .btn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+.part-card .btn:active, .btn:active {
+  transform: scale(0.98);
+}
+
+/* Media Query: Tablets & Mobile (< 992px) */
+@media (max-width: 991.98px) {
+  /* Extra bottom padding to avoid dock overlap */
+  body {
+    padding-bottom: 78px !important;
+  }
+  .toast-container {
+    margin-bottom: 76px !important;
+  }
+
+  /* Navbar collapse styling on mobile */
+  .navbar-collapse {
+    background: rgba(15, 20, 29, 0.98);
+    border-radius: 12px;
+    border: 1px solid var(--tamiya-card-border);
+    padding: 14px 16px;
+    margin-top: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  }
+  .navbar-nav .nav-link {
+    padding: 9px 12px !important;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+  }
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    background: rgba(0, 210, 255, 0.08);
+  }
+
+  /* Horizontal smooth swipe for filter pills */
+  #componentTypeFilterContainer {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding-bottom: 6px;
+    margin-bottom: -2px;
+    gap: 8px !important;
+  }
+  #componentTypeFilterContainer::-webkit-scrollbar {
+    height: 4px;
+  }
+  #componentTypeFilterContainer::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+  }
+  .filter-pill-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0.42rem 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  /* Always visible carousel nav buttons on touch devices */
+  .img-nav-btn {
+    opacity: 0.92 !important;
+    width: 34px !important;
+    height: 34px !important;
+    background: rgba(15, 20, 29, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+  }
+}
+
+/* Media Query: Phones (< 768px) */
+@media (max-width: 767.98px) {
+  /* Tighter, more cohesive vertical section spacing */
+  header.carbon-bg {
+    padding-top: 1.75rem !important;
+    padding-bottom: 2rem !important;
+  }
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Typography scale */
+  h1.display-5 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.2px !important;
+  }
+  .display-6 {
+    font-size: 1.4rem !important;
+    line-height: 1.25 !important;
+  }
+  h2.h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.3 !important;
+  }
+  .lead {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Card padding adjustments */
+  .guide-card {
+    padding: 1rem !important;
+    border-radius: 12px !important;
+  }
+  .category-card {
+    padding: 1rem !important;
+  }
+  .rule-box-allowed, .rule-box-forbidden {
+    padding: 0.9rem !important;
+  }
+  .paddock-tip-card {
+    padding: 1rem !important;
+  }
+
+  /* Form controls font size (16px prevents iOS Safari auto-zoom) */
+  input[type="text"].form-control, select.form-select {
+    font-size: 16px !important;
+    min-height: 42px;
+  }
+
+  /* Live Legality status banner full width */
+  #liveLegalityBanner {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  #liveLegalityText {
+    word-break: break-word;
+  }
+}
+
+/* Media Query: Extra Small Phones (< 576px) */
+@media (max-width: 575.98px) {
+  .part-img-wrapper {
+    height: 180px;
+  }
+  .lightbox-img-container {
+    height: 270px;
+  }
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+  .modal-content {
+    border-radius: 14px;
+  }
+  .modal-body {
+    padding: 1rem !important;
+  }
+  .modal-header, .modal-footer {
+    padding: 0.75rem 1rem !important;
+  }
+  .modal-footer {
+    flex-direction: column !important;
+    gap: 8px;
+  }
+  .modal-footer > * {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center;
+  }
+  .brand-tamiya {
+    font-size: 0.92rem;
+    gap: 8px;
+  }
+  .brand-flag {
+    width: 26px;
+    height: 18px;
   }
 }

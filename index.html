@@ -62,9 +62,9 @@
         </ul>
 
         <!-- Category Selector in Navbar -->
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 mt-3 mt-lg-0 pt-3 pt-lg-0 border-top border-lg-0 border-secondary border-opacity-25">
           <label class="text-muted small d-none d-xl-inline">Categoria Attiva:</label>
-          <select id="navbarCategorySelect" class="form-select form-select-sm bg-dark text-white border-secondary fw-semibold" style="width: auto;">
+          <select id="navbarCategorySelect" class="form-select form-select-sm bg-dark text-white border-secondary fw-semibold">
             <option value="bmax">B-Max GP (Basic Max)</option>
             <option value="open">Open Class (Japan Cup)</option>
             <option value="tuned">Tuned Class / TMEC</option>
@@ -74,12 +74,10 @@
           </select>
 
           <!-- Current Build Count Button -->
-          <a href="#summarySection" class="btn btn-sm btn-outline-info d-flex align-items-center gap-2">
+          <a href="#summarySection" class="btn btn-sm btn-outline-info d-flex align-items-center justify-content-center gap-2">
             <i class="bi bi-cart3"></i>
             <span>Build: <strong id="navBuildCount">0</strong> parti</span>
           </a>
-
-
         </div>
       </div>
     </div>
@@ -88,11 +86,12 @@
   <!-- =========================================================================
        HERO & CATEGORY SELECTOR CARDS
        ========================================================================= -->
-  <header class="carbon-bg py-5">
+  <header class="carbon-bg py-4 py-md-5">
     <div class="container px-3 px-lg-4 text-center">
       <div class="d-inline-flex align-items-center gap-2 px-3 py-1 mb-3 rounded-pill bg-dark border border-secondary border-opacity-50 text-white small">
         <span class="badge bg-danger rounded-circle p-1">●</span>
-        <span>Regolamento Ufficiale Campionati Mini 4WD Italia • Stagione 2024 - 2026</span>
+        <span class="d-none d-sm-inline">Regolamento Ufficiale Campionati Mini 4WD Italia • Stagione 2024 - 2026</span>
+        <span class="d-inline d-sm-none">Regolamento Ufficiale Mini 4WD Italia</span>
       </div>
 
       <h1 class="display-5 fw-extrabold text-white mb-2">
@@ -112,7 +111,7 @@
   <!-- =========================================================================
        CATEGORY DEEP DIVE & RULES GUIDE
        ========================================================================= -->
-  <section id="guideSection" class="py-5 border-bottom border-secondary border-opacity-25">
+  <section id="guideSection" class="py-4 py-md-5 border-bottom border-secondary border-opacity-25">
     <div class="container px-3 px-lg-4">
       <div id="categoryGuideContainer">
         <!-- Rendered dynamically by app.js -->
@@ -123,7 +122,7 @@
   <!-- =========================================================================
        PADDOCK TECH & ADVANCED SETUP TIPS (DIVISI PER CATEGORIA)
        ========================================================================= -->
-  <section id="paddockTipsSection" class="py-5 border-bottom border-secondary border-opacity-25 bg-dark">
+  <section id="paddockTipsSection" class="py-4 py-md-5 border-bottom border-secondary border-opacity-25 bg-dark">
     <div class="container px-3 px-lg-4">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
         <div>
@@ -146,7 +145,7 @@
   <!-- =========================================================================
        INTERACTIVE MINI 4WD COMPONENT CONFIGURATOR
        ========================================================================= -->
-  <section id="builderSection" class="py-5">
+  <section id="builderSection" class="py-4 py-md-5">
     <div class="container px-3 px-lg-4">
       
       <!-- Section Title & Live Status -->
@@ -158,8 +157,8 @@
         </div>
 
         <!-- Legality Status Live Alert -->
-        <div id="liveLegalityBanner" class="spec-badge-pill border-success text-success bg-dark">
-          <i class="bi bi-shield-check fs-5"></i>
+        <div id="liveLegalityBanner" class="spec-badge-pill border-success text-success bg-dark p-2 px-3">
+          <i class="bi bi-shield-check fs-5 me-2 flex-shrink-0"></i>
           <div>
             <div class="fw-bold small text-uppercase">Stato Conformità Regolamento</div>
             <div id="liveLegalityText" class="small text-white">100% Conforme alla Categoria Attiva</div>
@@ -192,7 +191,7 @@
             <div class="d-flex flex-column flex-sm-row gap-2 justify-content-xl-end">
               
               <!-- Legal Toggle -->
-              <div class="form-check form-switch d-flex align-items-center gap-2 bg-dark p-2 border border-secondary border-opacity-50 rounded">
+              <div class="form-check form-switch d-flex align-items-center justify-content-between justify-content-sm-start gap-2 bg-dark p-2 px-3 border border-secondary border-opacity-50 rounded">
                 <input class="form-check-input ms-0 me-2" type="checkbox" id="legalOnlyToggle" checked>
                 <label class="form-check-label small text-white user-select-none mb-0" for="legalOnlyToggle">
                   Solo Legali <span class="badge bg-success ms-1">Attivo</span>
@@ -200,7 +199,7 @@
               </div>
 
               <!-- Search Input -->
-              <div class="input-group input-group-sm">
+              <div class="input-group">
                 <span class="input-group-text bg-dark border-secondary text-muted"><i class="bi bi-search"></i></span>
                 <input type="text" id="componentSearchInput" class="form-control bg-dark text-white border-secondary" placeholder="Cerca Item (es. 15477, Carbon)...">
               </div>
@@ -212,7 +211,7 @@
       </div>
 
       <!-- Component Cards Grid -->
-      <div class="row g-4" id="componentsGrid">
+      <div class="row g-3 g-md-4" id="componentsGrid">
         <!-- Rendered dynamically by app.js -->
       </div>
 
@@ -222,7 +221,7 @@
   <!-- =========================================================================
        BUILD SUMMARY & SHOPPING BILL OF MATERIALS (BOM)
        ========================================================================= -->
-  <section id="summarySection" class="py-5 bg-dark border-top border-secondary border-opacity-25">
+  <section id="summarySection" class="py-4 py-md-5 bg-dark border-top border-secondary border-opacity-25">
     <div class="container px-3 px-lg-4">
       
       <div class="guide-card mb-4">
@@ -237,11 +236,11 @@
           </div>
 
           <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-2">
-            <button class="btn btn-sm btn-outline-info" id="btnCopyBom">
+          <div class="d-flex flex-wrap gap-2 w-100 w-md-auto">
+            <button class="btn btn-sm btn-outline-info flex-grow-1 flex-md-grow-0" id="btnCopyBom">
               <i class="bi bi-clipboard-check me-1"></i> Copia Lista Ricambi
             </button>
-            <button class="btn btn-sm btn-outline-light" id="btnPrintBom">
+            <button class="btn btn-sm btn-outline-light d-none d-sm-inline-flex" id="btnPrintBom">
               <i class="bi bi-printer me-1"></i> Stampa Scheda
             </button>
             <button class="btn btn-sm btn-outline-danger" id="btnClearBom">
@@ -251,35 +250,35 @@
         </div>
 
         <!-- Verification Metrics Cards -->
-        <div class="row g-3 mb-4">
+        <div class="row g-2 g-md-3 mb-4">
           <div class="col-6 col-md-3">
-            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
-              <div class="text-muted small text-uppercase">Conformità Gara</div>
-              <div class="fs-5 fw-bold text-success" id="summaryLegalityScore">100% Legale</div>
+            <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+              <div class="text-muted small text-uppercase metric-label">Conformità Gara</div>
+              <div class="fs-5 fw-bold text-success mt-1" id="summaryLegalityScore">100% Legale</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
-              <div class="text-muted small text-uppercase">Telaio Base</div>
-              <div class="fs-5 fw-bold text-info text-truncate" id="summaryChassisName">Nessuno</div>
+            <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+              <div class="text-muted small text-uppercase metric-label">Telaio Base</div>
+              <div class="fs-6 fs-md-5 fw-bold text-info text-truncate mt-1" id="summaryChassisName">Nessuno</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
-              <div class="text-muted small text-uppercase">Parti Selezionate</div>
-              <div class="fs-4 fw-bold text-white" id="summaryPartsCount">0</div>
+            <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+              <div class="text-muted small text-uppercase metric-label">Parti Selezionate</div>
+              <div class="fs-4 fw-bold text-white mt-1" id="summaryPartsCount">0</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="p-3 rounded bg-dark border border-secondary border-opacity-50 text-center">
-              <div class="text-muted small text-uppercase">Stima Indicativa</div>
-              <div class="fs-5 fw-semibold text-muted" id="summaryTotalPrice">€ 0.00</div>
+            <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+              <div class="text-muted small text-uppercase metric-label">Stima Indicativa</div>
+              <div class="fs-5 fw-semibold text-muted mt-1" id="summaryTotalPrice">€ 0.00</div>
             </div>
           </div>
         </div>
 
-        <!-- Selected Parts Table / List -->
-        <div class="table-responsive">
+        <!-- Selected Parts Table (Desktop View) -->
+        <div class="table-responsive d-none d-md-block">
           <table class="table table-dark table-hover align-middle mb-0" id="summaryPartsTable">
             <thead class="table-secondary text-uppercase small text-muted font-heading">
               <tr>
@@ -299,12 +298,17 @@
           </table>
         </div>
 
+        <!-- Selected Parts Cards (Mobile View) -->
+        <div class="d-md-none d-flex flex-column gap-2" id="summaryMobileCards">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
         <!-- Empty State Message -->
         <div id="summaryEmptyState" class="text-center py-5 text-muted">
           <i class="bi bi-inbox fs-1 d-block mb-2 text-secondary"></i>
           <h5 class="text-white">Nessun componente ancora selezionato</h5>
           <p class="small mb-3">Seleziona i pezzi nel configuratore sovrastante oppure carica un preset consigliato vincitore.</p>
-          <button class="btn btn-sm btn-primary" id="btnLoadPresetDirect">
+          <button class="btn btn-sm btn-primary py-2 px-3 w-100 w-sm-auto" id="btnLoadPresetDirect">
             <i class="bi bi-magic me-1"></i> Carica Configurazione Consigliata per questa Categoria
           </button>
         </div>
@@ -418,6 +422,30 @@
   </div>
 
 
+
+  <!-- =========================================================================
+       FLOATING MOBILE BAR (DOCK)
+       ========================================================================= -->
+  <div class="floating-mobile-bar d-lg-none" id="floatingMobileBar">
+    <div class="container-fluid px-3 d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <span class="floating-category-badge" id="floatingCategoryBadge">B-MAX GP</span>
+        <div class="d-flex flex-column">
+          <span class="small fw-bold text-white lh-1" id="floatingBuildSummary">0 Parti</span>
+          <span class="text-success small fw-semibold lh-1 mt-1" id="floatingPriceSummary">€ 0.00</span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <a href="#filtersSection" class="btn btn-sm btn-outline-secondary py-1 px-2 text-white" title="Filtri">
+          <i class="bi bi-funnel"></i>
+        </a>
+        <a href="#summarySection" class="btn btn-sm btn-primary py-1 px-3 fw-bold d-flex align-items-center gap-1 shadow-sm" id="floatingGoToSummaryBtn">
+          <i class="bi bi-card-checklist"></i>
+          <span>Vedi Build</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Toast Notification Container -->
   <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1090; margin-bottom: 70px;">

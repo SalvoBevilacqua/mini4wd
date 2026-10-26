@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </span>
             </div>
             <h5 class="fw-bold text-white mb-1 font-heading">${cat.name}</h5>
-            <p class="text-muted small mb-3 text-truncate-2" style="font-size: 0.85rem; min-height: 2.5rem;">
+            <p class="text-muted small mb-2 text-truncate-2" style="font-size: 0.85rem;">
               ${cat.tagline}
             </p>
             <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 small">
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Header Banner -->
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 pb-4 mb-4 border-bottom border-secondary border-opacity-50">
           <div>
-            <div class="d-flex align-items-center gap-2 mb-2">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
               <span class="badge px-3 py-1 font-heading" style="background-color: ${cat.color}; font-size: 0.85rem;">
                 <i class="bi ${cat.icon} me-1"></i> ${cat.badge}
               </span>
@@ -157,8 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <!-- Quick Action: Load Recommended Build -->
-          <div class="d-flex flex-column gap-2">
-            <button class="btn btn-outline-info d-flex align-items-center gap-2" id="btnLoadPreset">
+          <div class="d-flex flex-column gap-2 mt-2 mt-lg-0">
+            <button class="btn btn-outline-info d-flex align-items-center justify-content-center gap-2 py-2 w-100 w-lg-auto" id="btnLoadPreset">
               <i class="bi bi-magic"></i>
               <span>Carica Setup Consigliato Vincitore</span>
             </button>
@@ -178,11 +178,11 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <!-- Rules Columns: What is Allowed vs What is Forbidden -->
-        <div class="row g-4 mb-4">
+        <div class="row g-3 g-md-4 mb-4">
           <!-- Allowed Column -->
           <div class="col-12 col-lg-6">
             <div class="rule-box-allowed h-100">
-              <h5 class="text-success fw-bold font-heading mb-3 d-flex align-items-center gap-2">
+              <h5 class="text-success fw-bold font-heading mb-3 d-flex align-items-center gap-2" style="font-size: 0.95rem;">
                 <i class="bi bi-check-circle-fill"></i> COSA SI PUÒ FARE / MONTARE (CONSENTITO)
               </h5>
               <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Forbidden Column -->
           <div class="col-12 col-lg-6">
             <div class="rule-box-forbidden h-100">
-              <h5 class="text-danger fw-bold font-heading mb-3 d-flex align-items-center gap-2">
+              <h5 class="text-danger fw-bold font-heading mb-3 d-flex align-items-center gap-2" style="font-size: 0.95rem;">
                 <i class="bi bi-x-octagon-fill"></i> COSA È VIETATO (SQUALIFICA IN VERIFICA)
               </h5>
               <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
@@ -219,27 +219,27 @@ document.addEventListener("DOMContentLoaded", () => {
           <h5 class="text-uppercase text-white fw-bold mb-3 font-heading"><i class="bi bi-rulers text-warning me-2"></i>Dima Tecnica & Limiti Dimensionali Ufficiali</h5>
           <div class="row g-2 text-center">
             <div class="col-6 col-md-3">
-              <div class="p-2 rounded bg-dark border border-secondary border-opacity-50">
-                <div class="text-muted small">Larghezza Max</div>
-                <div class="fw-bold text-white fs-6 font-heading">${cat.dimensions.maxWidth}</div>
+              <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+                <div class="text-muted dimension-label">Larghezza Max</div>
+                <div class="fw-bold text-white fs-6 font-heading mt-1">${cat.dimensions.maxWidth}</div>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="p-2 rounded bg-dark border border-secondary border-opacity-50">
-                <div class="text-muted small">Lunghezza Max</div>
-                <div class="fw-bold text-white fs-6 font-heading">${cat.dimensions.maxLength}</div>
+              <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+                <div class="text-muted dimension-label">Lunghezza Max</div>
+                <div class="fw-bold text-white fs-6 font-heading mt-1">${cat.dimensions.maxLength}</div>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="p-2 rounded bg-dark border border-secondary border-opacity-50">
-                <div class="text-muted small">Luce da Terra Minima</div>
-                <div class="fw-bold text-warning fs-6 font-heading">${cat.dimensions.minGroundClearance}</div>
+              <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+                <div class="text-muted dimension-label">Luce da Terra Minima</div>
+                <div class="fw-bold text-warning fs-6 font-heading mt-1">${cat.dimensions.minGroundClearance}</div>
               </div>
             </div>
             <div class="col-6 col-md-3">
-              <div class="p-2 rounded bg-dark border border-secondary border-opacity-50">
-                <div class="text-muted small">Peso Minimo (in marcia)</div>
-                <div class="fw-bold text-success fs-6 font-heading">${cat.dimensions.minWeight}</div>
+              <div class="p-2 p-md-3 rounded bg-dark border border-secondary border-opacity-50 text-center h-100 d-flex flex-column justify-content-center">
+                <div class="text-muted dimension-label">Peso Minimo (in marcia)</div>
+                <div class="fw-bold text-success fs-6 font-heading mt-1">${cat.dimensions.minWeight}</div>
               </div>
             </div>
           </div>
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
               ${tip.badge}
             </span>
           </div>
-          <h6 class="fw-bold text-white mb-2 font-heading" style="font-size: 0.95rem; min-height: 2.4rem;">
+          <h6 class="fw-bold text-white mb-2 font-heading" style="font-size: 0.95rem; line-height: 1.35;">
             ${tip.title}
           </h6>
           <p class="text-info small fw-semibold mb-2" style="font-size: 0.8rem;">
@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <!-- Product Name -->
-                <h6 class="fw-bold text-white mb-1" style="font-size: 0.95rem; min-height: 2.8rem; line-height: 1.4;">
+                <h6 class="fw-bold text-white mb-2" style="font-size: 0.95rem; line-height: 1.35;">
                   ${item.name}
                 </h6>
 
@@ -446,15 +446,15 @@ document.addEventListener("DOMContentLoaded", () => {
               <!-- Action Buttons -->
               <div>
                 <div class="d-flex gap-2 mb-2">
-                  <button class="btn btn-sm btn-outline-secondary w-50" data-action="details" data-part-id="${item.id}">
+                  <button class="btn btn-sm btn-outline-secondary w-50 py-2 d-flex align-items-center justify-content-center" data-action="details" data-part-id="${item.id}">
                     <i class="bi bi-info-circle me-1"></i> Dettagli
                   </button>
-                  <a href="${item.tamiyaUrl}" target="_blank" class="btn btn-sm btn-outline-primary w-50" title="Apri pagina ufficiale Tamiya">
+                  <a href="${item.tamiyaUrl}" target="_blank" class="btn btn-sm btn-outline-primary w-50 py-2 d-flex align-items-center justify-content-center" title="Apri pagina ufficiale Tamiya">
                     <i class="bi bi-box-arrow-up-right me-1"></i> Tamiya
                   </a>
                 </div>
 
-                <button class="btn btn-sm w-100 fw-bold ${isInBuild ? 'btn-danger' : (isLegal ? 'btn-primary' : 'btn-outline-danger')}" data-action="toggle-build" data-part-id="${item.id}">
+                <button class="btn btn-sm w-100 fw-bold py-2 d-flex align-items-center justify-content-center ${isInBuild ? 'btn-danger' : (isLegal ? 'btn-primary' : 'btn-outline-danger')}" data-action="toggle-build" data-part-id="${item.id}">
                   ${isInBuild ? '<i class="bi bi-dash-circle me-1"></i> Rimuovi dal Build' : '<i class="bi bi-plus-circle me-1"></i> Aggiungi al Build'}
                 </button>
               </div>
@@ -488,6 +488,29 @@ document.addEventListener("DOMContentLoaded", () => {
         const partId = btn.getAttribute("data-part-id");
         switchCardImage(partId, -1);
       });
+    });
+
+    // Touch swipe support on card images
+    grid.querySelectorAll(".part-img-wrapper").forEach(wrapper => {
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      wrapper.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      wrapper.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const partId = wrapper.id.replace("imgWrap_", "");
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 40) {
+          if (diff < 0) {
+            switchCardImage(partId, 1);
+          } else {
+            switchCardImage(partId, -1);
+          }
+        }
+      }, { passive: true });
     });
 
     // Zoom Lightbox Modal
@@ -591,6 +614,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const navBuildCount = document.getElementById("navBuildCount");
     if (navBuildCount) navBuildCount.textContent = totalCount;
 
+    // Update floating mobile dock
+    const floatingBadge = document.getElementById("floatingCategoryBadge");
+    const floatingBuild = document.getElementById("floatingBuildSummary");
+    const floatingPrice = document.getElementById("floatingPriceSummary");
+    if (floatingBadge && cat) floatingBadge.textContent = cat.badge;
+    if (floatingBuild) floatingBuild.textContent = `${totalCount} ${totalCount === 1 ? 'Parte' : 'Parti'}`;
+    if (floatingPrice) floatingPrice.textContent = `€ ${totalPrice.toFixed(2)}`;
+
     const summaryPartsCount = document.getElementById("summaryPartsCount");
     if (summaryPartsCount) summaryPartsCount.textContent = totalCount;
 
@@ -601,14 +632,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const chassisPart = selectedParts.find(p => p.category === "chassis");
     const summaryChassisName = document.getElementById("summaryChassisName");
     if (summaryChassisName) {
-      summaryChassisName.textContent = chassisPart ? chassisPart.name : "Nessun telaio";
+      summaryChassisName.textContent = chassisPart ? chassisPart.name : "Nessuno";
     }
 
     // ===================================
     // LEGALITY & COMPATIBILITY CHECKS
     // ===================================
     const issues = [];
-    const cat = categoriesData[state.currentCategory];
 
     // Check 1: Any part illegal for this category?
     const illegalParts = selectedParts.filter(p => !p.allowedCategories.includes(state.currentCategory));
@@ -649,8 +679,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (issues.length === 0) {
       if (liveBanner) {
-        liveBanner.className = "spec-badge-pill border-success text-success bg-dark";
-        liveBanner.querySelector("i").className = "bi bi-shield-check fs-5 text-success";
+        liveBanner.className = "spec-badge-pill border-success text-success bg-dark p-2 px-3";
+        liveBanner.querySelector("i").className = "bi bi-shield-check fs-5 text-success me-2 flex-shrink-0";
       }
       if (liveText) liveText.textContent = `100% Conforme al Regolamento ${cat.badge}`;
       if (summaryLegalityScore) {
@@ -659,8 +689,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } else {
       if (liveBanner) {
-        liveBanner.className = "spec-badge-pill border-danger text-danger bg-dark";
-        liveBanner.querySelector("i").className = "bi bi-exclamation-octagon-fill fs-5 text-danger";
+        liveBanner.className = "spec-badge-pill border-danger text-danger bg-dark p-2 px-3";
+        liveBanner.querySelector("i").className = "bi bi-exclamation-octagon-fill fs-5 text-danger me-2 flex-shrink-0";
       }
       if (liveText) liveText.textContent = issues[0];
       if (summaryLegalityScore) {
@@ -670,22 +700,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ===================================
-    // RENDER BOM TABLE
+    // RENDER BOM TABLE & MOBILE CARDS
     // ===================================
     const tableBody = document.getElementById("summaryTableBody");
     const emptyState = document.getElementById("summaryEmptyState");
-    const partsTable = document.getElementById("summaryPartsTable");
+    const partsTableWrapper = document.getElementById("summaryPartsTable")?.closest(".table-responsive");
+    const mobileCards = document.getElementById("summaryMobileCards");
 
     if (selectedParts.length === 0) {
       if (tableBody) tableBody.innerHTML = "";
+      if (mobileCards) mobileCards.innerHTML = "";
       if (emptyState) emptyState.style.display = "block";
-      if (partsTable) partsTable.style.display = "none";
+      if (partsTableWrapper) partsTableWrapper.style.display = "none";
+      if (mobileCards) mobileCards.style.display = "none";
       return;
     }
 
     if (emptyState) emptyState.style.display = "none";
-    if (partsTable) partsTable.style.display = "table";
+    if (partsTableWrapper) partsTableWrapper.style.display = "";
+    if (mobileCards) mobileCards.style.display = "";
 
+    // 1. Render Desktop Table
     if (tableBody) {
       tableBody.innerHTML = selectedParts.map(part => {
         const isLegal = part.allowedCategories.includes(state.currentCategory);
@@ -743,6 +778,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Attach remove handlers
       tableBody.querySelectorAll("[data-remove-id]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const partId = btn.getAttribute("data-remove-id");
+          togglePartInBuild(partId);
+        });
+      });
+    }
+
+    // 2. Render Mobile Cards
+    if (mobileCards) {
+      mobileCards.innerHTML = selectedParts.map(part => {
+        const isLegal = part.allowedCategories.includes(state.currentCategory);
+
+        return `
+          <div class="summary-mobile-card">
+            <div class="d-flex align-items-center gap-3">
+              <div class="summary-mobile-thumb flex-shrink-0">
+                <img src="${part.images[0]}" alt="${part.name}">
+              </div>
+              <div class="flex-grow-1 min-w-0">
+                <div class="d-flex align-items-center justify-content-between gap-1 mb-1">
+                  <span class="item-tag">#${part.itemNumber}</span>
+                  <span class="fw-bold text-success fs-6">€ ${part.price.toFixed(2)}</span>
+                </div>
+                <div class="fw-bold text-white small text-truncate" title="${part.name}">${part.name}</div>
+                <div class="d-flex flex-wrap align-items-center gap-1 mt-1">
+                  <span class="badge bg-secondary text-uppercase" style="font-size: 0.65rem;">${part.category}</span>
+                  ${isLegal ? `
+                    <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50" style="font-size: 0.65rem;">
+                      <i class="bi bi-check-circle-fill me-1"></i> Legale
+                    </span>
+                  ` : `
+                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger border-opacity-50" style="font-size: 0.65rem;">
+                      <i class="bi bi-x-circle-fill me-1"></i> Vietato
+                    </span>
+                  `}
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-2 mt-2 border-top border-secondary border-opacity-25 summary-mobile-actions gap-2">
+              <div class="d-flex gap-2">
+                <a href="${part.tamiyaUrl}" target="_blank" class="btn btn-sm btn-outline-info py-1 px-2" title="Scheda Ufficiale">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Tamiya
+                </a>
+                <a href="https://www.google.com/search?q=Tamiya+${part.itemNumber}+${encodeURIComponent(part.name)}" target="_blank" class="btn btn-sm btn-outline-secondary py-1 px-2" title="Cerca Shop">
+                  <i class="bi bi-cart me-1"></i> Shop
+                </a>
+              </div>
+              <button class="btn btn-sm btn-outline-danger py-1 px-2" data-remove-id="${part.id}">
+                <i class="bi bi-trash3 me-1"></i> Rimuovi
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Attach remove handlers on mobile cards
+      mobileCards.querySelectorAll("[data-remove-id]").forEach(btn => {
         btn.addEventListener("click", () => {
           const partId = btn.getAttribute("data-remove-id");
           togglePartInBuild(partId);
@@ -1003,6 +1095,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+
+  // Auto-close mobile navbar on link click
+  const navContent = document.getElementById("navContent");
+  if (navContent) {
+    navContent.querySelectorAll("a.nav-link, a.btn").forEach(link => {
+      link.addEventListener("click", () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(navContent);
+        if (bsCollapse && window.innerWidth < 992) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  }
+
+  // Floating Mobile Dock Action: Scroll to summary smoothly
+  const floatingGoToSummary = document.getElementById("floatingGoToSummaryBtn");
+  if (floatingGoToSummary) {
+    floatingGoToSummary.addEventListener("click", (e) => {
+      const summarySec = document.getElementById("summarySection");
+      if (summarySec) {
+        e.preventDefault();
+        summarySec.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 
   // =========================================================================
   // INITIAL BOOTSTRAP
